@@ -1,0 +1,33 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |2.1| 
+ |SimLib|  |0000.014| 
+ |TrafLink| |0000.001|
+ |EndVersion| 
+      2 
+ |External Name Match Profile| 
+       1 
+ |Default|  |Default|  1 0 1 
+
+ |External Name Match Profile| 
+       1 
+ |ExpertDefault|  |ExpertDefault|  1 0 1
+
+
+ |External Name Match Profile| 
+ |Default|   |Default| 
+
+       0 
+ |< all links >|  
+       0
+
+       0
+
+ |External Name Match Profile| 
+ |ExpertDefault|   |ExpertDefault| 
+
+       0 
+ |< all links >|  
+       0
+
+       0
+

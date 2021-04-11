@@ -1,0 +1,11 @@
+show databases;
+show tables;
+use krkrol;
+
+Something else.
+
+Even more to copy
+
+(._.)/
+<)  )
+ /  \

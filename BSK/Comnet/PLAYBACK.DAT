@@ -1,0 +1,917 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |1.8| 
+ |SimFlow|  |0000.031| 
+ |SimLib|  |0000.014| 
+ |ComnetIII|  |0000.022| 
+ |EndVersion| 
+
+80
+	Parm	||	0	1			ALOHA_PARM	||	||	1	0	cLnkCfg	AlohaParmObj	||
+19				0	0	0	ALOHA_PARM	STREAM	Stream	iStream	INTEGERTYPE	||	0	
+				0	0	0	ALOHA_PARM	SLOT_WIDTH	|Slot Width|	tSlotWidth	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	SLOT_TIME	|Slot Time|	tSlotTime	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	RETRY_LIMIT	|Retry Limit|	iRetryLimit	INTEGERTYPE	||	0	
+				0	0	0	ALOHA_PARM	RETRY_INTERVAL_TYPE	|Retry Interval Type|	eRetryInterval	ENUMTYPE	RetryIntervalType	0	
+				0	0	0	ALOHA_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	PROB_DISTRIBUTION	|Prob Distribution|	sotRetryInterval	OBJECTTYPE	SampleObj	0	
+				0	0	0	ALOHA_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	ALOHA_PARM	OFFSET	Offset	tOffset	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	ALOHA_PARM	GIVE_UP_INTERVAL	|Give Up Interval|	tGiveUpInterval	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	ALOHA_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	ALOHA_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	ALOHA_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	CONTROL_TRANS_RATE	|Control Trans Rate|	rControlTransRate	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	CONTROL_CHANNEL	|Control Channel|	bControlChannel	BOOLEANTYPE	||	0	
+				1	0	0	ALOHA_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	ALOHA_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Parm	||	0	1			ANALYTIC_LINK_LOAD_PARM	||	||	1	0	cLnkLd	AnalyticalLnkLdrParmObj	||
+3				0	0	0	ANALYTIC_LINK_LOAD_PARM	USE_CALL_FOR_UTIL	|Use Call for Util|	bUseCallForUtil	BOOLEANTYPE	||	0	
+				1	0	0	ANALYTIC_LINK_LOAD_PARM	STD_DEV_FRAME_SIZE	|Std. Dev. Frame Size|	rStdDevFrameSize	REALTYPE	||	0	
+				1	0	0	ANALYTIC_LINK_LOAD_PARM	MEAN_FRAME_SIZE	|Mean Frame Size|	rMeanFrameSize	REALTYPE	||	0	
+	|Answer Command|	Command	1	1			ANSWER_MSG_CMD	||	||	1	0	cSesOpn	AnswerCommandObj	||
+13				0	0	0	ANSWER_MSG_CMD	USE_ECHO_FOR_DESTINATION	|Use Echo For Destination|	bUseECHODestination	BOOLEANTYPE	||	0	
+				0	0	0	ANSWER_MSG_CMD	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	||	0	
+				1	0	0	ANSWER_MSG_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+				0	0	0	ANSWER_MSG_CMD	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	ANSWER_MSG_CMD	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	ANSWER_MSG_CMD	PRIORITY	Priority	rPriority	REALTYPE	||	0	
+				1	0	0	ANSWER_MSG_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	ANSWER_MSG_CMD	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	MsgTextType	0	
+				0	0	0	ANSWER_MSG_CMD	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	MsgTextString	0	
+				0	0	0	ANSWER_MSG_CMD	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	MsgSizeUnitType	0	
+				0	0	0	ANSWER_MSG_CMD	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	CalcType	0	
+				1	0	0	ANSWER_MSG_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	ANSWER_MSG_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	|Application Source|	|Layouts.Sources|	1	1			APPLICATION_SOURCE	||	||	1	0	cApplic	AppSourceObj	||
+16				0	0	1	APPLICATION_SOURCE	TRIGGER_LIST_TYPE	|Trigger List Type|	oTrigListMgr.bWeightedListOption	ENUMTYPE	TriggerListType	0	
+				0	0	1	APPLICATION_SOURCE	TRIGGER	Trigger	oTrigListMgr.qList	OBJECTTYPE	QueueObj.Triggers	0	
+				0	0	1	APPLICATION_SOURCE	SCHEDULE	Schedule	eSchdType	ENUMTYPE	SchdMethodType	0	
+				0	0	1	APPLICATION_SOURCE	REC_MSG_DELAY	|Rec Msg Delay|	sotRecMsgDelay	OBJECTTYPE	SampleObj	0	
+				0	0	1	APPLICATION_SOURCE	REC_MSG	|Rec Msg|	oReceivedMsgSeqMgr.qList	OBJECTTYPE	QueueObj.RecMsgs	0	
+				0	0	1	APPLICATION_SOURCE	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				0	1	0	APPLICATION_SOURCE	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	1	APPLICATION_SOURCE	MAX_ARRIVALS	|Max Arrivals|	oGenratr.soMaxCount	OBJECTTYPE	SampleObj	0	
+				0	0	1	APPLICATION_SOURCE	LAST	Last	oGenratr.sotLast	OBJECTTYPE	SampleObj	0	
+				0	1	0	APPLICATION_SOURCE	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	APPLICATION_SOURCE	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	1	APPLICATION_SOURCE	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	APPLICATION_SOURCE	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				1	0	1	APPLICATION_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				0	0	1	APPLICATION_SOURCE	FIRST	First	oGenratr.sotFirst	OBJECTTYPE	SampleObj	0	
+				0	0	1	APPLICATION_SOURCE	COMMAND_SEQ	|Command Sequence|	oCommandSeqMgr.qList	OBJECTTYPE	QueueObj.Commands	0	
+	|Assign Variable Command|	Command	1	1			ASSIGN_VARIABLE_CMD	||	||	1	0	cVarCmd	AssignCommandObj	||
+2				0	0	0	ASSIGN_VARIABLE_CMD	VARIABLE	Variable	oVar	OBJECTTYPE	UsrVarObj	0	
+				0	0	0	ASSIGN_VARIABLE_CMD	EXPRESSION	Expression	sExpr	STRINGTYPE	||	0	
+	Parm	||	0	0			ATM_PARM	||	||	1	0	cConfig	ATMConfigParmObj	||
+8				0	0	0	ATM_PARM	VIRTUAL_CUT_THROUGH	|Virtual Cut-through|	bVirtualCutThrough	BOOLEANTYPE	||	0	
+				0	0	0	ATM_PARM	VIRTUAL_CUT_THROUGH	|Virtual Cut-through|	bVirtualCutThrough	BOOLEANTYPE	||	0	
+				0	0	0	ATM_PARM	PROTOCOL_PROCESSING	|Protocol Processing|	oMultiprotocolListMgr.qList	OBJECTTYPE	QueueObj.ProtocolProcessing	0	
+				0	0	0	ATM_PARM	PORT_PROCESSING_SPECIAL_CASE	|Port Processing Special Case|	oPortDelayListMgr.qList	OBJECTTYPE	QueueObj.PortDelay	0	
+				0	0	0	ATM_PARM	OUTPUT_PORT_PROCESSING	|Output Port Processing|	tDefaultOutPortDelay	REALTYPE	||	0	
+				1	0	0	ATM_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				0	0	0	ATM_PARM	INPUT_PORT_PROCESSING	|Input Port Processing|	tDefaultInPortDelay	REALTYPE	||	0	
+				1	0	0	ATM_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+	Parm	||	0	0			ATM_TRAFFIC_PARM	||	||	1	0	cTrfPol	ATMPolicyParmObj	||
+10				0	0	0	ATM_TRAFFIC_PARM	SUSTAIN_RATE	|Sustain Rate|	rRate2	REALTYPE	||	0	
+				0	0	0	ATM_TRAFFIC_PARM	SET_CLP_METHOD	|Set Clp Method|	eSetDE	ENUMTYPE	SetDEType	0	
+				0	0	0	ATM_TRAFFIC_PARM	PEAK_RATE	|Peak Rate|	rRate1	REALTYPE	||	0	
+				0	0	0	ATM_TRAFFIC_PARM	NEVER_DISCARD	|Never Discard|	bNeverDiscard	BOOLEANTYPE	||	0	
+				0	0	0	ATM_TRAFFIC_PARM	GCRA2_LIMIT	|Gcra2 Limit|	iLimit2	INTEGERTYPE	||	0	
+				0	0	0	ATM_TRAFFIC_PARM	GCRA2_COUNT_TYPE	|Gcra2 Count Type|	eGCRACnt2	ENUMTYPE	GCRACountType	0	
+				0	0	0	ATM_TRAFFIC_PARM	GCRA1_LIMIT	|Gcra1 Limit|	iLimit1	INTEGERTYPE	||	0	
+				0	0	0	ATM_TRAFFIC_PARM	GCRA1_COUNT_TYPE	|Gcra1 Count Type|	eGCRACnt1	ENUMTYPE	GCRACountType	0	
+				0	0	0	ATM_TRAFFIC_PARM	GCRA_CONFORMANCE	|Gcra Conformance|	eConform	ENUMTYPE	GCRAConformanceType	0	
+				0	0	0	ATM_TRAFFIC_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0	
+	Parm	||	0	0			AVAILABLE_RATE_PARM	||	||	1	0	cRatCtl	AvailableRCParmObj	||
+16				0	0	0	AVAILABLE_RATE_PARM	Xrm	Xrm	iXrm	INTEGERTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	XDF	Xdf	rXDF	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	TOF	Tof	rTOF	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	TDF	Tdf	rTDF	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	RDF	Rdf	rRateReductionFactor	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	RC_PROTOCOL_ID	|Rc Protocol Id|	sRoutingProtocol	STRINGTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	RC_PACKET_SIZE	|Rc Packet Size|	iRCSize	INTEGERTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	RC_PACKET_PRIORITY	|Rc Packet Priority|	rRCPriority	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	PCR	Pcr	rRatePeak	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	Nrm	Nrm	iNbrUnitsBetweenRCPkt	INTEGERTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	MCR	Mcr	rRateMin	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	ICR	Icr	rRateIni	REALTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	CIF	Cif	iCIF	INTEGERTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0
+				1	0	0	AVAILABLE_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0
+				0	0	0	AVAILABLE_RATE_PARM	AIR	Air	rAdditiveIncrRate	REALTYPE	||	0
+	|Background Icon|	Miscellaneous	0	0			BACKGROUND_ICON	||	||	1	0	mTool	EditableBackgroundObj	||
+9				0	1	0	BACKGROUND_ICON	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				0	1	0	BACKGROUND_ICON	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	BACKGROUND_ICON	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	BACKGROUND_ICON	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	BACKGROUND_ICON	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				0	0	0	BACKGROUND_TEXT	TEXT_LABEL	|Text Label|	TextLabel	STRINGTYPE	||	0	
+				0	1	0	BACKGROUND_TEXT	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				0	1	0	BACKGROUND_TEXT	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	BACKGROUND_TEXT	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+	Parm	||	0	0			BASIC_BUFFER_POLICY_PARM	||	||	1	0	cBufPol	BasicBufferPolicyParmObj	||
+2				0	0	0	BASIC_BUFFER_POLICY_PARM	CONGESTION_THRESHOLD	|Congestion Threshold|	rCongThreshold	REALTYPE	||	0	
+				0	0	0	BASIC_BUFFER_POLICY_PARM	CONGESTION_IDENTIFICATION_POLICY	|Congestion Identification Policy|	eCongIndPolicy	ENUMTYPE	CongIndPolicyType	0	
+	Parm	||	0	0			CALL_BASED_LINK_LOAD_PARM	||	||	1	0	cPPLink	CallBasedLnkLdrParmObj	||
+8				0	0	0	CALL_BASED_LINK_LOAD_PARM	XMIT_ON_PARTIALLY_FILLED_PACKET_CIRCUITS	|Xmit on Partiall Filled Packet Circuits|	bPktXmitOnPartialPktCirc	BOOLEANTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	XMIT_ON_PARTIALLY_FILLED_CALL_CIRCUITS	|Xmit on Partiall Filled Call Circuits|	bPktXmitOnPartialCallCirc	BOOLEANTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	USE_CALL_FOR_UTIL	|Use Call for Util|	bUseCallForUtil	BOOLEANTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	PRIORITY	Priority	iPriority	INTEGERTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	MODEL_CYCLE_OPTION	|Model Cycle Option|	eModelCycle	ENUMTYPE	ModelCycleType	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	DE	DE	bDE	BOOLEANTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	CALL_CYCLE_TIME	|Call Cycle Time|	rCycleTime	REALTYPE	||	0	
+				0	0	0	CALL_BASED_LINK_LOAD_PARM	CALL_BW_OVERHEAD	|Call BW Overhead|	rCallBWOH	REALTYPE	||	0	
+	|Call Penalty Table|	||	0	0			CALL_PENALTY_TABLE	||	||	1	0	cMetric	CllRoutingMetricObj	||
+1				0	0	0	CALL_PENALTY_TABLE	TABLE	Table	oaThresholds	ARRAYTYPE	ThresholdArray	0	
+	|Routing Class|	||	0	0			CALL_ROUTING_CLASS	||	||	1	0	cClass	CllRoutingClassObj	||
+4				0	0	0	CALL_ROUTING_CLASS	RETRY_INTERVAL	|Retry Interval|	sotRetryInterval	OBJECTTYPE	SampleObj	0	
+				0	0	0	CALL_ROUTING_CLASS	REROUTE_CONNECTIONS	|Reroute Connections|	bRerouteConnections	BOOLEANTYPE	||	0	
+				0	0	0	CALL_ROUTING_CLASS	HOP_LIMIT	|Hop Limit|	iHopLim	INTEGERTYPE	||	0	
+				0	0	0	CALL_ROUTING_CLASS	CALL_BPS	|Call Bps|	rCallBPS	REALTYPE	||	0	
+	|Call Source|	|Layouts.Sources|	1	1			CALL_SOURCE	||	||	1	0	cCall	CallSourceObj	||
+16				0	0	0	CALL_SOURCE	TRIGGER_LIST_TYPE	|Trigger List Type|	bWeightedListOption	ENUMTYPE	TriggerListType	0	
+				0	0	0	CALL_SOURCE	TRIGGER	Trigger	oTrigListMgr.qList	OBJECTTYPE	QueueObj.Triggers	0	
+				0	0	0	CALL_SOURCE	PRIORITY	Priority	rPriority	REALTYPE	||	0	
+				0	0	0	CALL_SOURCE	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				0	1	0	CALL_SOURCE	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	0	CALL_SOURCE	LAST	Last	oGenratr.sotLast	OBJECTTYPE	SampleObj	0	
+				0	1	0	CALL_SOURCE	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	CALL_SOURCE	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	CALL_SOURCE	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	CALL_SOURCE	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				1	0	0	CALL_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				0	0	0	CALL_SOURCE	FIRST	First	oGenratr.sotFirst	OBJECTTYPE	SampleObj	0	
+				0	0	0	CALL_SOURCE	DURATION	Duration	sotHold	OBJECTTYPE	SampleObj	0	
+				0	0	0	CALL_SOURCE	DESTINATION_TYPE	|Destination Type|	oSinkTokenCategoryListMgr..eDestinationType	ENUMTYPE	DestinationType	0	
+				0	0	0	CALL_SOURCE	DESTINATION	Destination	oSinkTokenCategoryListMgr.qList	OBJECTTYPE	QueueObj.Destinations	0	
+				0	0	0	CALL_SOURCE	CALL_ROUTING_CLASS	|Call Routing Class|	oCoS	OBJECTTYPE	||	0	
+	|WAN Cloud|	Areas	0	1			CLOUD	||	||	1	0	cCldCfg	FrmRlyCloudConfigObj	||
+14				0	0	0	CLOUD	TIME_TO_RECOVER	|Time To Recover|	oConfigOwner.soTimeToRecover	OBJECTTYPE	SampleObj	0	
+				0	0	0	CLOUD	TIME_TO_CONGESTION	|Time To Congestion|	oConfigOwner.soTimeToCongestion	OBJECTTYPE	SampleObj	0	
+				0	0	0	CLOUD	TIME_NEXT_CONGESTION_CHANGE	|Time Next Congestion Change|	oConfigOwner.tOfNextCongestionChange	REALTYPE	||	0	
+				0	0	0	CLOUD	STREAM_NO	|Stream No|	soExtreme.iStreamNum	INTEGERTYPE	||	0	
+				0	0	0	CLOUD	PROBABILITY_EXTREME	|Probability Extreme|	rProbExtreme	REALTYPE	||	0	
+				0	0	0	CLOUD	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	CLOUD	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	CLOUD	PARENT_NAME	|Parent Name|	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	0	CLOUD	MEASUREMENT_INTERVAL	|Measurement Interval|	rMeasInterval	REALTYPE	||	0	
+				0	1	0	CLOUD	ICON_Y	|Icon Y|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	CLOUD	ICON_X	|Icon X|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	CLOUD	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	CLOUD	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+				0	0	0	CLOUD	CONGESTION_INDICATOR	|Congestion Indicator|	eCongestion	ENUMTYPE	CongestionState	0	
+	|Cloud Access Link|	Layouts.Links	1	1			CLOUD_ACCESS_LINK	||	||	1	0	cCldAcc	CldAccessLinkConfigObj	||
+7				0	0	0	CLOUD_ACCESS_LINK	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	CLOUD_ACCESS_LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	CLOUD_ACCESS_LINK	PARENT_NAME	|Parent Name|	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	1	0	CLOUD_ACCESS_LINK	ICON_Y	|Icon Y|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	CLOUD_ACCESS_LINK	ICON_X	|Icon X|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	CLOUD_ACCESS_LINK	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+	Parm	||	0	0			CLOUD_ACCESS_LINK_PARM	||	||	1	0	cCldAcc	CldAccessLinkConfigParmObj	||
+10				0	0	0	CLOUD_ACCESS_LINK_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	PER_VC_BUFFERING	|Per Vc Buffering|	bPerVC	BOOLEANTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	PACKET_DISCARD_TYPE	|Packet Discard Type|	eDiscardType	ENUMTYPE	PacketDiscardType	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	INGRESS_BANDWIDTH	|Ingress Bandwidth|	rBandwidth	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	INFINITE_BUFFER	|Infinite Buffer|	bInfBuffer	BOOLEANTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	EPD_DISCARD_THRESHOLD	|Epd Discard Threshold|	rBufferThreshold	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	EGRESS_BUFFER_SIZE	|Egress Buffer Size|	rOutBuffer	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	EGRESS_BUFFER_POLICY	|Egress Buffer Policy|	oBufferPolicy.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	EGRESS_BANDWIDTH	|Egress Bandwidth|	rRevBandwidth	REALTYPE	||	0	
+				0	0	0	CLOUD_ACCESS_LINK_PARM	BUFFER_UNITS	|Buffer Units|	eBufSizeUnits	ENUMTYPE	MsgSizeUnitType	0	
+	|Cloud Access Point|	|Layouts.Access Points|	1	0			CLOUD_ACCESS_PAD	||	||	1	0	cCldArc	CloudAccessPadObj	||
+3				0	0	0	CLOUD_ACCESS_PAD	PERCENTAGE	Percentage	Percentage	REALTYPE	||	0	
+				0	1	0	CLOUD_ACCESS_PAD	OWNER	Owner	PadParent	OBJECTTYPE	ParentType	0	
+				0	0	0	CLOUD_ACCESS_PAD	GRAVITY	Gravity	Gravity	ENUMTYPE	PadGravityType	0	
+	|Cloud Gateway Arc|	Arcs	1	0			CLOUD_GATEWAY_ARC	||	||	1	0	cCldArc	CloudGWArcObj	||
+5				0	1	0	CLOUD_GATEWAY_ARC	STOP	Stop	Stop.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	CLOUD_GATEWAY_ARC	START	Start	Start	OBJECTTYPE	NodeOrGatewayType	0	
+				0	1	0	CLOUD_GATEWAY_ARC	PARENT_NAME	|Parent Name|	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	0	0	CLOUD_GATEWAY_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	0	0	CLOUD_GATEWAY_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+	|Cloud VC|	Layouts	1	1			CLOUD_VC	||	||	1	0	cCldVC	CldVCConfigObj	||
+7				0	0	0	CLOUD_VC	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	CLOUD_VC	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	CLOUD_VC	PARENT_NAME	|Parent Name|	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	1	0	CLOUD_VC	ICON_Y	|Icon Y|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	CLOUD_VC	ICON_X	|Icon X|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	CLOUD_VC	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	CLOUD_VC	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+	|Cloud Vc Arc|	Arcs	1	0			CLOUD_VC_ARC	||	||	1	0	cCldArc	CldVCArcObj	||
+5				0	1	0	CLOUD_VC_ARC	STOP	Stop	Stop.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	CLOUD_VC_ARC	START	Start	Start.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	CLOUD_VC_ARC	PARENT_NAME	|Parent Name|	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	0	0	CLOUD_VC_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	0	0	CLOUD_VC_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+	Parm	||	0	1			COMP_COMM_PARM	||	||	1	0	cConfig	ApplicConfigParmObj	||
+26				0	0	0	COMP_COMM_PARM	VIRTUAL_CUT_THROUGH	|Virtual Cut-through|	bVirtualCutThrough	BOOLEANTYPE	||	0	
+				0	0	0	COMP_COMM_PARM	TRANSFER_TIME	|Transfer Time|	sotTransferTime	OBJECTTYPE	SampleObj	0	
+				0	0	0	COMP_COMM_PARM	TIME_SLICE	|Time Slice|	sotTimeSlice	OBJECTTYPE	SampleObj	0	
+				1	0	0	COMP_COMM_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				0	0	0	COMP_COMM_PARM	SRC_SINK_ONLY	|Src Sink Only|	bSrcSnkOnly	BOOLEANTYPE	||	0	
+				0	0	0	COMP_COMM_PARM	SECTOR_SIZE	|Sector Size|	rSectorSize	REALTYPE	||	0	
+				0	0	0	COMP_COMM_PARM	PROTOCOL_PROCESSING	|Protocol Processing|	oMultiprotocolListMgr.qList	OBJECTTYPE	QueueObj.ProtocolProcessing	0	
+				0	0	0	COMP_COMM_PARM	PROCESSING_TIME_PER_CYCLE	|Processing Time Per Cycle|	sotProcessingTimePerCycle	OBJECTTYPE	SampleObj	0
+				1	0	0	COMP_COMM_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0
+				0	0	0	COMP_COMM_PARM	PORT_PROCESSING_SPECIAL_CASE	|Port Processing Special Case|	oPortDelayListMgr.qList	OBJECTTYPE	QueueObj.PortDelay	0
+				0	0	0	COMP_COMM_PARM	PACKET_PROCESSING_USES_PROCESSOR	|Packet Processing Uses Processor|	bPktProcUsesProcessor	BOOLEANTYPE	||	0
+				0	0	0	COMP_COMM_PARM	OVERHEAD_TIME	|Overhead Time|	sotOverheadTime	OBJECTTYPE	SampleObj	0
+				0	0	0	COMP_COMM_PARM	OUTPUT_PORT_PROCESSING	|Output Port Processing|	tDefaultOutPortDelay	REALTYPE	||	0
+				1	0	0	COMP_COMM_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0
+				0	0	0	COMP_COMM_PARM	NODE_BUFFER_UNITS	|Node Buffer Units|	eNodeBufSizeUnits	ENUMTYPE	MsgSizeUnitType	0
+				0	0	0	COMP_COMM_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0
+				0	0	0	COMP_COMM_PARM	INPUT_PORT_PROCESSING	|Input Port Processing|	tDefaultInPortDelay	REALTYPE	||	0
+				1	0	0	COMP_COMM_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0
+				0	0	0	COMP_COMM_PARM	FILE_USES_PROCESSOR	|File Uses Processor|	bFileUsesProcessor	BOOLEANTYPE	||	0
+				0	0	0	COMP_COMM_PARM	FILE	File	oFileMgr.qList	OBJECTTYPE	QueueObj.Files	0
+				0	0	0	COMP_COMM_PARM	DELAY_PER_VC_REQUEST	|Delay Per Vc Request|	sotDelayPerVCRequest	OBJECTTYPE	SampleObj	0
+				0	0	0	COMP_COMM_PARM	DELAY_PER_KBYTE	|Delay Per Kbyte|	sotDelayPerKByte	OBJECTTYPE	SampleObj	0
+				0	0	0	COMP_COMM_PARM	CALL_BANDWIDTH	|Call Bandwidth|	rCallBandwidth	REALTYPE	||	0
+				0	0	0	COMP_COMM_PARM	BUFFER_SELECTION_RULE	|Buffer Selection Rule|	eBufferSelRule	ENUMTYPE	BufferSelRuleType	0	
+				0	0	0	COMP_COMM_PARM	APPLICATION_SELECTION_RULE	|Application Selection Rule|	eAppSelRule	ENUMTYPE	AppSelRuleType	0	
+				0	0	0	COMP_COMM_PARM	APP_PKT_SELECTION_RULE	|App Pkt Selection Rule|	eAppPktSelRule	ENUMTYPE	AppPktSelRuleType	0	
+	Parm	||	0	1			COMPUTER_GROUP_PARM	||	||	1	0	cConfig	ComputerConfigParmObj	||
+23				0	0	0	COMPUTER_GROUP_PARM	TRANSFER_TIME	|Transfer Time|	sotTransferTime	OBJECTTYPE	SampleObj	0	
+				0	0	0	COMPUTER_GROUP_PARM	TIME_SLICE	|Time Slice|	sotTimeSlice	OBJECTTYPE	SampleObj	0	
+				1	0	0	COMPUTER_GROUP_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	SECTOR_SIZE	|Sector Size|	rSectorSize	REALTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	QUANTITY	Quantity	iQuantity	INTEGERTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	PROCESSING_TIME_PER_CYCLE	|Processing Time Per Cycle|	sotProcessingTimePerCycle	OBJECTTYPE	SampleObj	0	
+				1	0	0	COMPUTER_GROUP_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	PORT_PROCESSING_SPECIAL_CASE	|Port Processing Special Case|	oPortDelayListMgr.qList	OBJECTTYPE	QueueObj.PortDelay	0	
+				0	0	0	COMPUTER_GROUP_PARM	PACKET_PROCESSING_USES_PROCESSOR	|Packet Processing Uses Processor|	bPktProcUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	OVERHEAD_TIME	|Overhead Time|	sotOverheadTime	OBJECTTYPE	SampleObj	0	
+				0	0	0	COMPUTER_GROUP_PARM	OUTPUT_PORT_PROCESSING	|Output Port Processing|	tDefaultOutPortDelay	REALTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	NODE_BUFFER_UNITS	|Node Buffer Units|	eNodeBufSizeUnits	ENUMTYPE	MsgSizeUnitType	0	
+				0	0	0	COMPUTER_GROUP_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	INPUT_PORT_PROCESSING	|Input Port Processing|	tDefaultInPortDelay	REALTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	FILE_USES_PROCESSOR	|File Uses Processor|	bFileUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	COMPUTER_GROUP_PARM	FILE	File	oFileMgr.qList	OBJECTTYPE	QueueObj.Files	0	
+				0	0	0	COMPUTER_GROUP_PARM	DELAY_PER_VC_REQUEST	|Delay Per Vc Request|	sotDelayPerVCRequest	OBJECTTYPE	SampleObj	0	
+				0	0	0	COMPUTER_GROUP_PARM	DELAY_PER_KBYTE	|Delay Per Kbyte|	sotDelayPerKByte	OBJECTTYPE	SampleObj	0	
+				0	0	0	COMPUTER_GROUP_PARM	BUFFER_SELECTION_RULE	|Buffer Selection Rule|	eBufferSelRule	ENUMTYPE	AppSelRuleType	0	
+				0	0	0	COMPUTER_GROUP_PARM	APPLICATION_SELECTION_RULE	|Application Selection Rule|	eAppSelRule	ENUMTYPE	AppSelRuleType	0	
+				0	0	0	COMPUTER_GROUP_PARM	APP_PKT_SELECTION_RULE	|App Pkt Selection Rule|	eAppPktSelRule	ENUMTYPE	AppPktSelRuleType	0	
+	Parm	||	0	1			CONSTANT_RATE_PARM	||	||	1	0	cRatCtl	ConstantRCParmObj	||
+5				0	0	0	CONSTANT_RATE_PARM	USE_CIR	|Use Cir|	bUseCIR	BOOLEANTYPE	||	0	
+				0	0	0	CONSTANT_RATE_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0	
+				0	0	0	CONSTANT_RATE_PARM	BURST_TYPE	|Burst Type|	eBurst	ENUMTYPE	BurstType	0	
+				1	0	0	CONSTANT_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+				0	0	0	CONSTANT_RATE_PARM	BURST_INTERVAL	|Burst Interval|	tInterval	REALTYPE	||	0	
+	Parm	||	0	1			CSMA_CD_PARM	||	||	1	0	cLnkCfg	CsmaCdParmObj	||
+20				0	0	0	CSMA_CD_PARM	STREAM	Stream	iStream	INTEGERTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	SLOT_TIME	|Slot Time|	tSlotTime	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	RETRY_LIMIT	|Retry Limit|	iRetryLimit	INTEGERTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	RETRY_INTERVAL_TYPE	|Retry Interval Type|	eRetryInterval	ENUMTYPE	RetryIntervalType	0	
+				0	0	0	CSMA_CD_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	PROB_DISTRIBUTION	|Prob Distribution|	sotRetryInterval	OBJECTTYPE	SampleObj	0	
+				0	0	0	CSMA_CD_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	OFFSET	Offset	tOffset	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	JAM	Jam	tJam	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	INTER_FRAME_GAP	|Inter Frame Gap|	tInterframeGap	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	GIVE_UP_INTERVAL	|Give Up Interval|	tGiveUpInterval	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	CSMA_CD_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	CONTROL_TRANS_RATE	|Control Trans Rate|	rControlTransRate	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	CONTROL_CHANNEL	|Control Channel|	bControlChannel	BOOLEANTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	COLLISION_WINDOW	|Collision Window|	tCollisionWindow	REALTYPE	||	0	
+				1	0	0	CSMA_CD_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	CSMA_CD_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Parm	||	0	1			CSMA_PARM	||	||	1	0	cLnkCfg	CsmaParmObj	||
+21				0	0	0	CSMA_PARM	STREAM	Stream	iStream	INTEGERTYPE	||	0	
+				0	0	0	CSMA_PARM	SLOT_TIME	|Slot Time|	tSlotTime	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	RETRY_LIMIT	|Retry Limit|	iRetryLimit	INTEGERTYPE	||	0	
+				0	0	0	CSMA_PARM	RETRY_INTERVAL_TYPE	|Retry Interval Type|	eRetryInterval	ENUMTYPE	RetryIntervalType	0	
+				0	0	0	CSMA_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	PROB_DISTRIBUTION	|Prob Distribution|	sotRetryInterval	OBJECTTYPE	SampleObj	0	
+				0	0	0	CSMA_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	CSMA_PARM	OFFSET	Offset	tOffset	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	CSMA_PARM	JAM	Jam	tJam	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	INTER_FRAME_GAP	|Inter Frame Gap|	tInterframeGap	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	GIVE_UP_INTERVAL	|Give Up Interval|	tGiveUpInterval	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	CSMA_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	CSMA_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	CSMA_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	CONTROL_TRANS_RATE	|Control Trans Rate|	rControlTransRate	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	CONTROL_CHANNEL	|Control Channel|	bControlChannel	BOOLEANTYPE	||	0	
+				0	0	0	CSMA_PARM	COLLISION_WINDOW	|Collision Window|	tCollisionWindow	REALTYPE	||	0	
+				1	0	0	CSMA_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	CSMA_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Trigger	||	0	0			DUMMY1	||	||	1	0	cTrig	TrigListEleObj	||
+5				0	0	0	DUMMY1	||	|Text or Name|	sTrigQualifier	STRINGTYPE	||	0	
+				0	0	0	DUMMY1	||	Delay	sotTriggerDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	DUMMY1	||	Rule	eTriggerRule	ENUMTYPE	TriggerRuleType	0	
+				0	0	0	DUMMY1	||	Successor	oTriggeredSource	OBJECTTYPE	UnopenableType	0	
+				0	0	0	DUMMY1	||	Probability	rWeight	REALTYPE	||	0	
+	|Port Delay|	||	0	0			DUMMY2	||	||	1	0	cConfig	PortDelayObj	||
+2				0	0	0	DUMMY2	||	|In Delay|	tInDelay	REALTYPE	||	0	
+				0	0	0	DUMMY2	||	|Out Delay|	tOutDelay	REALTYPE	||	0	
+	|Call Routing Protocol|	||	0	0			DUMMY3	||	||	1	0	cRteLib	ShortestPathCallRoutingObj	||
+3				0	0	0	DUMMY3	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+				0	0	0	DUMMY3	||	|Routing Update|	tUpdateInterval	REALTYPE	||	0	
+				0	0	0	DUMMY3	||	Preemption	bPreemption	BOOLEANTYPE	||	0	
+	|Call Routing Protocol|	||	0	0			DUMMY4	||	||	1	0	cRteLib	MinPenaltyCallRoutingObj	||
+3				0	0	0	DUMMY4	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+				0	0	0	DUMMY4	||	|Routing Update|	tUpdateInterval	REALTYPE	||	0	
+				0	0	0	DUMMY4	||	Preemption	bPreemption	BOOLEANTYPE	||	0	
+	|Packet Routing Protocol|	||	0	0			DUMMY5	||	||	1	0	cRteLib	ShortestPathPacketRoutingObj	||
+2				0	0	0	DUMMY5	||	|Connect Oriented|	bSessionRouting	BOOLEANTYPE	||	0	
+				0	0	0	DUMMY5	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+	|Packet Routing Protocol|	||	0	0			DUMMY6	||	||	1	0	cRteLib	IGRPRoutingObj	||
+5				0	0	0	DUMMY6	||	|Connect Oriented|	bSessionRouting	BOOLEANTYPE	||	0	
+				0	0	0	DUMMY6	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+				0	0	0	DUMMY6	||	|LAN Delay|	rLANDelay	REALTYPE	||	0	
+				0	0	0	DUMMY6	||	|Other Delay|	rOtherDelay	REALTYPE	||	0	
+				0	0	0	DUMMY6	||	|Routing Update|	tUpdateInterval	REALTYPE	||	0	
+	|Packet Routing Protocol|	||	0	0			DUMMY7	||	||	1	0	cRteLib	SPFRoutingObj	||
+2				0	0	0	DUMMY7	||	|Connect Oriented|	bSessionRouting	BOOLEANTYPE	||	0	
+				0	0	0	DUMMY7	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+	|Packet Routing Protocol|	||	0	0			DUMMY8	||	||	1	0	cRteLib	MinPenaltyPktRoutingObj	||
+4				0	0	0	DUMMY8	||	|Congestion Threshold Type|	eTrafMetric	ENUMTYPE	CongestionMeasureType	0	
+				0	0	0	DUMMY8	||	|Connect Oriented|	bSessionRouting	BOOLEANTYPE	||	0	
+				0	0	0	DUMMY8	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+				0	0	0	DUMMY8	||	|Routing Update|	tUpdateInterval	REALTYPE	||	0	
+	|Packet Routing Protocol|	||	0	0			DUMMY9	||	||	1	0	cRteLib	ShortestMeasuredDelayRoutingObj	||
+3				0	0	0	DUMMY9	||	|Connect Oriented|	bSessionRouting	BOOLEANTYPE	||	0	
+				0	0	0	DUMMY9	||	|Deviation %|	rDeviationPercen	REALTYPE	||	0	
+				0	0	0	DUMMY9	||	|Routing Update|	tUpdateInterval	REALTYPE	||	0	
+	Parm	||	0	0			ENHANCED_WINDOW_PARM	||	||	1	0	cFCEnh	FlowCtlEnhParmObj	||
+1				0	0	0	ENHANCED_WINDOW_PARM	ERROR_CTL_TYPE	|Error Ctl Type|	eErrorControl	ENUMTYPE	ErrorControlType	0	
+	Parm	||	0	1			FDDI_BASIC_PARM	||	||	1	0	cLnkCf2	FDDIParmObj	||
+11				0	0	0	FDDI_BASIC_PARM	TOKEN_PASS_DELAY	|FDDI Pass Delay|	tTokPassDelay	REALTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	FDDI_BASIC_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	FDDI_TARGET_TOKEN_ROT_TIME	|FDDI Target Token Rotation Time|	tTargetTokRotTime	REALTYPE	||	0	
+				1	0	0	FDDI_BASIC_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	FDDI_BASIC_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Parm	||	0	0			FRAME_RELAY_TRAFFIC_PARM	||	||	1	0	cTrfPol	FRPolicyParmObj	||
+9				0	0	0	FRAME_RELAY_TRAFFIC_PARM	USE_CIR	|Use Cir|	bUseCIR	BOOLEANTYPE	||	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	THRESHOLD_DE	|Threshold De|	iThreshold1	INTEGERTYPE	||	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	THRESHOD_DISCARD	|Threshod Discard|	iThreshold2	INTEGERTYPE	||	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	SET_DE_METHOD	|Set De Method|	eSetDE	ENUMTYPE	SetDEType	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	NEVER_DISCARD	|Never Discard|	bNeverDiscard	BOOLEANTYPE	||	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	COUNT_DE_TYPE	|Count De Type|	eFRCount	ENUMTYPE	FRCountType	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	BURST_TYPE	|Burst Type|	eBurst	ENUMTYPE	BurstType	0	
+				0	0	0	FRAME_RELAY_TRAFFIC_PARM	BURST_INTERVAL	|Burst Interval|	tInterval	REALTYPE	||	0	
+	Parm	||	0	1			FRAME_RELAY_VC_PARM	||	||	1	0	cCldVC	CldVCConfigParmObj	||
+9				0	0	0	FRAME_RELAY_VC_PARM	USE_CIR	|Use Cir|	bUseCIR	BOOLEANTYPE	||	0	
+				0	0	0	FRAME_RELAY_VC_PARM	PROPAGATION_DELAY	|Propagation Delay|	tPropDelay	REALTYPE	||	0	
+				0	0	0	FRAME_RELAY_VC_PARM	NEVER_DROP_FRAMES	|Never Drop Frames|	bNeverDrop	BOOLEANTYPE	||	0	
+				0	0	0	FRAME_RELAY_VC_PARM	HOP_COUNT	|Hop Count|	soHopCount	OBJECTTYPE	SampleObj	0	
+				0	0	0	FRAME_RELAY_VC_PARM	DISCARD_ELIGIBLE_SETTING	|Discard Eligible Setting|	eDESetting	ENUMTYPE	DESettingType	0	
+				0	0	0	FRAME_RELAY_VC_PARM	BURST_TYPE	|Burst Type|	eBurst	ENUMTYPE	BurstType	0	
+				0	0	0	FRAME_RELAY_VC_PARM	BURST_INTERVAL	|Burst Interval|	tBurstInterval	REALTYPE	||	0	
+				1	0	0	FRAME_RELAY_VC_PARM	BURST_EXCESS	|Burst Excess|	rBurstExcess	REALTYPE	||	0	
+				1	0	0	FRAME_RELAY_VC_PARM	BURST_COMMITTED	|Burst Committed|	rBurstCommitted	REALTYPE	||	0	
+	|Subnet Access Point|	|Layouts.Access Points|	1	0			GATEWAY	||	||	1	0	cPort	GatewayPadObj	||
+3				0	0	0	GATEWAY	PERCENTAGE	Percentage	Percentage	REALTYPE	||	0	
+				0	1	0	GATEWAY	OWNER	|Owner|	PadParent	OBJECTTYPE	ParentType	0	
+				0	0	0	GATEWAY	GRAVITY	Gravity	Gravity	ENUMTYPE	PadGravityType	0	
+	|Gateway Arc|	|Arcs|	1	0			GATEWAY_ARC	||	||	1	0	cPort	GatewayArcObj	||
+5				0	1	0	GATEWAY_ARC	PARENT_NAME	Parent	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	1	0	GATEWAY_ARC	NODE	|Node|	Start.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	0	0	GATEWAY_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	1	0	GATEWAY_ARC	GATEWAY	|Gateway|	Stop	OBJECTTYPE	NodeOrGatewayType	0	
+				0	0	0	GATEWAY_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+	Aloha	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	AlohaConfigObj	||
+0	|FDDI Basic|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	FDDIConfigObj	||
+0	|Priority FDDI|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityFDDIConfigObj	||
+0	|Priority Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityTokenRingConfigObj	||
+0	|Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	TokenRingConfigObj	||
+0	CSMA	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaConfigObj	||
+0	CSMA/CD	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaCdConfigObj	||
+0	Point-To-Point	Layouts.Links	1	1			LINK	||	||	1	0	cPPLink	P2PConfigObj	||
+0	Polling	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	PollingConfigObj	||
+14				0	0	0	LINK	TIME_TO_REPAIR	|Time To Repair|	oConfigOwner.soTimeToRepair	OBJECTTYPE	SampleObj	0	
+				0	0	0	LINK	TIME_TO_FAILURE	|Time To Failure|	oConfigOwner.soTimeToFailure	OBJECTTYPE	SampleObj	0	
+				0	0	0	LINK	SNAPSHOT_REPORT	|Snapshot Reports|	||	NOTYPE	SnapshotReportType	0	
+				0	0	0	LINK	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	LINK	PARENT_NAME	Parent	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	0	LINK	NEXT_STATE_CHANGE	|Next State Change|	tOfNextStateChange	REALTYPE	||	0	
+				0	1	0	LINK	LINK_LOAD_TYPE_AND_PARM	|Link Load Parm|	oConfigOwner.oLinkLoader.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				1	0	0	LINK	LINK_LOAD_FACTOR_Y	|Link Load Factor Y|	oConfigOwner.rLoadFactorY	REALTYPE	||	0	
+				1	0	0	LINK	LINK_LOAD_FACTOR_X	|Link Load Factor X|	oConfigOwner.rLoadFactorX	REALTYPE	||	0	
+				0	1	0	LINK	ICON_Y	|Icon Y Coord|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	LINK	ICON_X	|Icon X Coord|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	LINK	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	LINK	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+	|Macro Command|	Command	1	0			MACRO_CMD	||	||	1	0	cMacCmd	MacroCommandObj	||
+2				0	0	0	MACRO_CMD	COMMAND_SEQ	|Command Sequence|	oCmdSeqMgr.qList	OBJECTTYPE	QueueObj.Commands	0	
+				0	0	0	MACRO_CMD	ATOMIC_WRT_VARIABLES	|Atomic wrt Variables|	bAtomic	BOOLEANTYPE	||	0	
+	|Message Source|	|Layouts.Sources|	1	1			MESSAGE_SOURCE	||	||	1	0	cMsgSrc	MsgSourceObj	||
+28				0	0	0	MESSAGE_SOURCE	TRIGGER_LIST_TYPE	|Trigger List Type|	bWeightedListOption	ENUMTYPE	TriggerListType	0	
+				0	0	0	MESSAGE_SOURCE	TRIGGER	Trigger	oTrigListMgr.qList	OBJECTTYPE	QueueObj.Triggers	0	
+				0	0	0	MESSAGE_SOURCE	SCHEDULE	Schedule	eSchdType	ENUMTYPE	SchdMethodType	0	
+				0	0	0	MESSAGE_SOURCE	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	SourceCommand.Field	0	
+				0	0	0	MESSAGE_SOURCE	REC_MSG_DELAY	|Rec Msg Delay|	sotRecMsgDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	MESSAGE_SOURCE	REC_MSG	|Rec Msg|	oReceivedMsgSeqMgr.qList	OBJECTTYPE	QueueObj.RecMsgs	0	
+				1	0	0	MESSAGE_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+				0	0	0	MESSAGE_SOURCE	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	MESSAGE_SOURCE	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	MESSAGE_SOURCE	PRIORITY	Priority	rPriority	REALTYPE	SourceCommand.Field	0	
+				0	0	0	MESSAGE_SOURCE	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				0	1	0	MESSAGE_SOURCE	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				1	0	0	MESSAGE_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	MESSAGE_SOURCE	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	SourceCommand.MsgTextType	0	
+				0	0	0	MESSAGE_SOURCE	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	SourceCommand.MsgTextString	0	
+				0	0	0	MESSAGE_SOURCE	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	SourceCommand.MsgSizeUnitType	0	
+				0	0	0	MESSAGE_SOURCE	LAST	Last	oGenratr.sotLast	OBJECTTYPE	SampleObj	0	
+				0	1	0	MESSAGE_SOURCE	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	MESSAGE_SOURCE	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	MESSAGE_SOURCE	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	MESSAGE_SOURCE	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				1	0	0	MESSAGE_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				0	0	0	MESSAGE_SOURCE	FIRST	First	oGenratr.sotFirst	OBJECTTYPE	SampleObj	0	
+				0	0	0	MESSAGE_SOURCE	DESTINATION_TYPE	|Destination Type|	oDestListMgr.eDestinationType	ENUMTYPE	SourceCommand.DestinationType	0	
+				0	0	0	MESSAGE_SOURCE	DESTINATION	Destination	oDestListMgr.qList	OBJECTTYPE	SourceCommand.QueueObj.Destinations	0	
+				0	0	0	MESSAGE_SOURCE	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	SourceCommand.CalcType	0	
+				1	0	0	MESSAGE_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	MESSAGE_SOURCE	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	Backbone	Areas	0	0			MODEL	||	||	1	0	cModel	cnModelObj	||
+43				0	0	0	MODEL	ZOOMSCALE	Zoomscale	oConfigOwner.BasicDisplayNodeData.ZoomScale	REALTYPE	||	0	
+				0	0	0	MODEL	ZOOM_Y	|Zoom Y|	oConfigOwner.BasicDisplayNodeData.ZoomY	REALTYPE	||	0	
+				0	0	0	MODEL	ZOOM_X	|Zoom X|	oConfigOwner.BasicDisplayNodeData.ZoomX	REALTYPE	||	0	
+				0	0	0	MODEL	WARMUP_LENGTH	|Warmup Length|	oSimMgr.rWarmupLength	REALTYPE	||	0	
+				0	0	0	MODEL	WARMUP_EVERY_REP	|Warmup Every Rep|	oSimMgr.bWarmupEveryRep	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	VIRTUAL_SIZE	|Virtual Size|	oConfigOwner.BasicDisplayNodeData.VirtualSize	REALTYPE	||	0	
+				0	0	0	MODEL	TRAFFIC_SCALE	|Traffic Scale|	rTrafficScale	REALTYPE	||	0	
+				0	0	0	MODEL	TRACE_TO_SCREEN	|Trace To Screen|	oTraceMgr.bTraceToScreen	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	TRACE_TO_DISK	|Trace To Disk|	oTraceMgr.bTraceToDisk	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	TRACE_NEXT_ONOFF_TIME	|Trace Next Onoff Time|	oTraceMgr.tInitialStateChange	REALTYPE	||	0	
+				0	0	0	MODEL	TRACE_FILE_NAME	|Trace File Name|	oTraceMgr.sTraceFile	STRINGTYPE	||	0	
+				0	0	0	MODEL	STEP_SIZE	|Step Size|	oAnimMgr.rStepSize	REALTYPE	||	0	
+				0	0	0	MODEL	SNAPSHOT_REPORT_ALL	|Snapshot Reports (all on)|	||	NOTYPE	SnapshotReportAllType	0	
+				0	0	0	MODEL	SINGLE_STEP	|Single Step|	oTraceMgr.bSingleStep	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	SHOW_CLOCK	|Show Clock|	oAnimMgr.bShowClock	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	SESSION_FILE_SCALE	|Session File Scale|	oExtSesFileMgr.rTrafficScale	REALTYPE	||	0	
+				0	0	0	MODEL	SESSION_FILE	|Session File|	oExtSesFileMgr.bUseFile	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	RESET_SYSTEM	|Reset System|	oSimMgr.bResetSystem	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	REP_LENGTH	|Rep Length|	oSimMgr.rTrialLength	REALTYPE	||	0	
+				0	0	0	MODEL	POSTRUN_REPORT_ALL	|Postrun Reports (all on)|	||	NOTYPE	PostrunReportAllType	0	
+				0	0	0	MODEL	PAUSE	Pause	iPause	INTEGERTYPE	||	0	
+				0	0	0	MODEL	PACKET_ROUTING_PROTOCOL	|Packet Routing Protocol|	oPacketRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	
+				0	0	0	MODEL	NUMBER_OF_REPS	|Number Of Reps|	oSimMgr.iNumReps	INTEGERTYPE	||	0	
+				0	0	0	MODEL	NODE_UTIL_UPDATE_INTERVAL	|Node Util Update Interval|	tNodeUtilMeasureInterval	REALTYPE	||	0	
+				0	0	0	MODEL	MSG_FILE_SCALE	|Msg File Scale|	oExtMsgFileMgr.rTrafficScale	REALTYPE	||	0	
+				0	0	0	MODEL	MSG_FILE	|Msg File|	oExtMsgFileMgr.bUseFile	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	MESSAGE_DELAYS_INCL_QUEUING	|Message Delays Incl Queuing|	bMsgDlyInclInitAppQ	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	LINK_UTIL_UPDATE_INTERVAL	|Link Util Update Interval|	tUtilMeasureInterval	REALTYPE	||	0	
+				0	0	1	MODEL	GLOBAL_VARIABLE	|Global Variable|	oUsrVarMgr.qList	OBJECTTYPE	QueueObj	0	
+				0	0	1	MODEL	GLOBAL_COMMAND	|Global Command|	oCommandMgr.qList	OBJECTTYPE	QueueObj	0	
+				0	0	0	MODEL	FOREGROUND_R	|Foreground R|	oConfigOwner.BasicDisplayNodeData.ForegroundR	REALTYPE	||	0	
+				0	0	0	MODEL	FOREGROUND_G	|Foreground G|	oConfigOwner.BasicDisplayNodeData.ForegroundG	REALTYPE	||	0	
+				0	0	0	MODEL	FOREGROUND_B	|Foreground B|	oConfigOwner.BasicDisplayNodeData.ForegroundB	REALTYPE	||	0	
+				0	0	0	MODEL	COLOR_SNAPSHOT_MEASURES	|Color Snapshot Measures|	bShowChroma	BOOLEANTYPE	SnapReqListMgrQ.Field	0	
+				0	0	0	MODEL	COLOR_ALARMS	|Color Alarms|	bShowAlarms	BOOLEANTYPE	SnapReqListMgrQ.Field	0	
+				0	0	0	MODEL	CALL_ROUTING_PROTOCOL	|Call Routing Protocol|	oCallRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	
+				0	0	0	MODEL	CALL_FILE_SCALE	|Call File Scale|	oExtCllFileMgr.rTrafficScale	REALTYPE	||	0	
+				0	0	0	MODEL	CALL_FILE	|Call File|	oExtCllFileMgr.bUseFile	BOOLEANTYPE	||	0	
+				0	0	0	MODEL	BACKGROUND_R	|Background R|	oConfigOwner.BasicDisplayNodeData.BackgroundR	REALTYPE	||	0	
+				0	0	0	MODEL	BACKGROUND_G	|Background G|	oConfigOwner.BasicDisplayNodeData.BackgroundG	REALTYPE	||	0	
+				0	0	0	MODEL	BACKGROUND_B	|Background B|	oConfigOwner.BasicDisplayNodeData.BackgroundB	REALTYPE	||	0	
+				0	0	0	MODEL	APPLICATION_TYPE	|Application Type|	oAppCategoryMgr.qList	OBJECTTYPE	QueueObj	0	
+				0	0	0	MODEL	ANIMATE	Animate	oAnimMgr.bShowTokens	BOOLEANTYPE	||	0	
+	|Named Distribution|	Miscellaneous	0	0			NAMED_DISTRIBUTION	||	||	1	0	cVarCmd	NamedExprObj	||
+4				0	0	0	NAMED_DISTRIBUTION	TRUNCATE_WO_ERROR	|Truncate wo Error|	bTruncateSilently	BOOLEANTYPE	||	0	
+				0	0	0	NAMED_DISTRIBUTION	SAMPLE	Sample	oDist	OBJECTTYPE	SampleObj	0	
+				0	0	0	NAMED_DISTRIBUTION	EXPRESSION	Expression	oExprCmd.sExpr	STRINGTYPE	||	0	
+				0	0	0	NAMED_DISTRIBUTION	DISTRIBUTION_TYPE	|Distribution Type|	eSampleType	ENUMTYPE	NamedSampleType	0	
+	|Processing Node|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ApplicConfigObj	||
+0	|Computer Group|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ComputerConfigObj	||
+0	Router	Layouts.Nodes	1	1			NODE	||	||	1	0	cRteNd	RouterConfigObj	||
+0	Switch	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ATMConfigObj	||
+13				0	0	1	NODE	VARIABLE	Variable	oUsrVarMgr.qList	OBJECTTYPE	QueueObj	0	
+				0	0	0	NODE	TIME_TO_REPAIR	|Time To Repair|	oConfigOwner.soTimeToRepair	OBJECTTYPE	SampleObj	0	
+				0	0	0	NODE	TIME_TO_FAILURE	|Time To Failure|	oConfigOwner.soTimeToFailure	OBJECTTYPE	SampleObj	0	
+				0	0	0	NODE	SNAPSHOT_REPORT	|Snapshot Reports|	||	NOTYPE	SnapshotReportType	0	
+				0	0	0	NODE	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	NODE	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	NODE	PARENT_NAME	Parent	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	0	NODE	NEXT_STATE_CHANGE	|Next State Change|	oConfigOwner.tOfNextStateChange	REALTYPE	||	0	
+				0	1	0	NODE	ICON_Y	|Icon Y Coord|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	NODE	ICON_X	|Icon X Coord|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	NODE	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	NODE	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+				0	0	1	NODE	COMMAND	Command	oCommandRepertoireMgr.qList	OBJECTTYPE	QueueObj	0	
+	|Packet Flow|	Miscellaneous	0	1			PACKET_FLOW	||	||	1	0	cPktFlo	PacketFlowObj	||
+10				0	0	0	PACKET_FLOW	STOP_NODE	|Stop Node|	oDestListMgr.qList	OBJECTTYPE	QueueObj.FlowDestinations	0	
+				0	0	0	PACKET_FLOW	START_NODE	|Start Node|	oAssignedNode	OBJECTTYPE	UnopenableType	0	
+				0	0	0	PACKET_FLOW	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE		0	
+				1	0	0	PACKET_FLOW	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0	
+				0	0	0	PACKET_FLOW	PRIORITY	Priority	rPriority	REALTYPE		0	
+				0	0	0	PACKET_FLOW	LAST	Last	oGenratr.sotLast	OBJECTTYPE	SampleObj	0	
+				1	0	0	PACKET_FLOW	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				0	0	0	PACKET_FLOW	FIRST	First	oGenratr.sotFirst	OBJECTTYPE	SampleObj	0	
+				1	0	0	PACKET_FLOW	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	PACKET_FLOW	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	UnopenableType	0	
+	|Packet Penalty Table|	||	0	0			PACKET_PENALTY_TABLE	||	||	1	0	cMetric	PktRoutingMetricObj	||
+1				0	0	0	PACKET_PENALTY_TABLE	TABLE	Table	oaThresholds	ARRAYTYPE	ThresholdArray	0	
+	|Routing Class|	||	0	0			PACKET_ROUTING_CLASS	||	||	1	0	cClass	PktRoutingClassObj	||
+6				0	0	0	PACKET_ROUTING_CLASS	UTIL_FACTOR	|Util Factor|	rUtilFactor	REALTYPE	||	0	
+				0	0	0	PACKET_ROUTING_CLASS	RETRY_INTERVAL	|Retry Interval|	sotRetryInterval	OBJECTTYPE	SampleObj	0	
+				0	0	0	PACKET_ROUTING_CLASS	REROUTE_CONNECTIONS	|Reroute Connections|	bRerouteConnections	BOOLEANTYPE	||	0	
+				0	0	0	PACKET_ROUTING_CLASS	HOP_LIMIT	|Hop Limit|	iHopLim	INTEGERTYPE	||	0	
+				0	0	0	PACKET_ROUTING_CLASS	DELAY_FACTOR	|Delay Factor|	rDelayFactor	REALTYPE	||	0	
+				0	0	0	PACKET_ROUTING_CLASS	BW_FACTOR	|Bw Factor|	rBWFactor	REALTYPE	||	0	
+	Parm	||	0	1			POLLING_PARM	||	||	1	0	cLnkCfg	PollingParmObj	||
+14				0	0	0	POLLING_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	POLL_TIME	|Poll Time|	tPoll	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	POLL_REQUIRED	|Poll Required|	bCtlNodeNeedsPoll	BOOLEANTYPE	||	0	
+				0	0	0	POLLING_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	POLLING_PARM	NAK_TIME	|Nak Time|	tNAK	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	POLLING_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	POLLING_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	POLLING_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	POLLING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	CONTROL_TRANS_RATE	|Control Trans Rate|	rControlTransRate	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	CONTROL_CHANNEL	|Control Channel|	bControlChannel	BOOLEANTYPE	||	0	
+				1	0	0	POLLING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	POLLING_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	|Port Arc|	|Arcs|	1	1			PORT_ARC	||	||	1	0	cPort	PortArcObj	||
+17				0	1	0	PORT_ARC	PARENT_NAME	Parent	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	0	0	PORT_ARC	PACKET_ROUTING_PENALTY_TABLE	|Packet Routing Penalty Table|	oPktRoutingMetric	OBJECTTYPE	||	0	
+				0	0	0	PORT_ARC	OUTPUT_BUFFER_QUEUE_TYPE	|Output Buffer Queue Type|	eOutQueueType	ENUMTYPE	BufferRankType	0	
+				0	0	0	PORT_ARC	OUTPUT_BUFFER_POLICY	|Output Buffer Policy|	oOutBufferPolicy.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				0	0	0	PORT_ARC	OUTPUT_BUFFER_LIMIT	|Output Buffer Limit|	rOutputBufferLimit	REALTYPE	||	0	
+				1	0	0	PORT_ARC	OUTPUT_BUFFER_DELAY	|Output Buffer Delay|	tOutputBufferDelay	REALTYPE	||	0	
+				0	1	0	PORT_ARC	NODE	|Node|	Start	OBJECTTYPE	NodeOrGatewayType	0	
+				0	1	0	PORT_ARC	LINK	|Link|	Stop	OBJECTTYPE	LinkOrCloudAccessType	0	
+				0	0	0	PORT_ARC	LINE_CARD_ID	|Line Card Id|	sEntityType	STRINGTYPE	||	0	
+				0	0	0	PORT_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	0	0	PORT_ARC	INPUT_BUFFER_QUEUE_TYPE	|Input Buffer Queue Type|	eInQueueType	ENUMTYPE	BufferRankType	0	
+				0	0	0	PORT_ARC	INPUT_BUFFER_POLICY	|Input Buffer Policy|	oInBufferPolicy.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				0	0	0	PORT_ARC	INPUT_BUFFER_LIMIT	|Input Buffer Limit|	rInputBufferLimit	REALTYPE	||	0	
+				1	0	0	PORT_ARC	INPUT_BUFFER_DELAY	|Input Buffer Delay|	tInputBufferDelay	REALTYPE	||	0	
+				0	0	0	PORT_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+				0	0	0	PORT_ARC	CALL_ROUTING_PENALTY_TABLE	|Call Routing Penalty Table|	oCllRoutingMetric	OBJECTTYPE	||	0	
+				0	0	0	PORT_ARC	BUFFER_SIZE_TYPE	|Buffer Units|	eBufSizeUnits	ENUMTYPE	MsgSizeUnitType	0	
+	Parm	||	0	0			PREEMPTION_BUFFER_POLICY_PARM	||	||	1	0	cBufPol	PreemptBufferPolicyParmObj	||
+5				0	0	0	PREEMPTION_BUFFER_POLICY_PARM	USE_DISCARD_ELIGIBLE	|Use Discard Eligible|	bUseDiscardEligible	BOOLEANTYPE	||	0	
+				0	0	0	PREEMPTION_BUFFER_POLICY_PARM	PREEMPT_PRIORITY_>_MIN	|Preempt Priority > Min|	bDiscard	BOOLEANTYPE	||	0	
+				0	0	0	PREEMPTION_BUFFER_POLICY_PARM	MINIMUM_PRIORITY	|Minimum Priority|	rPriority	REALTYPE	||	0	
+				0	0	0	PREEMPTION_BUFFER_POLICY_PARM	CONGESTION_THRESHOLD	|Congestion Threshold|	rCongThreshold	REALTYPE	||	0	
+				0	0	0	PREEMPTION_BUFFER_POLICY_PARM	CONGESTION_IDENTIFICATION_POLICY	|Congestion Identification Policy|	eCongIndPolicy	ENUMTYPE	CongIndPolicyType	0	
+	Parm	||	0	1			PRIORITY_FDDI_PARM	||	||	1	0	cLnkCf2	PriorityFDDIParmObj	||
+12				0	0	0	PRIORITY_FDDI_PARM	TOKEN_PASS_DELAY	|Priority FDDI Pass Delay|	tTokPassDelay	REALTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	PRIORITY_LIST	Prioritie	oPortDepParmListMgr.qList	OBJECTTYPE	QueueObj.Priorities	0	
+				0	0	0	PRIORITY_FDDI_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	PRIORITY_FDDI_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	FDDI_TARGET_TOKEN_ROT_TIME	|Priority FDDI Target Token Rotation Time|	tTargetTokRotTime	REALTYPE	||	0	
+				1	0	0	PRIORITY_FDDI_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	PRIORITY_FDDI_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Parm	||	0	1			PRIORITY_TOKEN_PASSING_PARM	||	||	1	0	cLnkCf2	PriorityTokenRingParmObj	||
+12				0	0	0	PRIORITY_TOKEN_PASSING_PARM	TOKEN_PASS_DELAY	|Token Pass Delay|	tTokPassDelay	REALTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	TOKEN_HOLD_TIME_UNITS	|Token Hold Time Units|	eTokenHoldUnits	ENUMTYPE	TokenHoldUnitsType	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	TOKEN_HOLD_LIMIT	|Token Hold Limit|	tTokHoldLimit	REALTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	PRIORITY_TOKEN_PASSING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	PRIORITY_TOKEN_PASSING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	PRIORITY_TOKEN_PASSING_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	|Process Command|	Command	1	1			PROCESS_DATA_CMD	||	||	1	0	cComman	ProcessingCommandObj	||
+6				0	0	0	PROCESS_DATA_CMD	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	PROCESS_DATA_CMD	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	PROCESS_DATA_CMD	DELAY_USES_PROCESSOR	|Delay Uses Processor|	bDelayUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	PROCESS_DATA_CMD	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	CalcType	0	
+				1	0	0	PROCESS_DATA_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	PROCESS_DATA_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	Parm	||	0	1			PT_TO_PT_PARM	||	||	1	0	cLnkCfg	PtToPtParmObj	||
+14				0	0	0	PT_TO_PT_PARM	TOT_PKT_CIRCUITS	|Tot Pkt Circuits|	iTotPktCircuits	INTEGERTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	TOT_CALL_CIRCUITS	|Tot Call Circuits|	iTotCallCircuits	INTEGERTYPE	||	0	
+				1	0	0	PT_TO_PT_PARM	REV_BANDWIDTH	|Rev Bandwidth|	rRevBandwidth	REALTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	RESERVED_CALL_BW_PERCEN	|Reserved Call Bw Percen|	rReservedCallBWPercen	REALTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	PT_TO_PT_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	CALL_BANDWIDTH	|Call Bandwidth|	rCallBandwidth	REALTYPE	||	0	
+				1	0	0	PT_TO_PT_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	PT_TO_PT_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	Parm	||	0	1			RANDOM_LINK_LOAD_PARM	||	||	1	0	cLnkLd	RandomLnkLdrParmObj	||
+7				0	0	0	RANDOM_LINK_LOAD_PARM	USE_CALL_FOR_UTIL	|Use Call for Util|	bUseCallForUtil	BOOLEANTYPE	||	0	
+				0	0	0	RANDOM_LINK_LOAD_PARM	PRIORITY	Priority	iPriority	INTEGERTYPE	||	0	
+				0	0	0	RANDOM_LINK_LOAD_PARM	IAT_STREAM_NO	|IAT Stream Number|	iIATStream	INTEGERTYPE	||	0	
+				1	0	0	RANDOM_LINK_LOAD_PARM	FRAME_SIZE	|Frame Size|	soFrameSize	OBJECTTYPE	SampleObj	0	
+				1	0	0	RANDOM_LINK_LOAD_PARM	FRAME_IAT	|Frame IAT|	soIAT	OBJECTTYPE	SampleObj	0	
+				0	0	0	RANDOM_LINK_LOAD_PARM	DE	DE	bDE	BOOLEANTYPE	||	0	
+				0	0	0	RANDOM_LINK_LOAD_PARM	COMPUTE_IAT	|Compute IAT|	bComputeIAT	BOOLEANTYPE	||	0	
+	|Read Command|	Command	1	1			READ_FILE_CMD	||	||	1	0	cComman	ReadCommandObj	||
+7				0	0	0	READ_FILE_CMD	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	READ_FILE_CMD	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	READ_FILE_CMD	FILE	File	oFileToAccess	OBJECTTYPE	FileObj	0	
+				0	0	0	READ_FILE_CMD	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	CalcType	0	
+				1	0	0	READ_FILE_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	READ_FILE_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+				0	0	0	READ_FILE_CMD	ACCESS_TYPE	|Access Type|	eModeType	ENUMTYPE	ReadWriteModeType	0	
+	|Remote Link|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteLinkConfigObj	||
+0	|Remote Node|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteNodeConfigObj	||
+0	Socket	Layouts.Sockets	1	1			REMOTE	||	||	1	0	cRemote	SocketObj	||
+6				1	0	0	REMOTE	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+				0	1	0	REMOTE	PARENT_NAME	|Parent Name|	oConfigOwner.NodeParent	OBJECTTYPE	ParentType	0	
+				0	1	0	REMOTE	ICON_Y	|Icon Y|	oConfigOwner.DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	REMOTE	ICON_X	|Icon X|	oConfigOwner.DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	REMOTE	ICON_SCALE	|Icon Scale|	oConfigOwner.DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	REMOTE	ICON_NAME	|Icon Name|	oConfigOwner.DisplayData.IconName	STRINGTYPE	||	0	
+	|Remote Arc|	Arcs	1	0			REMOTE_ARC	||	||	1	0	cRemote	RemoteArcObj	||
+5				0	1	0	REMOTE_ARC	STOP	Stop	Stop.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	REMOTE_ARC	START	Start	Start.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	REMOTE_ARC	PARENT_NAME	|Parent Name|	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	0	0	REMOTE_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	0	0	REMOTE_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+	|Response Source|	|Layouts.Sources|	1	1			RESPONSE_SOURCE	||	||	1	0	cResSrc	ResSourceObj	||
+20				0	0	0	RESPONSE_SOURCE	USE_ECHO_FOR_DESTINATION	|Use Echo For Destination|	bUseECHODestination	BOOLEANTYPE	SourceCommand.Field	0	
+				0	0	0	RESPONSE_SOURCE	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	SourceCommand.Field	0	
+				0	0	0	RESPONSE_SOURCE	REC_MSG_DELAY	|Rec Msg Delay|	sotRecMsgDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	RESPONSE_SOURCE	REC_MSG	|Received Message|	oReceivedMsgSeqMgr.qList	OBJECTTYPE	QueueObj.RecMsgs	0	
+				1	0	0	RESPONSE_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+				0	0	0	RESPONSE_SOURCE	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	RESPONSE_SOURCE	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	RESPONSE_SOURCE	PRIORITY	Priority	rPriority	REALTYPE	SourceCommand.Field	0	
+				0	1	0	RESPONSE_SOURCE	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				1	0	0	RESPONSE_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	RESPONSE_SOURCE	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	SourceCommand.MsgTextType	0	
+				0	0	0	RESPONSE_SOURCE	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	SourceCommand.MsgTextString	0	
+				0	0	0	RESPONSE_SOURCE	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	SourceCommand.MsgSizeUnitType	0	
+				0	1	0	RESPONSE_SOURCE	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	RESPONSE_SOURCE	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	RESPONSE_SOURCE	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	RESPONSE_SOURCE	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				0	0	0	RESPONSE_SOURCE	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	SourceCommand.CalcType	0	
+				1	0	0	RESPONSE_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	RESPONSE_SOURCE	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	Parm	||	0	1			ROUTER_PARM	||	||	1	0	cRteNd	RouterConfigParmObj	||
+26				0	0	0	ROUTER_PARM	TRANSFER_TIME	|Transfer Time|	sotTransferTime	OBJECTTYPE	SampleObj	0	
+				0	0	0	ROUTER_PARM	TIME_SLICE	|Time Slice|	sotTimeSlice	OBJECTTYPE	SampleObj	0	
+				1	0	0	ROUTER_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				0	0	0	ROUTER_PARM	SECTOR_SIZE	|Sector Size|	rSectorSize	REALTYPE	||	0	
+				0	0	0	ROUTER_PARM	PROTOCOL_PROCESSING	|Protocol Processing|	oMultiprotocolListMgr.qList	OBJECTTYPE	QueueObj.ProtocolProcessing	0	
+				0	0	0	ROUTER_PARM	PROCESSING_TIME_PER_CYCLE	|Processing Time Per Cycle|	sotProcessingTimePerCycle	OBJECTTYPE	SampleObj	0	
+				1	0	0	ROUTER_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0	
+				0	0	0	ROUTER_PARM	PORT_PROCESSING_SPECIAL_CASE	|Port Processing Special Case|	oPortDelayListMgr.qList	OBJECTTYPE	QueueObj.PortDelay	0	
+				0	0	0	ROUTER_PARM	PACKET_PROCESSING_USES_PROCESSOR	|Packet Processing Uses Processor|	bPktProcUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	ROUTER_PARM	OVERHEAD_TIME	|Overhead Time|	sotOverheadTime	OBJECTTYPE	SampleObj	0
+				0	0	0	ROUTER_PARM	OUTPUT_PORT_PROCESSING	|Output Port Processing|	tDefaultOutPortDelay	REALTYPE	||	0
+				1	0	0	ROUTER_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0
+				0	0	0	ROUTER_PARM	NODE_BUFFER_UNITS	|Node Buffer Units|	eNodeBufSizeUnits	ENUMTYPE	MsgSizeUnitType	0
+				0	0	0	ROUTER_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0
+				0	0	0	ROUTER_PARM	INPUT_PORT_PROCESSING	|Input Port Processing|	tDefaultInPortDelay	REALTYPE	||	0
+				1	0	0	ROUTER_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0
+				0	0	0	ROUTER_PARM	FILE_USES_PROCESSOR	|File Uses Processor|	bFileUsesProcessor	BOOLEANTYPE	||	0
+				0	0	0	ROUTER_PARM	FILE	File	oFileMgr.qList	OBJECTTYPE	QueueObj.Files	0
+				0	0	0	ROUTER_PARM	DELAY_PER_VC_REQUEST	|Delay Per Vc Request|	sotDelayPerVCRequest	OBJECTTYPE	SampleObj	0
+				0	0	0	ROUTER_PARM	DELAY_PER_KBYTE	|Delay Per Kbyte|	sotDelayPerKByte	OBJECTTYPE	SampleObj	0
+				0	0	0	ROUTER_PARM	CALL_BANDWIDTH	|Call Bandwidth|	rCallBandwidth	REALTYPE	||	0
+				0	0	0	ROUTER_PARM	BUSRATE	Busrate	rBusRate	REALTYPE	||	0
+				0	0	0	ROUTER_PARM	BUSCOUNT	Buscount	iBusCount	INTEGERTYPE	||	0
+				0	0	0	ROUTER_PARM	BUFFER_SELECTION_RULE	|Buffer Selection Rule|	eBufferSelRule	ENUMTYPE	BufferSelRuleType	0
+				0	0	0	ROUTER_PARM	APPLICATION_SELECTION_RULE	|Application Selection Rule|	eAppSelRule	ENUMTYPE	AppSelRuleType	0
+				0	0	0	ROUTER_PARM	APP_PKT_SELECTION_RULE	|App Pkt Selection Rule|	eAppPktSelRule	ENUMTYPE	AppPktSelRuleType	0	
+	|Session Source|	|Layouts.Sources|	1	1			SESSION_SOURCE	||	||	1	0	cSesSrc	SesSourceObj	||
+29				0	0	0	SESSION_SOURCE	TRIGGER_LIST_TYPE	|Trigger List Type|	bWeightedListOption	ENUMTYPE	TriggerListType	0	
+				0	0	0	SESSION_SOURCE	TRIGGER	Trigger	oTrigListMgr.qList	OBJECTTYPE	QueueObj.Triggers	0	
+				0	0	0	SESSION_SOURCE	SETUP_PKT_BYTES	|Setup Pkt Bytes|	iSetupPktBytes	INTEGERTYPE	SourceCommand.Field	0	
+				0	0	0	SESSION_SOURCE	SETUP_CONFIRM_BYTES	|Setup Confirm Bytes|	iConfirmPktBytes	INTEGERTYPE	SourceCommand.Field	0	
+				0	0	0	SESSION_SOURCE	SCHEDULE	Schedule	eSchdType	ENUMTYPE	SchdMethodType	0	
+				0	0	0	SESSION_SOURCE	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	SourceCommand.Field	0	
+				0	0	0	SESSION_SOURCE	REC_MSG_DELAY	|Rec Msg Delay|	sotRecMsgDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	SESSION_SOURCE	REC_MSG	|Rec Msg|	oReceivedMsgSeqMgr.qList	OBJECTTYPE	QueueObj.RecMsgs	0	
+				1	0	0	SESSION_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+				0	0	0	SESSION_SOURCE	PRIORITY	Priority	rPriority	REALTYPE	SourceCommand.ForwardMsgCommand.Field	0	
+				0	0	0	SESSION_SOURCE	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				0	1	0	SESSION_SOURCE	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				1	0	0	SESSION_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SourceCommand.ForwardMsgCommand.SampleObj	0	
+				1	0	0	SESSION_SOURCE	MSGS_PER_SESSION	|Msgs Per Session|	oForwardMsgSrc.oGenratr.soMaxCount	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	SESSION_SOURCE	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	SourceCommand.ForwardMsgCommand.MsgTextType	0	
+				0	0	0	SESSION_SOURCE	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	SourceCommand.ForwardMsgCommand.MsgTextString	0	
+				0	0	0	SESSION_SOURCE	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	SourceCommand.ForwardMsgCommand.MsgSizeUnitType	0	
+				1	0	0	SESSION_SOURCE	MSG_IAT	|Msg IAT|	oForwardMsgSrc.oGenratr.sotDelta1	OBJECTTYPE	SourceCommand.SampleObj	0	
+				0	0	0	SESSION_SOURCE	LAST	Last	oGenratr.sotLast	OBJECTTYPE	SampleObj	0	
+				0	1	0	SESSION_SOURCE	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	SESSION_SOURCE	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	SESSION_SOURCE	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	SESSION_SOURCE	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				1	0	0	SESSION_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				0	0	0	SESSION_SOURCE	FIRST	First	oGenratr.sotFirst	OBJECTTYPE	SampleObj	0	
+				0	0	0	SESSION_SOURCE	DESTINATION_TYPE	|Destination Type|	oDestListMgr.eDestinationType	ENUMTYPE	SourceCommand.DestinationType	0	
+				0	0	0	SESSION_SOURCE	DESTINATION	Destination	oDestListMgr.qList	OBJECTTYPE	SourceCommand.QueueObj.Destinations	0	
+				1	0	0	SESSION_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.ForwardMsgCommand.SampleObj	0	
+				0	0	0	SESSION_SOURCE	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	|Setup Command|	Command	1	1			SETUP_SESSION_CMD	||	||	1	0	cSesOpn	SetupCommandObj	||
+16				0	0	0	SETUP_SESSION_CMD	SETUP_PKT_BYTES	|Setup Pkt Bytes|	iSetupPktBytes	INTEGERTYPE	||	0
+				0	0	0	SETUP_SESSION_CMD	SETUP_CONFIRM_BYTES	|Setup Confirm Bytes|	iConfirmPktBytes	INTEGERTYPE	||	0
+				0	0	0	SETUP_SESSION_CMD	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	||	0
+				1	0	0	SETUP_SESSION_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0
+				0	0	0	SETUP_SESSION_CMD	PRIORITY	Priority	rPriority	REALTYPE	ForwardMsgCommand.Field	0
+				0	0	0	SETUP_SESSION_CMD	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0
+				1	0	0	SETUP_SESSION_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0
+				1	0	0	SETUP_SESSION_CMD	MSGS_PER_SESSION	|Msgs Per Session|	oForwardMsgSrc.oGenratr.soMaxCount	OBJECTTYPE	SampleObj	0
+				0	0	0	SETUP_SESSION_CMD	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	ForwardMsgCommand.MsgTextType	0
+				0	0	0	SETUP_SESSION_CMD	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	ForwardMsgCommand.MsgTextString	0
+				0	0	0	SETUP_SESSION_CMD	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	ForwardMsgCommand.MsgSizeUnitType	0
+				1	0	0	SETUP_SESSION_CMD	MSG_IAT	|Msg IAT|	oForwardMsgSrc.oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0
+				0	0	0	SETUP_SESSION_CMD	DESTINATION_TYPE	|Destination Type|	oDestListMgr.eDestinationType	ENUMTYPE	DestinationType	0
+				0	0	0	SETUP_SESSION_CMD	DESTINATION	Destination	oDestListMgr.qList	OBJECTTYPE	QueueObj.Destinations	0
+				1	0	0	SETUP_SESSION_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	ForwardMsgCommand.SampleObj	0
+				0	0	0	SETUP_SESSION_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0
+	Parm	||	0	0			SLIDING_WINDOW_PARM	||	||	1	0	cFCEnh	SlidingFCEnhParmObj	||
+9				0	0	0	SLIDING_WINDOW_PARM	TIMEOUT_MULTIPLIER	|Timeout Multiplier|	rRTTMultiplier	REALTYPE	||	0	
+				0	0	0	SLIDING_WINDOW_PARM	RTT_ESTIMATE_GAIN2	|Rtt Estimate Gain2|	rRTTGain2	REALTYPE	||	0	
+				0	0	0	SLIDING_WINDOW_PARM	RTT_ESTIMATE_GAIN1	|Rtt Estimate Gain1|	rRTTGain1	REALTYPE	||	0	
+				0	0	0	SLIDING_WINDOW_PARM	RETRANSMIT_TIMEOUT_UPDATE	|Retransmit Timeout Update|	eRTO	ENUMTYPE	RTOType	0	
+				0	0	0	SLIDING_WINDOW_PARM	RETRANSMIT_BACKOFF_ON	|Retransmit Backoff On|	bRetransmitBackoff	BOOLEANTYPE	||	0	
+				0	0	0	SLIDING_WINDOW_PARM	RETRANSMIT_BACKOFF_MAX_DELAY	|Retransmit Backoff Max Delay|	rMaxRTOBackoff	REALTYPE	||	0	
+				0	0	0	SLIDING_WINDOW_PARM	ERROR_CTL_TYPE	|Error Ctl Type|	eErrorControl	ENUMTYPE	ErrorControlType	0	
+				0	0	0	SLIDING_WINDOW_PARM	ACK_HOLDING_TYPE	|Ack Holding Type|	eAckHoldType	ENUMTYPE	AcksHoldingType	0	
+				0	0	0	SLIDING_WINDOW_PARM	ACK_HOLDING_TIME	|Ack Holding Time|	rAckHoldTime	REALTYPE	||	0	
+	Parm	||	0	1			SOCKET_PARM	||	||	1	0	cRemote	SocketConfigParmObj	||
+12				0	0	0	SOCKET_PARM	PROCESSOR_SWAPS_AFTER_PKTZ	|Processor Swaps After Pktz|	bAppRelAfterPacket	BOOLEANTYPE	||	0	
+				0	0	0	SOCKET_PARM	PKTZ_USES_PROCESSOR	|Pktz Uses Processor|	bPktzUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	SOCKET_PARM	PKTZ_IN_CYCLES	|Pktz In Cycles|	bPktzInCycles	BOOLEANTYPE	||	0	
+				1	0	0	SOCKET_PARM	PKTZ_DELAY	|Pktz Delay|	sotPktzDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	SOCKET_PARM	MAX_SOURCE_WINDOW_SIZE	|Max Source Window Size|	iMaxSourceWindowSize	INTEGERTYPE	||	0	
+				0	0	0	SOCKET_PARM	MAX_SOURCE_PACKET_SIZE	|Max Source Packet Size|	iMaxSourcePacketSize	INTEGERTYPE	||	0	
+				0	0	0	SOCKET_PARM	MAX_SINK_WINDOW_SIZE	|Max Sink Window Size|	iMaxWindowSize	INTEGERTYPE	||	0	
+				0	0	0	SOCKET_PARM	MAX_SINK_PACKET_SIZE	|Max Sink Packet Size|	iMaxPacketSize	INTEGERTYPE	||	0	
+				0	0	0	SOCKET_PARM	EXCLUDE_OTHER_PKTZ_PARAMETERS	|Exclude Other Pktz Parameters|	bExclPktzInTrnAndSrc	BOOLEANTYPE	||	0	
+				0	0	0	SOCKET_PARM	ASSY_USES_PROCESSOR	|Assy Uses Processor|	bAssyUsesProcessor	BOOLEANTYPE	||	0	
+				0	0	0	SOCKET_PARM	ASSY_IN_CYCLES	|Assy In Cycles|	bPktzInCycles	BOOLEANTYPE	||	0	
+				0	0	0	SOCKET_PARM	ASSY_DELAY	|Assy Delay|	sotAssyDelay	OBJECTTYPE	SampleObj	0	
+	|Source Arc|	|Arcs|	1	0			SOURCE_ARC	||	||	1	0	cLaySrc	SourceArcObj	||
+5				0	1	0	SOURCE_ARC	SOURCE	|Source|	Start.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	1	0	SOURCE_ARC	PARENT_NAME	Parent	ArcContainer	OBJECTTYPE	ParentType	0	
+				0	1	0	SOURCE_ARC	NODE	|Node|	Stop.PadParent	OBJECTTYPE	UnopenableType	0	
+				0	0	0	SOURCE_ARC	JOINTS	Joints	Joints	ARRAYTYPE	PointArrayType	0	
+				0	0	0	SOURCE_ARC	FORCE_STRAIGHT_LINES	|Force Straight Lines|	ForceHVLine	BOOLEANTYPE	||	0	
+	Subnet	Areas	0	0			SUBNET	||	||	1	0	cArea	AreaObj	||
+20				0	0	0	SUBNET	ZOOMSCALE	Zoomscale	BasicDisplayNodeData.ZoomScale	REALTYPE	||	0	
+				0	0	0	SUBNET	ZOOM_Y	|Zoom Y|	BasicDisplayNodeData.ZoomY	REALTYPE	||	0	
+				0	0	0	SUBNET	ZOOM_X	|Zoom X|	BasicDisplayNodeData.ZoomX	REALTYPE	||	0	
+				0	0	0	SUBNET	VIRTUAL_SIZE	|Virtual Size|	BasicDisplayNodeData.VirtualSize	REALTYPE	||	0	
+				0	0	0	SUBNET	TRAFFIC_SCALE	|Traffic Scale|	rTrafficScale	REALTYPE	||	0	
+				0	1	0	SUBNET	PARENT_NAME	Parent	NodeParent	OBJECTTYPE	ParentType	0	
+				0	0	0	SUBNET	PACKET_ROUTING_PROTOCOL	|Packet Routing Protocol|	oPacketRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	
+				0	0	0	SUBNET	NODE_UTIL_UPDATE_INTERVAL	|Node Util Update Interval|	tNodeUtilMeasureInterval	REALTYPE	||	0	
+				0	0	0	SUBNET	LINK_UTIL_UPDATE_INTERVAL	|Link Util Update Interval|	tUtilMeasureInterval	REALTYPE	||	0	
+				0	1	0	SUBNET	ICON_Y	|Icon Y Coord|	DisplayData.IconY	REALTYPE	||	0	
+				0	1	0	SUBNET	ICON_X	|Icon X Coord|	DisplayData.IconX	REALTYPE	||	0	
+				0	0	0	SUBNET	ICON_SCALE	|Icon Scale|	DisplayData.ScaleX	REALTYPE	||	0	
+				0	1	0	SUBNET	ICON_NAME	|Icon Name|	DisplayData.IconName	STRINGTYPE	||	0	
+				0	0	0	SUBNET	FOREGROUND_R	|Foreground R|	BasicDisplayNodeData.ForegroundR	REALTYPE	||	0	
+				0	0	0	SUBNET	FOREGROUND_G	|Foreground G|	BasicDisplayNodeData.ForegroundG	REALTYPE	||	0	
+				0	0	0	SUBNET	FOREGROUND_B	|Foreground B|	BasicDisplayNodeData.ForegroundB	REALTYPE	||	0	
+				0	0	0	SUBNET	CALL_ROUTING_PROTOCOL	|Call Routing Protocol|	oCallRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	
+				0	0	0	SUBNET	BACKGROUND_R	|Background R|	BasicDisplayNodeData.BackgroundR	REALTYPE	||	0	
+				0	0	0	SUBNET	BACKGROUND_G	|Background G|	BasicDisplayNodeData.BackgroundG	REALTYPE	||	0	
+				0	0	0	SUBNET	BACKGROUND_B	|Background B|	BasicDisplayNodeData.BackgroundB	REALTYPE	||	0	
+	|Tabular Distribution|	Miscellaneous	0	0			TABULAR_DISTRIBUTION	||	||	1	0	sRnNamd	TabularDistObj	||
+2				0	0	0	TABULAR_DISTRIBUTION	TABLE_TYPE	|Table Type|	tKind	ENUMTYPE	TableType	0	
+				0	0	0	TABULAR_DISTRIBUTION	TABLE	Table	rTable	ARRAYTYPE	TabularDistArray	0	
+	Parm	||	0	0			THRESHOLD_BUFFER_POLICY_PARM	||	||	1	0	cBufPol	ThrBufferPolicyParmObj	||
+5				0	0	0	THRESHOLD_BUFFER_POLICY_PARM	USE_DISCARD_ELIGIBLE	|Use Discard Eligible|	bUseDiscardEligible	BOOLEANTYPE	||	0	
+				0	0	0	THRESHOLD_BUFFER_POLICY_PARM	MINIMUM_PRIORITY	|Minimum Priority|	rPriority	REALTYPE	||	0	
+				0	0	0	THRESHOLD_BUFFER_POLICY_PARM	CONGESTION_THRESHOLD	|Congestion Threshold|	rCongThreshold	REALTYPE	||	0	
+				0	0	0	THRESHOLD_BUFFER_POLICY_PARM	CONGESTION_IDENTIFICATION_POLICY	|Congestion Identification Policy|	eCongIndPolicy	ENUMTYPE	CongIndPolicyType	0	
+				0	0	0	THRESHOLD_BUFFER_POLICY_PARM	BUFFER_THRESHOLD	|Buffer Threshold|	iThreshold	REALTYPE	||	0	
+	Parm	||	0	1			THROTTLED_RATE_PARM	||	||	1	0	cRatCtl	ThrottledRCParmObj	||
+9				0	0	0	THROTTLED_RATE_PARM	USE_CIR	|Use Cir|	bUseCIR	BOOLEANTYPE	||	0	
+				0	0	0	THROTTLED_RATE_PARM	TRIGGER_TYPE	|Trigger Type|	eTrigger	ENUMTYPE	ThrottleTriggerType	0	
+				0	0	0	THROTTLED_RATE_PARM	RECOVERY_TIMEOUT	|Recovery Timeout|	tRecoveryTimeout	REALTYPE	||	0	
+				0	0	0	THROTTLED_RATE_PARM	NO_CONGESTION_COUNT_THRESHOLD	|No Congestion Count Threshold|	iThrCntNoCong	INTEGERTYPE	||	0	
+				0	0	0	THROTTLED_RATE_PARM	CONGESTION_COUNT_THRESHOLD	|Congestion Count Threshold|	iThrCntCong	INTEGERTYPE	||	0	
+				0	0	0	THROTTLED_RATE_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0	
+				0	0	0	THROTTLED_RATE_PARM	BURST_TYPE	|Burst Type|	eBurst	ENUMTYPE	BurstType	0	
+				1	0	0	THROTTLED_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+				0	0	0	THROTTLED_RATE_PARM	BURST_INTERVAL	|Burst Interval|	tInterval	REALTYPE	||	0	
+	Parm	||	0	1			TOKEN_PASSING_PARM	||	||	1	0	cLnkCf2	TokenRingParmObj	||
+11				0	0	0	TOKEN_PASSING_PARM	TOKEN_PASS_DELAY	|Token Pass Delay|	tTokPassDelay	REALTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	TOKEN_HOLD_TIME_UNITS	|Token Hold Time Units|	eTokenHoldUnits	ENUMTYPE	TokenHoldUnitsType	0	
+				0	0	0	TOKEN_PASSING_PARM	TOKEN_HOLD_LIMIT	|Token Hold Limit|	tTokHoldLimit	REALTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	PROPAGATION	Propagation	tPropagation	REALTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	FRAME_OH	|Frame Overhead|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	TOKEN_PASSING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	TOKEN_PASSING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+				0	0	0	TOKEN_PASSING_PARM	AUTO_RETRANSMIT	|Auto Retransmit|	bAutoRetransmit	BOOLEANTYPE	||	0	
+	|Transport Command|	Command	1	1			TRANSPORT_MSG_CMD	||	||	1	0	cTrnCmd	TransportCommandObj	||
+15				0	0	0	TRANSPORT_MSG_CMD	ROUTING_CLASS	|Routing Class|	oCoS	OBJECTTYPE	||	0	
+				1	0	0	TRANSPORT_MSG_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0	
+				0	0	0	TRANSPORT_MSG_CMD	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	TRANSPORT_MSG_CMD	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	0	0	TRANSPORT_MSG_CMD	PRIORITY	Priority	rPriority	REALTYPE	||	0	
+				0	0	0	TRANSPORT_MSG_CMD	POSTRUN_REPORT	|Postrun Reports|	||	NOTYPE	PostrunReportType	0	
+				1	0	0	TRANSPORT_MSG_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				0	0	0	TRANSPORT_MSG_CMD	MSG_TEXT_TYPE	|Msg Text Type|	eMsgTextType	ENUMTYPE	MsgTextType	0	
+				0	0	0	TRANSPORT_MSG_CMD	MSG_TEXT	|Msg Text|	sMsgText	STRINGTYPE	MsgTextString	0	
+				0	0	0	TRANSPORT_MSG_CMD	MSG_SIZE_UNIT	|Msg Size Unit|	eMsgSizeUnits	ENUMTYPE	MsgSizeUnitType	0	
+				0	0	0	TRANSPORT_MSG_CMD	DESTINATION_TYPE	|Destination Type|	oDestListMgr.eDestinationType	ENUMTYPE	DestinationType	0	
+				0	0	0	TRANSPORT_MSG_CMD	DESTINATION	Destination	oDestListMgr.qList	OBJECTTYPE	QueueObj.Destinations	0	
+				0	0	0	TRANSPORT_MSG_CMD	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	CalcType	0	
+				1	0	0	TRANSPORT_MSG_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	TRANSPORT_MSG_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+	|Transport Protocol|	||	0	0			TRANSPORT_PROTOCOL	||	||	1	0	cTrnprt	TransportLayerObj	||
+25				0	0	0	TRANSPORT_PROTOCOL	WINDOW_SIZE	|Window Size|	oTransportParms.iWindowSize	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	TRAFFIC_POLICY	|Traffic Policy|	oTrafficPolicy.oParms	OBJECTTYPE	ParmType	0	
+				0	0	0	TRANSPORT_PROTOCOL	ROUTED_PROTOCOL	|Routed Protocol|	oTransportParms.sRoutingProtocol	STRINGTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	RETRANSMIT_INTERVAL	|Retransmit Interval|	oTransportParms.tPktRetransmitInt	REALTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	RETRANSMIT_BLOCKED_PACKETS	|Retransmit Blocked Packets|	oTransportParms.bRetransmitBlockedPackets	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	RELEASE_1.1_COMPATIBLE_TIMER	|Release 1.1 Compatible Timer|	oTransportParms.bRel11CompRetransInt	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	RATE_CONTROL	|Rate Control|	oRateCtl.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				0	0	0	TRANSPORT_PROTOCOL	PAD_PACKET	|Pad Packet|	oTransportParms.bPadToFillPacket	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	PACKET_OVERHEAD_BYTES	|Packet Overhead Bytes|	oTransportParms.iPktOHBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	PACKET_DATA_BYTES	|Packet Data Bytes|	oTransportParms.iPktDataBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	OPEN_SEQUENCE_DELAY	|Open Sequence Delay|	oTransportParms.rOpenDelay	REALTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	OPEN_RESPONSE_BYTES	|Open Response Bytes|	oTransportParms.iOpenResBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	OPEN_REQUEST_BYTES	|Open Request Bytes|	oTransportParms.iOpenReqBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	OPEN_DELAY_IN_CYCLES	|Open Delay In Cycles|	oTransportParms.bOpenDlyInCycles	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	MODEL_OPEN_SEQUENCE	|Model Open Sequence|	oTransportParms.bModelOpenSeq	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	MODEL_ERROR_CTL_ACK	|Model Error Ctl Ack|	oTransportParms.bModelErrorCtlAck	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	MODEL_CLOSE_SEQUENCE	|Model Close Sequence|	oTransportParms.bModelCloseSeq	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	FLOW_CONTROL_METHOD	|Flow Control|	oConfig	OBJECTTYPE	FlowCtlObj	0	
+				0	0	0	TRANSPORT_PROTOCOL	FLOW_CONTROL	|Flow Control (enhanced)|	oConfig.oParms	OBJECTTYPE	SelfExplanatoryParmType	0	
+				0	0	0	TRANSPORT_PROTOCOL	CLOSE_SEQUENCE_DELAY	|Close Sequence Delay|	oTransportParms.rCloseDelay	REALTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	CLOSE_RESPONSE_BYTES	|Close Response Bytes|	oTransportParms.iCloseResBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	CLOSE_REQUEST_BYTES	|Close Request Bytes|	oTransportParms.iCloseReqBytes	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	CLOSE_DELAY_IN_CYCLES	|Close Delay In Cycles|	oTransportParms.bCloseDlyInCycles	BOOLEANTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	ACK_PRIORITY	|Ack Priority|	oTransportParms.iCtlPktPriority	INTEGERTYPE	||	0	
+				0	0	0	TRANSPORT_PROTOCOL	ACK_BYTES	|Ack Bytes|	oTransportParms.iAckBytes	INTEGERTYPE	||	0	
+	|User Variable|	||	1	0			USER_VARIABLE	||	||	1	0	cUsrVar	UsrVarObj	||
+4				0	0	0	USER_VARIABLE	TYPE	Type	eMode	ENUMTYPE	ModeType	0	
+				0	0	0	USER_VARIABLE	MAX_TRIES	|Max Access Tries|	iMaxAccessTries	INTEGERTYPE	||	0	
+				0	0	0	USER_VARIABLE	EXCLUSIVE_ACCESS	|Exclusive Access|	bExclusiveAccess	BOOLEANTYPE	||	0	
+				0	0	0	USER_VARIABLE	ACCESS_TIME	|Access Time|	tAccess	REALTYPE	||	0	
+	Parm	||	0	1			VARIABLE_RATE_PARM	||	||	1	0	cRatCtl	VariableRCParmObj	||
+8				1	0	0	VARIABLE_RATE_PARM	SUSTAIN_THRESHOLD	|Sustain Threshold|	iThresholdSustain	INTEGERTYPE	||	0	
+				0	0	0	VARIABLE_RATE_PARM	SUSTAIN_INTERVAL	|Sustain Interval|	tIntervalSustain	REALTYPE	||	0	
+				1	0	0	VARIABLE_RATE_PARM	PEAK_THRESHOLD	|Peak Threshold|	iThresholdPeak	INTEGERTYPE	||	0	
+				0	0	0	VARIABLE_RATE_PARM	PEAK_INTERVAL	|Peak Interval|	tIntervalPeak	REALTYPE	||	0	
+				0	0	0	VARIABLE_RATE_PARM	MINIMUM_THRESHOLD	|Minimum Threshold|	iThresholdMinimum	INTEGERTYPE	||	0	
+				0	0	0	VARIABLE_RATE_PARM	MINIMUM_INTERVAL	|Minimum Interval|	tIntervalMinimum	REALTYPE	||	0	
+				0	0	0	VARIABLE_RATE_PARM	BURST_UNIT	|Burst Unit|	eMeasUnits	ENUMTYPE	BurstUnitType	0	
+				1	0	0	VARIABLE_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+	|Wait For Command|	Command	1	0			WAIT_FOR_CMD	||	||	1	0	cComman	WaitForCommandObj	||
+8				0	0	0	WAIT_FOR_CMD	WAIT_FOR_WHAT	|Wait for What|	eWaitForWhat	ENUMTYPE	WaitForWhatType	0	
+				0	0	0	WAIT_FOR_CMD	TIME_OUT_TIME	|Time Out Time|	rTimeOutTime	REALTYPE	||	0	
+				0	0	0	WAIT_FOR_CMD	RETAIN_ORIG_MSG	|Retain Orig Msg|	bRetainOriginalRecMsg	BOOLEANTYPE	||	0	
+				0	0	0	WAIT_FOR_CMD	REQ_MSG_TEXT	|Req Msg Text|	sRequiredMsgText	STRINGTYPE	||	0	
+				0	0	0	WAIT_FOR_CMD	EXPRESSION	Expression	oExprCmd.sExpr	STRINGTYPE	||	0	
+				0	0	0	WAIT_FOR_CMD	ALARM_NODE	|Alarm Node|	oAlarmNode	OBJECTTYPE	UnopenableType	0	
+				0	0	0	WAIT_FOR_CMD	ALARM	Alarm	oSnapshot.sDialogTitle	STRINGTYPE	||	0	
+				0	0	0	WAIT_FOR_CMD	ACCEPT_RESPONDING_MSG_ONLY	|Accept Responding Msg Only|	bRespondingMsgOnly	BOOLEANTYPE	||	0	
+	Parm	||	0	1			WAN_CLOUD_PARM	||	||	1	0	cCldCfg	FrmRlyCloudConfigParmObj	||
+18				0	0	0	WAN_CLOUD_PARM	XMIT_DEFAULT_VC	|Xmit Default Vc|	bOkToXmitDefaultVC	BOOLEANTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	STREAM_NO	|Stream No|	soExtreme.iStreamNum	INTEGERTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	PIGGYBACK	Piggyback	bPiggyBack	BOOLEANTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	MAX_SESSIONS	|Max Sessions|	iMaxSessions	INTEGERTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	HOP_UPDATE	|Hop Update|	sotHopUpdate	OBJECTTYPE	SampleObj	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_PRIORITY	|Frame Priority|	eFrmPriority	ENUMTYPE	FramePriorityMode	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_OH	|Frame Oh|	iFrameOH	INTEGERTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_MIN	|Frame Min|	iFrameMin	INTEGERTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_MAX	|Frame Max|	iFrameMax	INTEGERTYPE	||	0	
+				1	0	0	WAN_CLOUD_PARM	FRAME_DROP_PROB_NORMAL	|Frame Drop Prob Normal|	rProbDropFrmNormal	REALTYPE	||	0	
+				1	0	0	WAN_CLOUD_PARM	FRAME_DROP_PROB_MODERATE	|Frame Drop Prob Moderate|	rProbDropFrmModerate	REALTYPE	||	0	
+				1	0	0	WAN_CLOUD_PARM	FRAME_DROP_PROB_EXTREME	|Frame Drop Prob Extreme|	rProbDropFrmExtreme	REALTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_DELAY_NORMAL	|Frame Delay Normal|	sotFrameDelayNormal	OBJECTTYPE	SampleObj	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_DELAY_MODERATE	|Frame Delay Moderate|	sotFrameDelayModerate	OBJECTTYPE	SampleObj	0	
+				0	0	0	WAN_CLOUD_PARM	FRAME_DELAY_EXTREME	|Frame Delay Extreme|	sotFrameDelayExtreme	OBJECTTYPE	SampleObj	0	
+				0	0	0	WAN_CLOUD_PARM	DE_FRAME_DROP_PROB_NORMAL	|De Frame Drop Prob Normal|	rProbDropDENormal	REALTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	DE_FRAME_DROP_PROB_MODERATE	|De Frame Drop Prob Moderate|	rProbDropDEModerate	REALTYPE	||	0	
+				0	0	0	WAN_CLOUD_PARM	DE_FRAME_DROP_PROB_EXTREME	|De Frame Drop Prob Extreme|	rProbDropDEExtreme	REALTYPE	||	0	
+	|Write Command|	Command	1	1			WRITE_FILE_CMD	||	||	1	0	cComman	WriteCommandObj	||
+7				0	0	0	WRITE_FILE_CMD	PROCESS_MULT	|Process Mult|	rProcessMult	REALTYPE	||	0	
+				0	0	0	WRITE_FILE_CMD	PROCESS_ADD	|Process Add|	rProcessAdd	REALTYPE	||	0	
+				0	1	0	WRITE_FILE_CMD	FILE	File	oFileToAccess	OBJECTTYPE	FileObj	0	
+				0	0	0	WRITE_FILE_CMD	CALC_TYPE	|Calc Type|	eCalcType	ENUMTYPE	CalcType	0	
+				1	0	0	WRITE_FILE_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				0	0	0	WRITE_FILE_CMD	APPLICATION_TYPE	|Application Type|	oAppCategory	OBJECTTYPE	SourceCommand.UnopenableType	0	
+				0	0	0	WRITE_FILE_CMD	ACCESS_TYPE	|Access Type|	eModeType	ENUMTYPE	ReadWriteModeType	0	

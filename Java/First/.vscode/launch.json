@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Lab1_2",
+            "request": "launch",
+            "mainClass": "excercise9.Lab1_2",
+            "projectName": "First_c337f2c7",
+            "args": "10 -12 0 10 1 100 0 7"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"            
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab1",
+            "request": "launch",
+            "mainClass": "Lab1",
+            "projectName": "First_c7fba47d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab1_2",
+            "request": "launch",
+            "mainClass": "excercise9.Lab1_2",
+            "projectName": "First_c7fba47d"
+        },
+        {
+            "type": "java",
+            "name": "Launch LineReader",
+            "request": "launch",
+            "mainClass": "shitANDgiggles.LineReader",
+            "projectName": "First_c7fba47d"
+        },
+        {
+            "type": "java",
+            "name": "Launch PressCounter",
+            "request": "launch",
+            "mainClass": "shitANDgiggles.PressCounter",
+            "projectName": "First_c7fba47d"
+        }
+    ]
+}

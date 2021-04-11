@@ -1,0 +1,13 @@
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.exe
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.deps.json
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.runtimeconfig.json
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.runtimeconfig.dev.json
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.dll
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\bin\Debug\netcoreapp3.1\DDHLab1.pdb
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.csprojAssemblyReference.cache
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.AssemblyInfoInputs.cache
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.AssemblyInfo.cs
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.csproj.CoreCompileInputs.cache
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.dll
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.pdb
+C:\Users\Krzysztof\source\repos\DDHLab1\DDHLab1\obj\Debug\netcoreapp3.1\DDHLab1.genruntimeconfig.cache

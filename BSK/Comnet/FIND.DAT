@@ -1,0 +1,46 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |1.8| 
+ |SimFlow|  |0000.031| 
+ |SimLib|  |0000.014| 
+ |ComnetIII|  |0000.022| 
+ |EndVersion| 
+
+12
+	|Application Source|	|Layouts.Sources|	1	1			APPLICATION_SOURCE	||	||	1	0	cApplic	AppSourceObj	||
+1				0	0	1	APPLICATION_SOURCE	SCHEDULE	Schedule	eSchdType	ENUMTYPE	SchdMethodType	0	
+	|Call Source|	|Layouts.Sources|	1	1			CALL_SOURCE	||	||	1	0	cCall	CallSourceObj	||
+1				0	0	0	CALL_SOURCE	CALL_ROUTING_CLASS	|Call Routing Class|	oCoS	OBJECTTYPE	||	0	
+	|WAN Cloud|	Areas	0	1			CLOUD	||	||	1	0	cCldCfg	FrmRlyCloudConfigObj	||
+1				1	0	0	CLOUD	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+	|Cloud Access Link|	Layouts.Links	1	1			CLOUD_ACCESS_LINK	||	||	1	0	cCldAcc	CldAccessLinkConfigObj	||
+1				1	0	0	CLOUD_ACCESS_LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	|Cloud VC|	Layouts	1	1			CLOUD_VC	||	||	1	0	cCldVC	CldVCConfigObj	||
+1				1	0	0	CLOUD_VC	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	Aloha	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	AlohaConfigObj	||
+0	|FDDI Basic|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	FDDIConfigObj	||
+0	|Priority FDDI|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityFDDIConfigObj	||
+0	|Priority Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityTokenRingConfigObj	||
+0	|Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	TokenRingConfigObj	||
+0	CSMA	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaConfigObj	||
+0	CSMA/CD	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaCdConfigObj	||
+0	Point-To-Point	Layouts.Links	1	1			LINK	||	||	1	0	cPPLink	P2PConfigObj	||
+0	Polling	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	PollingConfigObj	||
+1				1	0	0	LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	|Message Source|	|Layouts.Sources|	1	1			MESSAGE_SOURCE	||	||	1	0	cMsgSrc	MsgSourceObj	||
+1				0	0	0	MESSAGE_SOURCE	PROTOCOL	Protocol	oTransportProto.oTransportParms	OBJECTTYPE	SourceCommand.Field	0	
+	|Processing Node|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ApplicConfigObj	||
+0	|Computer Group|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ComputerConfigObj	||
+0	Router	Layouts.Nodes	1	1			NODE	||	||	1	0	cRteNd	RouterConfigObj	||
+0	Switch	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ATMConfigObj	||
+1				1	0	0	NODE	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	|Remote Link|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteLinkConfigObj	||
+0	|Remote Node|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteNodeConfigObj	||
+0	Socket	Layouts.Sockets	1	1			REMOTE	||	||	1	0	cRemote	SocketObj	||
+1				1	0	0	REMOTE	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+	|Response Source|	|Layouts.Sources|	1	1			RESPONSE_SOURCE	||	||	1	0	cResSrc	ResSourceObj	||
+1				0	0	0	RESPONSE_SOURCE	PROTOCOL	Protocol	oTransportProto.oTransportParms	OBJECTTYPE	SourceCommand.Field	0	
+	|Session Source|	|Layouts.Sources|	1	1			SESSION_SOURCE	||	||	1	0	cSesSrc	SesSourceObj	||
+1				0	0	0	SESSION_SOURCE	PROTOCOL	Protocol	oTransportProto.oTransportParms	OBJECTTYPE	SourceCommand.Field	0	
+	Subnet	Areas	0	0			SUBNET	||	||	1	0	cArea	AreaObj	||
+2				0	0	0	SUBNET	PACKET_ROUTING_PROTOCOL	|Packet Routing Protocol|	oPacketRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	
+				0	0	0	SUBNET	CALL_ROUTING_PROTOCOL	|Call Routing Protocol|	oCallRoutingProtocol	OBJECTTYPE	RoutingProtocolObj	0	

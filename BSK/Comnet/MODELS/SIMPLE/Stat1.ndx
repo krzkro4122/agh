@@ -1,0 +1,10 @@
+ |Node:LA:AvailLevel:1|      143
+ |Node:LA:Level:1|      485
+ |Node:NY:AvailLevel:1|      895
+ |Node:NY:Level:1|     1237
+ |CONFIG:LinkA:AvailLevel:1|     1647
+ |CONFIG:LinkA:Level:1|     1994
+ |CONFIG:LinkB:AvailLevel:1|     2409
+ |CONFIG:LinkB:Level:1|     2756
+ |CallType:LA:LA-NY:NY:NbrHopsLevel:1|     3171
+ |CallType:NY:NY-LA:LA:NbrHopsLevel:1|     3494

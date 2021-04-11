@@ -1,0 +1,58 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |2.1| 
+ |SimFlow|  |0000.031| 
+ |SimLib|  |0000.014| 
+ |ComnetIII|  |0001.306| 
+ |EndVersion| 
+       2 
+
+ |WAN Cloud Parameters| 
+       3 
+ |DEFAULT|  |DEFAULT|  1 0 1 
+ |DEFAULT|  |Frame Relay|  1 0 1 
+ |DEFAULT|  |ATM|  1 0 1 
+
+ |Clouds| 
+       3 
+ |WAN Cloud|  |WAN Cloud|  1 0 1  |cloud2.icn|  1  |Clouds|  1  |CLOUD|         1        6  |nodes|  1  ||   ||   ||   ||  1 
+ |WAN Cloud|  |Frame Relay|  1 0 1  |cloud2.icn|  1  |Clouds|  0  ||         0        0  |nodes|  1  ||   ||   ||   ||  1 
+ |WAN Cloud|  |ATM|  1 0 1  |cloud2.icn|  1  |Clouds|  0  ||         0        0  |nodes|  1  ||   ||   ||   ||  1 
+
+
+ |WAN Cloud Parameters| 
+ |DEFAULT|  |DEFAULT|      10000.0000      1024          0.0000           0.0000           0.0000         0        0        0          0.0000  0 1          0.0000           0.0000           0.0000  1  |NILOBJ|   |NILOBJ|   |NILOBJ|   |NILOBJ|         0        0          0.0000           0.0000           0.0000  
+ |DEFAULT|  |Frame Relay|      10000.0000      1024          0.0000           0.0000           0.0000        13     4108       12          0.0000  0 1          0.0000           0.0000           0.0000  1  |10.0|   |10.0|   |10.0|   |NILOBJ|         0        2          0.0000           0.0000           0.0000  
+ |DEFAULT|  |ATM|      10000.0000      1024          0.0000           0.0000           0.0000        53       53        5          0.0000  0 1          0.0000           0.0000           0.0000  1  |1.0|   |1.0|   |1.0|   |NILOBJ|         0        2          0.0000           0.0000           0.0000  
+
+ |Clouds| 
+ |WAN Cloud|  |WAN Cloud| 
+  3 |WAN Cloud|  |0|  |WAN Cloud|  0 ||          0.0          0.0   0    0 0 ||          0.0          0.0  |cloud2.icn|       1.00         0.00         0.00       1.00         0.00         0.00         1.00         1.00     0.00     0.00     0.00    60.00    60.00    60.00  0 ||        0.000   0  1  2
+
+
+ |WAN Cloud|   ||  || 1 0 1        0          0.0000  0 
+       0 0        0 
+ |NILOBJ|   |WAN Cloud|   ||  || 1 0  |Frame Relay|  
+       0          0.0000   |NILOBJ|   |NILOBJ|  0 
+       0 
+         0.0000           0.0000         0  |NILOBJ|   |NILOBJ|         0          1.0000  
+ |WAN Cloud|  |Frame Relay| 
+  3 |WAN Cloud|  |0|  |Frame Relay|  0 ||          0.0          0.0   0    0 0 ||          0.0          0.0  |cloud2.icn|       1.00         0.00         0.00       1.00         0.00         0.00         1.00         1.00     0.00     0.00     0.00    60.00    60.00    60.00  0 ||        0.000   0  1  2
+
+
+ |Frame Relay|   ||  || 1 0 1        0          0.0000  0 
+       0 0        0 
+ |NILOBJ|   |WAN Cloud|   ||  || 1 0  |Frame Relay|  
+       0          0.0000   |NILOBJ|   |NILOBJ|  0 
+       0 
+         0.0000           0.0000         0  |NILOBJ|   |NILOBJ|         0          1.0000  
+ |WAN Cloud|  |ATM| 
+  3 |WAN Cloud|  |0|  |ATM|  0 ||          0.0          0.0   0    0 0 ||          0.0          0.0  |cloud2.icn|       1.00         0.00         0.00       1.00         0.00         0.00         1.00         1.00     0.00     0.00     0.00    60.00    60.00    60.00  0 ||        0.000   0  1  2
+
+
+ |ATM|   ||  || 1 0 1        0          0.0000  0 
+       0 0        0 
+ |NILOBJ|   |WAN Cloud|   ||  || 1 0  |ATM|  
+       0          0.0000   |NILOBJ|   |NILOBJ|  0 
+       0 
+         0.0000           0.0000         0  |NILOBJ|   |NILOBJ|         0          1.0000  
+

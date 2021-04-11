@@ -1,0 +1,768 @@
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     1
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.911      0.181      1.483   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     2
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.46
+  STANDARD DEVIATION            0.18
+  MAXIMUM                       0.70
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     3
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.911         0.181         1.483
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     4
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 2 FROM 10.0 TO 20.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.910      0.179      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     5
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 2 FROM 10.0 TO 20.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.45
+  STANDARD DEVIATION            0.18
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     6
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 2 FROM 10.0 TO 20.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.910         0.179         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     7
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 3 FROM 20.0 TO 30.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.902      0.164      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     8
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 3 FROM 20.0 TO 30.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.41
+  STANDARD DEVIATION            0.18
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE     9
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 3 FROM 20.0 TO 30.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.902         0.164         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    10
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 4 FROM 30.0 TO 40.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.907      0.175      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    11
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 4 FROM 30.0 TO 40.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.43
+  STANDARD DEVIATION            0.19
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    12
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 4 FROM 30.0 TO 40.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.907         0.175         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    13
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 5 FROM 40.0 TO 50.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.904      0.169      1.503   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    14
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 5 FROM 40.0 TO 50.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.42
+  STANDARD DEVIATION            0.18
+  MAXIMUM                       0.72
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    15
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 5 FROM 40.0 TO 50.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.904         0.169         1.503
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    16
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 6 FROM 50.0 TO 60.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.916      0.192      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    17
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 6 FROM 50.0 TO 60.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.48
+  STANDARD DEVIATION            0.19
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    18
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 6 FROM 50.0 TO 60.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.916         0.192         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    19
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 7 FROM 60.0 TO 70.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.902      0.163      1.503   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    20
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 7 FROM 60.0 TO 70.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.41
+  STANDARD DEVIATION            0.17
+  MAXIMUM                       0.72
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    21
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 7 FROM 60.0 TO 70.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.902         0.163         1.503
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    22
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 8 FROM 70.0 TO 80.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.907      0.177      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    23
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 8 FROM 70.0 TO 80.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.44
+  STANDARD DEVIATION            0.19
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    24
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 8 FROM 70.0 TO 80.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.907         0.177         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    25
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                    REPLICATION 9 FROM 80.0 TO 90.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.909      0.177      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    26
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                    REPLICATION 9 FROM 80.0 TO 90.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.44
+  STANDARD DEVIATION            0.18
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.05
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    27
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                    REPLICATION 9 FROM 80.0 TO 90.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.909         0.177         1.523
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    28
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                   REPLICATION 10 FROM 90.0 TO 100.0 SECONDS                    
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA Link                 250      0      0.895      0.150      1.523   1.92
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    29
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                             LINKS: COLLISION STATS                             
+
+                   REPLICATION 10 FROM 90.0 TO 100.0 SECONDS                    
+
+
+LINK NAME                  CSMA/CA  
+                             Link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES                 0
+
+COLLIDED FRAMES                    0
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.00
+  MAXIMUM                          0
+
+NBR OF DEFERRALS                  50
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.38
+  STANDARD DEVIATION            0.17
+  MAXIMUM                       0.74
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.00
+  STANDARD DEVIATION            0.04
+  MAXIMUM                          1
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     0
+  AVG PER EPISODE               0.00
+  MAX PER EPISODE                  0
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Mon Mar 22 20:59:41 2021   PAGE    30
+
+                                      Lab1                                      
+     Experiment scenario 2: IAT of "Message Source @ Computer Group" = 0.2      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                   REPLICATION 10 FROM 90.0 TO 100.0 SECONDS                    
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer Group / src Message Source:
+  Computer Group              250          0.895         0.150         1.523

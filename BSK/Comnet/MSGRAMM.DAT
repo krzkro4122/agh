@@ -1,0 +1,820 @@
+# A grammar description for MODSIM III
+#   Written by   : M.P. Whitehouse
+#   Last modified: 27th October 1994
+# CACI Products Co.
+
+
+#######################################################################################################################
+# The start of lexical analysis spec.
+
+%%%LEX
+
+%{
+
+#include "ytab.h"
+
+#if defined (_WINDOWS) || defined (_WIN32)
+#define isatty _isatty
+#define fileno _fileno
+#include <malloc.h>
+#endif
+
+long lineno = 1, charpos = 0;
+int anestlevel = 0, bnestlevel = 0;
+
+    /* string input code */
+int use_strings;
+char** in_strings;
+long num_strings;
+long current_str_num;
+
+char* get_next_string(result)
+int* result;
+{
+  char* c;
+
+  c = *(in_strings+current_str_num++);
+  if (c != NULL)
+    *result = MS_STRLEN(MS_Increment(c))+1;
+  return c;
+}
+
+int get_string(buf,result,max_size)
+char buf[];
+int* result;
+int max_size;
+{
+  char* c;
+  int end_loop = 0;
+
+  while (!end_loop)
+    if (current_str_num < num_strings) {
+      if ((c = get_next_string(result)) != NULL) {
+        end_loop = 1;
+        if (*result < max_size) {
+          memcpy(buf,c,*result);
+          buf[*result-1] = '\n';
+        }
+        else
+          return 0;
+          /* string length must be less than max_size in this version */
+      }
+    }
+    else {
+      end_loop = 1;
+      *result = YY_NULL;
+    }
+  return 1;
+}
+
+#undef YY_INPUT
+#define YY_INPUT(buf,result,max_size) \
+          if (use_strings) { \
+            if (!get_string(buf,&result,max_size))  \
+              YY_FATAL_ERROR( "string too big for flex scanner to handle" ); \
+          } \
+          else if ( ((result = fread( buf, 1, max_size, yyin )) == 0) \
+                    && ferror( yyin ) ) \
+            YY_FATAL_ERROR( "input in flex scanner failed" );
+
+%}
+
+    /*------------ Regular Definitions -----------*/
+newline     \n
+delim       " "|\t
+ws          {delim}+
+anyws       {delim}*
+
+letter      [A-Za-z]
+digit       [0-9]
+
+sign        "+"|"-"
+number      {digit}+
+hexnum      [A-F]|{digit}
+hexinteger  {digit}{hexnum}*H
+integer     {number}|{hexinteger}
+exp         E{sign}?{number}
+real        {number}"."{digit}*{exp}?|"."{number}{exp}?
+intrange    {number}".."
+
+stringbody  [^\"\n]|\"\"
+string      \"{stringbody}*\"
+char        "'"."'"|"'""'""'""'"|{number}C
+
+id          {letter}({letter}|{digit})*
+
+comma       ","
+dot         "."
+semicolon   ";"
+colon       ":"
+
+lparen      "("
+rparen      ")"
+lbrack      "["
+rbrack      "]"
+lbrace      "{"
+rbrace      "}"
+
+assign      ":="
+range       ".."
+plus        "+"
+minus       "-"
+times       "*"
+divide      "/"
+hash        "#"
+
+equal       "="
+less        "<"
+greater     ">"
+lessoreq    "<="
+greateroreq ">="
+noteq       "<>"
+
+startcmnta  {lbrace}
+endcmnta    {rbrace}
+startcmntb  "(*"
+endcmntb    "*)"
+
+    /* start state definitions */
+%x          cmntstate
+
+
+%%
+
+    /*------------ Modsim II Reserved Words ------------*/
+
+    /* Keywords */
+ALL         { charpos += yyleng; return(ALL); }
+AND         { charpos += yyleng; return(AND); }
+ARRAY       { charpos += yyleng; return(ARRAY); }
+AS          { charpos += yyleng; return(AS); }
+ASK         { charpos += yyleng; return(ASK); }
+BEGIN       { charpos += yyleng; return(BEGIN_); }
+BY          { charpos += yyleng; return(BY); }
+C"++"       { charpos += yyleng; return(CPLUSPLUS_); }
+C           { charpos += yyleng; return(C); }
+CALL        { charpos += yyleng; return(CALL); }
+CALLBACK    { charpos += yyleng; return(CALLBACK); }
+CASE        { charpos += yyleng; return(CASE); }
+CONST       { charpos += yyleng; return(CONST); }
+CLASS       { charpos += yyleng; return(CLASS); }
+DEFINITION  { charpos += yyleng; return(DEFINITION); }
+DIV         { charpos += yyleng; return(DIV); }
+DOWNTO      { charpos += yyleng; return(DOWNTO); }
+DURATION    { charpos += yyleng; return(DURATION); }
+ELSE        { charpos += yyleng; return(ELSE); }
+ELSIF       { charpos += yyleng; return(ELSIF); }
+END         { charpos += yyleng; return(END); }
+EXIT        { charpos += yyleng; return(EXIT); }
+FALSE       { charpos += yyleng; return(FALSE); }
+FIXED       { charpos += yyleng; return(FIXED); }
+FOR         { charpos += yyleng; return(FOR); }
+FOREACH     { charpos += yyleng; return(FOREACH); }
+FORWARD     { charpos += yyleng; return(FORWARD); }
+FROM        { charpos += yyleng; return(FROM); }
+IF          { charpos += yyleng; return(IF); }
+IMPLEMENTATION  { charpos += yyleng; return(IMPLEMENTATION); }
+IMPORT      { charpos += yyleng; return(IMPORT); }
+IN          { charpos += yyleng; return(IN); }
+INHERITED   { charpos += yyleng; return(INHERITED); }
+INOUT       { charpos += yyleng; return(INOUT); }
+INTERRUPT   { charpos += yyleng; return(INTERRUPT); }
+LIBRARY     { charpos += yyleng; return(LIBRARY); }
+LMONITOR    { charpos += yyleng; return(LMONITOR); }
+LMONITORED  { charpos += yyleng; return(LMONITORED); }
+LOOP        { charpos += yyleng; return(LOOP); }
+LRMONITORED { charpos += yyleng; return(LRMONITORED); }
+MAIN        { charpos += yyleng; return(MAIN); }
+METHOD      { charpos += yyleng; return(METHOD); }
+MOD         { charpos += yyleng; return(MOD); }
+MODULE      { charpos += yyleng; return(MODULE); }
+MONITOR     { charpos += yyleng; return(MONITOR); }
+NEW         { charpos += yyleng; return(NEW); }
+NILARRAY    { charpos += yyleng; return(NILARRAY); }
+NILOBJ      { charpos += yyleng; return(NILOBJ); }
+NILREC      { charpos += yyleng; return(NILREC); }
+NONMODSIM   { charpos += yyleng; return(NONMODSIM); }
+NOT         { charpos += yyleng; return(NOT); }
+OBJECT      { charpos += yyleng; return(OBJECT); }
+OF          { charpos += yyleng; return(OF); }
+ON          { charpos += yyleng; return(ON); }
+OR          { charpos += yyleng; return(OR); }
+OTHERWISE   { charpos += yyleng; return(OTHERWISE); }
+OUT         { charpos += yyleng; return(OUT); }
+OVERRIDE    { charpos += yyleng; return(OVERRIDE); }
+PRINT       { charpos += yyleng; return(PRINT); }
+PRIVATE     { charpos += yyleng; return(PRIVATE); }
+PROCEDURE   { charpos += yyleng; return(PROCEDURE); }
+PROTO       { charpos += yyleng; return(PROTO); }
+RECORD      { charpos += yyleng; return(RECORD); }
+REPEAT      { charpos += yyleng; return(REPEAT); }
+RETURN      { charpos += yyleng; return(RETURN); }
+REVERSED    { charpos += yyleng; return(REVERSED); }
+RMONITOR    { charpos += yyleng; return(RMONITOR); }
+RMONITORED  { charpos += yyleng; return(RMONITORED); }
+SAVED       { charpos += yyleng; return(SAVED); }
+SELF        { charpos += yyleng; return(SELF); }
+SPRINT      { charpos += yyleng; return(SPRINT); }
+TELL        { charpos += yyleng; return(TELL); }
+TERMINATE   { charpos += yyleng; return(TERMINATE); }
+TO          { charpos += yyleng; return(TO); }
+TRUE        { charpos += yyleng; return(TRUE); }
+TYPE        { charpos += yyleng; return(TYPE); }
+UNTIL       { charpos += yyleng; return(UNTIL); }
+VAR         { charpos += yyleng; return(VAR); }
+WAIT        { charpos += yyleng; return(WAIT); }
+WAITFOR     { charpos += yyleng; return(WAITFOR); }
+WITH        { charpos += yyleng; return(WITH); }
+WHEN        { charpos += yyleng; return(WHEN); }
+WHILE       { charpos += yyleng; return(WHILE); }
+
+    /*------- Other tokens --------*/
+{newline}   { charpos = 0; lineno++; }
+{ws}        { charpos += yyleng; }
+
+{plus}      { charpos += yyleng; return(PLUSOP_TOK); }
+{minus}     { charpos += yyleng; return(MINUSOP_TOK); }
+{times}     { charpos += yyleng; return(TIMESOP_TOK); }
+{divide}    { charpos += yyleng; return(DIVOP_TOK); }
+
+{equal}     { charpos += yyleng; return(EQUALOP_TOK); }
+{less}      { charpos += yyleng; return(LESSOP_TOK); }
+{greater}   { charpos += yyleng; return(GREATEROP_TOK); }
+{lessoreq}  { charpos += yyleng; return(LESSOREQOP_TOK); }
+{greateroreq}   { charpos += yyleng; return(GREATEROREQOP_TOK); }
+{noteq}     { charpos += yyleng; return(NOTEQOP_TOK); }
+
+{lparen}    { charpos += yyleng; return(LPAREN_TOK); }
+{rparen}    { charpos += yyleng; return(RPAREN_TOK); }
+{lbrack}    { charpos += yyleng; return(LBRACK_TOK); }
+{rbrack}    { charpos += yyleng; return(RBRACK_TOK); }
+
+{assign}    { charpos += yyleng; return(ASSIGN_TOK); }
+{range}     { charpos += yyleng; return(RANGE_TOK); }
+{comma}     { charpos += yyleng; return(COMMA_TOK); }
+{dot}       { charpos += yyleng; return(DOT_TOK); }
+{semicolon} { charpos += yyleng; return(SEMICOLON_TOK); }
+{colon}     { charpos += yyleng; return(COLON_TOK); }
+{hash}      { charpos += yyleng; return(HASH_TOK); }
+
+<<EOF>>     { return(ENDOFFILE_TOK); }
+
+{id}        { charpos += yyleng; return(ID_TOK); }
+{string}    { charpos += yyleng; return(STRINGLIT_TOK); }
+{integer}   { charpos += yyleng; return(INTEGERLIT_TOK); }
+{intrange}  { charpos += (yyleng-2); yyless(yyleng-2); return(INTEGERLIT_TOK); }
+{real}      { charpos += yyleng; return(REALLIT_TOK); }
+{char}      { charpos += yyleng; return(CHARLIT_TOK); }
+
+{startcmnta}    { charpos += yyleng; anestlevel++; BEGIN(cmntstate); }
+{startcmntb}    { charpos += yyleng; bnestlevel++; BEGIN(cmntstate); }
+
+.       { charpos += yyleng; }
+
+
+    /* ---- Comment state ---- */
+<cmntstate>{startcmnta} { charpos += yyleng; anestlevel++; }
+<cmntstate>{startcmntb} { charpos += yyleng; bnestlevel++; }
+<cmntstate>{endcmnta}   { charpos += yyleng; if (anestlevel > 0) anestlevel--; if (anestlevel == 0 && bnestlevel == 0) BEGIN(INITIAL); }
+<cmntstate>{endcmntb}   { charpos += yyleng; if (bnestlevel > 0) bnestlevel--; if (anestlevel == 0 && bnestlevel == 0) BEGIN(INITIAL); }
+<cmntstate>{newline}    { charpos = 0; lineno++; }
+<cmntstate>.            { charpos += yyleng; }
+
+%%
+
+
+    /* Modsim interface functions */
+parseropensrc( fname )
+char* fname;
+{
+  charpos = 0; lineno = 1; anestlevel = 0; bnestlevel = 0;
+  use_strings = 0;
+  /*yyin = fopen(fname, "r");*/
+  yyrestart(fopen(fname, "r"));
+}
+
+
+parserclosesrc()
+{
+  fclose(yyin);
+}
+
+
+parserinputstring( inputstrings, numofstrings )
+char** inputstrings;
+long numofstrings;
+{
+  charpos = 0; lineno = 1; anestlevel = 0; bnestlevel = 0;
+  use_strings = 1;
+  in_strings = inputstrings;
+  num_strings = numofstrings;
+  current_str_num = 0;
+}
+
+
+long parsergettok( cpos, lnum )
+long *cpos, *lnum;
+{
+  long tok;
+  
+  tok = yylex();
+  *cpos = charpos;
+  *lnum = lineno;
+  return tok;
+}
+
+
+char *parsergetlex()
+{
+  return MS_CreateString(yytext, 0);
+}
+
+
+    /* Override the library version of yywrap */
+yywrap()
+{
+  return 1;
+}
+
+
+
+%%%BUILTINS
+#######################################################################################################################
+
+# MODSIM builtin procedures
+# - note, PRINT, NEW, SPRINT procedures are special cases which disobey the normal syntax of
+#         procedures therefore they are defined as tokens rather than a ID token.  
+
+ABS ACTIVATE ADDMONITOR ASSOCDB CAP CHARTOSTR CHR CLINE CLONE CLOSEDB CREATEDB COMMIT DEACTIVATE DEC DISPOSE ERRNUM
+FLOAT GETLIST GETMONITOR HALT HIGH INC INPUT INSERT INTTOSTR ISANCESTOR LOW LOWER MAXOF MINOF OBJTYPEID OBJTYPENAME
+OBJVARID MAX MIN NEWPROC ODD ONERROR ONEXIT OPENDB ORD OUTPUT POSITION PRINTPROC REALTOSTR REPLACE REMOVEMONITOR ROUND
+SETDB SCHAR SIZEOF SPRINTPROC STATUS STRLEN STRTOCHAR STRTOINT STRTOREAL SUBSTR THISMETHOD TRACE UPDATEVALUE USEDB
+UPPER TRUNC VAL
+INTEGER STRING BOOLEAN REAL CHAR ANYOBJ ANYREC DATABASE ACTID
+
+
+
+%%%GRAMMAR
+#######################################################################################################################
+# The start of the grammar description
+
+main_mod_stmnt, _Module_BeginModule_ 
+                                        :   MAIN' MODULE' ID_TOK SEMICOLON_TOK'";
+
+impl_mod_stmnt, _Module_BeginModule_ 
+                                        :   IMPLEMENTATION' MODULE' ID_TOK SEMICOLON_TOK'";
+
+def_mod_stmnt, _Module_BeginModule_ 
+                                        :   DEFINITION' MODULE' ID_TOK SEMICOLON_TOK'";
+
+def_lib_mod_stmnt, _Module_BeginModule_ 
+                                        :   LIBRARY' DEFINITION' MODULE' ID_TOK SEMICOLON_TOK'";
+
+import_stmnt, _Diction_ImportStatement_ (m_mod, i_mod, d_mod)
+                                        :   FROM' ID_TOK IMPORT' import_id_list SEMICOLON_TOK'";
+
+>import_id_list                         :   import_id {import_id_rep};
+
+>import_id_rep                          :   COMMA_TOK' import_id;
+
+>import_id                              :   [ALL] import_name_id [import_subrange];
+
+>import_subrange                        :   LPAREN_TOK' import_name_id_list RPAREN_TOK';
+
+>import_name_id_list                    :   import_name_id {import_name_id_rep};
+
+>import_name_id_rep                     :   COMMA_TOK' import_name_id;
+
+>import_name_id                         :   ID_TOK [import_as];
+
+>import_as                              :   AS' ID_TOK;
+
+end_mod_stmnt, _Module_EndModule_ (i_mod, d_mod <)
+                                        :   END' MODULE' DOT_TOK'";
+
+end_main_mod_stmnt, _Module_EndModule_ (imp_code <<)
+                                        :   END' MODULE' DOT_TOK'";
+
+
+const_stmnt, _Decl_ConstSection_ (m_mod, i_mod, d_mod, proc_dec)
+                                        :   CONST';
+
+
+type_stmnt, _Decl_TypeSection_ (m_mod, i_mod, d_mod)
+                                        :   TYPE;
+
+forward_dec_stmnt, _Decl_ForwardTypeDeclaration_ (m_mod, i_mod, d_mod)            
+                                        :   ID_TOK EQUALOP_TOK' forward_type SEMICOLON_TOK'" FORWARD' SEMICOLON_TOK'";
+
+>forward_type                           :   RECORD | [SAVED'] OBJECT | [SAVED'] PROTO ;
+
+type_dec_stmnt, _Decl_TypeDeclaration_ (m_mod, i_mod, d_mod)
+                                        :   ID_TOK EQUALOP_TOK' base_type SEMICOLON_TOK'";
+
+general_dec_stmnt, _Decl_GeneralDeclaration_ (m_mod, i_mod, d_mod, proc_dec)
+                                        :   ID_TOK EQUALOP_TOK' expr SEMICOLON_TOK'";
+
+record_dec_stmnt, _Decl_RecordTypeDeclaration_ (m_mod, i_mod, d_mod > rec_dec)
+                                        :   ID_TOK EQUALOP_TOK' [FIXED] RECORD';
+
+end_record_dec_stmnt, _Decl_EndRecord_ (rec_dec <)
+                                        :   END' RECORD' SEMICOLON_TOK'";
+
+object_type_dec_stmnt, _Object_ObjectTypeDeclaration_ (m_mod, i_mod, d_mod, proc_dec > object_dec)
+                                        :   ID_TOK EQUALOP_TOK' [SAVED] object_title' [inherit_list];
+
+monitor_object_type_dec_stmnt, _Object_ObjectTypeDeclaration_ (m_mod, i_mod, d_mod, proc_dec > monitor_dec)
+                                        :   ID_TOK EQUALOP_TOK' [monitor_type] [SAVED] object_title' [inherit_list];
+
+>object_title                           :   OBJECT' | PROTO';
+
+>monitor_type                           :   MONITOR' ID_TOK;
+
+>inherit_list                           :   LPAREN_TOK' inherit_id RPAREN_TOK';
+
+>inherit_id                             :   ID_TOK [proto_replace] {inherit_rep};
+
+>inherit_rep                            :   COMMA_TOK' ID_TOK [proto_replace];
+
+>proto_replace                          :   LBRACK_TOK' ID_TOK COLON_TOK' [HASH_TOK] ID_TOK {proto_replace_rep} RBRACK_TOK';
+
+>proto_replace_rep                      :   COMMA_TOK' ID_TOK COLON_TOK' [HASH_TOK] ID_TOK;
+
+
+private_stmnt, _Object_PrivateSection_ (object_dec, monitor_dec)
+                                        :   PRIVATE';
+
+override_stmnt, _Object_OverrideSection_ (object_dec, monitor_dec)
+                                        :   OVERRIDE';
+
+class_stmnt, _Object_ClassSection_ (object_dec, monitor_dec)
+                                        :   CLASS';
+
+hidden_field_dec_stmnt, _Object_FieldDeclaration_ (object_dec, monitor_dec)
+                                        :   MINUSOP_TOK ID_TOK {minusid_rep} COLON_TOK' [HASH_TOK] base_type SEMICOLON_TOK'";
+
+>minusid_rep                            :   COMMA_TOK' MINUSOP_TOK ID_TOK | COMMA_TOK' ID_TOK;
+
+proto_field_dec_stmnt, _Object_FieldDeclaration_ (object_dec, monitor_dec)
+                                        :   ID_TOK {id_rep} COLON_TOK' HASH_TOK' base_type SEMICOLON_TOK'";
+
+hidden_ask_dec_stmnt, _Object_ASKMethodDecl_ (object_dec, monitor_dec)
+                                        :   ASK' METHOD' MINUSOP_TOK ID_TOK [proto_formal_params] [proto_return_type] SEMICOLON_TOK'";
+
+ask_dec_stmnt, _Object_ASKMethodDecl_ (object_dec, monitor_dec)
+                                        :   ASK' METHOD' ID_TOK [proto_formal_params] [proto_return_type] SEMICOLON_TOK'";
+
+tell_dec_stmnt, _Object_TELLMethodDecl_ (object_dec, monitor_dec)
+                                        :   TELL' METHOD' ID_TOK [proto_formal_params] SEMICOLON_TOK'";
+
+waitfor_dec_stmnt, _Object_WAITFORMethodDecl_ (object_dec, monitor_dec)
+                                        :   WAITFOR' METHOD' ID_TOK [proto_formal_params] [proto_return_type] SEMICOLON_TOK'";
+
+l_mon_dec_stmnt, _Object_LMONMethodDecl_ (monitor_dec)
+                                        :   LMONITOR' METHOD' ID_TOK SEMICOLON_TOK'";
+
+r_mon_dec_stmnt, _Object_RMONMethodDecl_ (monitor_dec)
+                                        :   RMONITOR' METHOD' ID_TOK SEMICOLON_TOK'";
+
+end_object_dec_stmnt, _Object_EndObject_ (object_dec, monitor_dec, object_imp <)
+                                        :   END' OBJECT' SEMICOLON_TOK'";
+
+end_object_proto_dec_stmnt, _Object_EndObject_ (object_dec, monitor_dec, object_imp <)
+                                        :   END' PROTO' SEMICOLON_TOK'";
+
+
+var_stmnt, _Decl_VarSection_ (m_mod, i_mod, d_mod, proc_dec)
+                                        :   VAR';
+
+simple_var_dec_stmnt, _Decl_VarDeclaration_ (m_mod, i_mod, d_mod, proc_dec, rec_dec, object_dec, monitor_dec)         
+                                        :   ID_TOK COLON_TOK' base_type SEMICOLON_TOK'";
+
+var_dec_stmnt, _Decl_VarDeclaration_ (m_mod, i_mod, d_mod, proc_dec, rec_dec, object_dec, monitor_dec)
+                                        :   ID_TOK {id_rep} COLON_TOK' base_type SEMICOLON_TOK'";
+
+persist_var_dec_stmnt, _Object_FieldDeclaration_ (object_dec, monitor_dec)
+                                        :   TIMESOP_TOK' ID_TOK {id_rep} COLON_TOK' base_type SEMICOLON_TOK'";
+
+>base_type                              :   ID_TOK | subrange_type | enum_type | array_type | fixed_array_type |
+                                            monitored_type | procedure_type;
+
+>subrange_type                          :   LBRACK_TOK' expr RANGE_TOK' expr RBRACK_TOK';
+
+>enum_type                              :   LPAREN_TOK' id_list RPAREN_TOK';
+
+>array_type                             :   ARRAY' index_list OF' base_type;
+
+>fixed_array_type                       :   FIXED' ARRAY' index_list OF' base_type;
+
+>index_list                             :   array_index {index_rep};
+
+>index_rep                              :   COMMA_TOK' array_index;
+
+>array_index                            :   ID_TOK | enum_type | subrange_type;
+
+>monitored_type                         :   monitor_meth ID_TOK [monitor_obj];
+
+>monitor_meth                           :   LMONITORED | RMONITORED | LRMONITORED;
+
+>monitor_obj                            :   BY' ID_TOK {id_rep};
+
+>procedure_type                         :   PROCEDURE' [base_type];
+
+
+object_dec_stmnt, _Object_ObjectBlockStatement_ (m_mod, i_mod > object_imp)
+                                        :   OBJECT' ID_TOK SEMICOLON_TOK'";
+
+object_proto_dec_stmnt, _Object_ObjectBlockStatement_ (m_mod, i_mod > object_imp)
+                                        :   PROTO' ID_TOK SEMICOLON_TOK'";
+
+
+ask_head_stmnt, _Object_ASKMethodHeading_ ( object_imp > proc_dec)
+                                        :   ASK' METHOD' ID_TOK [proto_formal_params] [proto_return_type] SEMICOLON_TOK'";
+
+tell_head_stmnt, _Object_TELLMethodHeading_ (object_imp > proc_dec)
+                                        :   TELL' METHOD' ID_TOK [proto_formal_params] SEMICOLON_TOK'";
+
+waitfor_head_stmnt, _Object_WAITFORMethodHeading_ (object_imp > proc_dec)
+                                        :   WAITFOR' METHOD' ID_TOK [proto_formal_params] [proto_return_type] SEMICOLON_TOK'";
+
+>proto_formal_params                    :   LPAREN_TOK' [proto_param_list] RPAREN_TOK';
+
+>proto_param_list                       :   proto_param {proto_param_rep};
+
+>proto_param_rep                        :   SEMICOLON_TOK' proto_param;
+
+>proto_param                            :   param_dir id_list COLON_TOK' [HASH_TOK] ID_TOK;
+
+>proto_return_type                      :   COLON_TOK' [HASH_TOK] ID_TOK;
+
+
+end_method_stmnt, _Object_EndMethod_ (imp_code <<)
+                                        :   END' METHOD' SEMICOLON_TOK'";
+
+
+inherit_stmnt, _Stmt_InheritStatement_(imp_code)
+                                        :   INHERITED' [from_obj] ID_TOK [arguments] SEMICOLON_TOK'";
+
+>inherit_call                           :   INHERITED' [from_obj] ID_TOK [arguments];
+
+>from_obj                               :   FROM' ID_TOK;
+
+
+ask_call_stmnt, _Stmt_AskCallStatement_ (imp_code)
+                                        :   ASK' object_term [TO'] struct_ref SEMICOLON_TOK'";
+
+>ask_call                               :   ASK' object_term [TO'] struct_ref;
+
+>object_term                            :   object_id | ask_call;
+
+>object_id                              :   struct_ref | SELF | LPAREN_TOK' object_term RPAREN_TOK';
+
+
+tell_call_stmnt, _Stmt_TellCallStatement_ (imp_code)
+                                        :   TELL' object_term [TO'] ID_TOK [arguments] [in_expr] SEMICOLON_TOK'";
+
+>tell_call                              :   TELL' object_term [TO'] ID_TOK [arguments] [in_expr];
+
+#>tell_call_b                            :   ID_TOK [arguments] in_expr;
+
+>in_expr                                :   IN' expr;
+
+
+wait_duration_stmnt, _Stmt_WaitDurationStatement_ (imp_code > wait")
+                                        :   WAIT' DURATION' expr;
+
+wait_for_stmnt, _Stmt_WaitForStatement_ (imp_code > wait")
+                                        :   WAIT' FOR' object_term [TO'] ID_TOK [arguments];
+
+on_interrupt_stmnt, _Stmt_OnInterruptStatement_ (wait)
+                                        :   ON' INTERRUPT';
+
+end_wait_stmnt, _Stmt_EndWaitStatement_  (wait <)
+                                        :   END' WAIT' SEMICOLON_TOK'";
+
+
+terminate_stmnt, _Stmt_TerminateStatement_ (imp_code)
+                                        :   TERMINATE' SEMICOLON_TOK'";
+
+
+l_mon_head_stmnt, _Object_LMONMethodHeading_ (object_imp > proc_dec)
+                                        :   LMONITOR' METHOD' ID_TOK SEMICOLON_TOK'";
+
+r_mon_head_stmnt, _Object_RMONMethodHeading_ (object_imp > proc_dec)
+                                        :   RMONITOR' METHOD' ID_TOK SEMICOLON_TOK'";
+
+
+callback_proc_dec_stmnt_a, _Decl_ProcedureDeclaration_ (d_mod)
+                                        :   CALLBACK PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'" [end_dec];
+
+callback_proc_dec_stmnt_b, _Decl_ProcedureDeclaration_ (m_mod, i_mod)
+                                        :   CALLBACK PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'" end_dec;
+
+callback_proc_head_stmnt, _Decl_ProcedureHeading_ (m_mod, i_mod > proc_dec)
+                                        :   CALLBACK PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'";
+
+proc_dec_stmnt_a, _Decl_ProcedureDeclaration_ (d_mod)
+                                        :   PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'" [end_dec];
+
+proc_dec_stmnt_b, _Decl_ProcedureDeclaration_ (m_mod, i_mod)
+                                        :   PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'" end_dec;
+
+proc_head_stmnt, _Decl_ProcedureHeading_ (m_mod, i_mod > proc_dec)
+                                        :   PROCEDURE' ID_TOK [formal_params] [return_type] SEMICOLON_TOK'";
+
+>end_dec                                :   FORWARD SEMICOLON_TOK'" | NONMODSIM [lang_spec] SEMICOLON_TOK'";
+
+>lang_spec                              :   CPLUSPLUS_ | C;
+
+>formal_params                          :   LPAREN_TOK' [param_list] RPAREN_TOK';
+
+>param_list                             :   param {param_rep};
+
+>param_rep                              :   SEMICOLON_TOK' param;
+
+>param                                  :   param_dir id_list COLON_TOK' ID_TOK;
+
+>param_dir                              :   IN | INOUT | OUT;
+
+>return_type                            :   COLON_TOK' ID_TOK;
+
+end_proc_stmnt, _Decl_EndProcedure_ (imp_code <<)
+                                        :   END' PROCEDURE' SEMICOLON_TOK'";
+
+return_stmnt, _Stmt_ReturnStatement_ (imp_code)
+                                        :   RETURN' [expr] SEMICOLON_TOK'";
+
+
+begin_stmnt, _Stmt_BeginStatement_ (m_mod, proc_dec > imp_code)
+                                        :   BEGIN_';
+
+
+simple_call_stmnt, _Stmt_ProcCallStatement_ (imp_code)
+                                        :   ID_TOK LPAREN_TOK' [expr_list] RPAREN_TOK' SEMICOLON_TOK'";
+
+simple_assign_stmnt, _Stmt_AssignmentStatement_ (imp_code)
+                                        :   ID_TOK ASSIGN_TOK' expr SEMICOLON_TOK'";
+
+
+assign_stmnt, _Stmt_AssignmentStatement_ (imp_code)
+                                        :   ID_TOK [qualifier] {dot_rep} ASSIGN_TOK' expr SEMICOLON_TOK'";
+
+
+proc_call_stmnt, _Stmt_ProcCallStatement_ (imp_code)
+                                        :   ID_TOK [qualifier] {dot_rep} [in_expr] SEMICOLON_TOK'";
+
+var_call_stmnt (imp_code)               :   CALL' ID_TOK [qualifier] {dot_rep} SEMICOLON_TOK'";
+
+>var_call                               :   CALL' ID_TOK [qualifier] {dot_rep};
+
+
+if_stmnt, _Stmt_IfStatement_  (imp_code)
+                                        :   IF' expr;
+
+elsif_stmnt, _Stmt_ElsifStatement_  :   ELSIF' expr;
+
+else_stmnt, _Stmt_ElseStatement_    :   ELSE';
+
+end_if_stmnt, _Stmt_EndifStatement_ 
+                                        :   END' IF' SEMICOLON_TOK'";
+
+
+case_stmnt, _Stmt_CaseStatement_ (imp_code > case")
+                                        :   CASE' expr;
+
+when_stmnt, _Stmt_WhenStatement_ (case) :   WHEN' case_label COLON_TOK';
+
+>case_label                             :   case_literal {case_literal_rep};
+
+>case_literal_rep                       :   COMMA_TOK' case_literal;
+
+>case_literal                           :   case_const RANGE_TOK' case_const | case_const;
+
+>case_const                             :   literal | ID_TOK;
+
+otherwise_stmnt, _Stmt_OtherwiseStatement_ (case)
+                                        :   OTHERWISE';
+
+end_case_stmnt, _Stmt_EndCaseStatement_ (case <)
+                                        :   END' CASE' SEMICOLON_TOK'";
+
+
+repeat_stmnt, _Stmt_RepeatStatement_ (imp_code > repeat")
+                                        :   REPEAT';
+
+until_stmnt, _Stmt_UntilStatement_ (repeat <)
+                                        :   UNTIL' expr SEMICOLON_TOK'";
+
+
+while_stmnt, _Stmt_WhileStatement_ (imp_code > while")
+                                        :   WHILE' expr;
+
+end_while_stmnt, _Stmt_EndWhileStatement_ (while <)
+                                        :   END' WHILE' SEMICOLON_TOK'";
+
+
+simple_for_stmnt, _Stmt_ForStatement_ (imp_code > for")
+                                        :   FOR' ID_TOK ASSIGN_TOK' expr for_dir expr [for_inc];
+
+for_stmnt, _Stmt_ForStatement_ (imp_code > for")
+                                        :   FOR' ID_TOK [qualifier] {dot_rep} ASSIGN_TOK' expr for_dir expr [for_inc];
+
+>for_dir                                :   TO | DOWNTO;
+
+>for_inc                                :   BY' expr;
+
+end_for_stmnt, _Stmt_EndForStatement_ (for <)
+                                        :   END' FOR' SEMICOLON_TOK'";
+
+
+foreach_stmnt, _Stmt_ForeachStatement_ (imp_code > foreach")
+                                        :   FOREACH' expr IN' expr [REVERSED];
+
+end_foreach_stmnt, _Stmt_EndForeachStatement_ (foreach <)
+                                        :   END' FOREACH' SEMICOLON_TOK'";
+
+
+loop_stmnt, _Stmt_LoopStatement_ (imp_code > loop")
+                                        :   LOOP';
+
+exit_stmnt, _Stmt_ExitStatement_ (imp_code)
+                                        :   EXIT' SEMICOLON_TOK'";
+
+end_loop_stmnt, _Stmt_EndLoopStatement_ (loop <)
+                                        :   END' LOOP' SEMICOLON_TOK'";
+
+
+do_nothing_stmnt                        :   SEMICOLON_TOK';
+
+
+general_proc_end_stmnt ((proc_dec)imp_code <<)
+                                        :   END' SEMICOLON_TOK'";
+
+general_mod_end_stmnt ((m_mod)imp_code <<)
+                                        :   END' SEMICOLON_TOK'";
+
+general_end_stmnt (imp_code <)          :   END' SEMICOLON_TOK'";
+
+
+>expr                                   :   term {term_rep};
+
+>term_rep                               :   binary_op term;
+
+>term                                   :   factor | LPAREN_TOK' expr RPAREN_TOK' | unary_op expr;
+
+>factor                                 :   literal | struct_ref | ask_call | tell_call | inherit_call | var_call | 
+                                            sprint_call;
+
+>literal                                :   INTEGERLIT_TOK | REALLIT_TOK | CHARLIT_TOK | STRINGLIT_TOK | TRUE | FALSE | 
+                                            NILREC | NILARRAY | NILOBJ | SELF;
+
+>literal_class                          :   INTEGERLIT_TOK | REALLIT_TOK | CHARLIT_TOK | STRINGLIT_TOK;
+
+>true_literal                           :   TRUE | FALSE | NILREC | NILARRAY | NILOBJ | SELF;
+
+>binary_op                              :   PLUSOP_TOK | MINUSOP_TOK | TIMESOP_TOK | DIV | DIVOP_TOK | MOD | LESSOP_TOK | 
+                                            GREATEROP_TOK | EQUALOP_TOK | NOTEQOP_TOK | LESSOREQOP_TOK | 
+                                            GREATEROREQOP_TOK | AND | OR;
+
+>unary_op                               :   PLUSOP_TOK | MINUSOP_TOK | NOT;
+
+
+>struct_ref                             :   ID_TOK [qualifier] {dot_rep};
+
+>dot_rep                                :   DOT_TOK' ID_TOK [qualifier];
+
+>qualifier                              :   arguments | array_elem_ref;
+
+>arguments                              :   LPAREN_TOK' [expr_list] RPAREN_TOK';
+
+>array_elem_ref                         :   LBRACK_TOK' expr {array_rep} RBRACK_TOK';
+
+>array_rep                              :   array_sep expr;
+
+>array_sep                              :   COMMA_TOK' | RBRACK_TOK' LBRACK_TOK';
+
+>expr_list                              :   expr {expr_rep};
+
+>expr_rep                               :   COMMA_TOK' expr;
+
+>id_list                                :   ID_TOK {id_rep};
+
+>id_rep                                 :   COMMA_TOK' ID_TOK;
+
+
+simple_new_call_stmnt, _Stmt_NewStatement_ (imp_code)
+                                        :   NEW' LPAREN_TOK' ID_TOK RPAREN_TOK' SEMICOLON_TOK'";
+
+new_call_stmnt, _Stmt_NewStatement_ (imp_code)
+                                        :   NEW' LPAREN_TOK' ID_TOK [qualifier] {dot_rep} {index_spec_rep} RPAREN_TOK' 
+                                            SEMICOLON_TOK'";
+
+>index_spec_rep                         :   COMMA_TOK' expr RANGE_TOK' expr;
+
+
+print_stmnt, _Stmt_PrintStatement_ (imp_code)
+                                        :   PRINT' LPAREN_TOK' expr_list RPAREN_TOK' WITH' expr SEMICOLON_TOK'";
+
+>sprint_call                            :   SPRINT' LPAREN_TOK' expr_list RPAREN_TOK' WITH' expr;
+
+.

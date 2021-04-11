@@ -1,0 +1,9 @@
+ |Msg:Computer group:Message Source:Computer group:transcmddelivered:1|      143
+ |CONFIG:CSMA/CA link:BusyLevelX:1|      544
+ |CONFIG:CSMA/CA link:BusyLevelY:1|      898
+ |CONFIG:CSMA/CA link:tokendelayX:1|     1252
+ |CONFIG:CSMA/CA link:tokendelayY:1|     1618
+ |CONFIG:CSMA/CA link:framelevel:1|     1984
+ |CONFIG:CSMA/CA link:framedelay:1|     2411
+ |CONFIG:CSMA/CA link:MultipleCllsns:1|     2776
+ |CONFIG:CSMA/CA link:CllsnsPerFrame:1|     3100

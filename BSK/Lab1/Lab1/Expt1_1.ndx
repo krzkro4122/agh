@@ -1,0 +1,108 @@
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:1|      143
+ |CONFIG:CSMA/CA Link:BusyLevelX:1|      544
+ |CONFIG:CSMA/CA Link:BusyLevelY:1|      898
+ |CONFIG:CSMA/CA Link:tokendelayX:1|     1252
+ |CONFIG:CSMA/CA Link:tokendelayY:1|     1618
+ |CONFIG:CSMA/CA Link:framelevel:1|     1984
+ |CONFIG:CSMA/CA Link:framedelay:1|     2411
+ |CONFIG:CSMA/CA Link:MultipleCllsns:1|     2776
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:1|     3100
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:2|     3424
+ |CONFIG:CSMA/CA Link:BusyLevelX:2|     3825
+ |CONFIG:CSMA/CA Link:BusyLevelY:2|     4179
+ |CONFIG:CSMA/CA Link:tokendelayX:2|     4533
+ |CONFIG:CSMA/CA Link:tokendelayY:2|     4899
+ |CONFIG:CSMA/CA Link:framelevel:2|     5265
+ |CONFIG:CSMA/CA Link:framedelay:2|     5692
+ |CONFIG:CSMA/CA Link:MultipleCllsns:2|     6057
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:2|     6381
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:3|     6705
+ |CONFIG:CSMA/CA Link:BusyLevelX:3|     7106
+ |CONFIG:CSMA/CA Link:BusyLevelY:3|     7460
+ |CONFIG:CSMA/CA Link:tokendelayX:3|     7814
+ |CONFIG:CSMA/CA Link:tokendelayY:3|     8180
+ |CONFIG:CSMA/CA Link:framelevel:3|     8546
+ |CONFIG:CSMA/CA Link:framedelay:3|     8973
+ |CONFIG:CSMA/CA Link:MultipleCllsns:3|     9338
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:3|     9662
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:4|     9986
+ |CONFIG:CSMA/CA Link:BusyLevelX:4|    10387
+ |CONFIG:CSMA/CA Link:BusyLevelY:4|    10741
+ |CONFIG:CSMA/CA Link:tokendelayX:4|    11095
+ |CONFIG:CSMA/CA Link:tokendelayY:4|    11461
+ |CONFIG:CSMA/CA Link:framelevel:4|    11827
+ |CONFIG:CSMA/CA Link:framedelay:4|    12254
+ |CONFIG:CSMA/CA Link:MultipleCllsns:4|    12619
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:4|    12943
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:5|    13267
+ |CONFIG:CSMA/CA Link:BusyLevelX:5|    13668
+ |CONFIG:CSMA/CA Link:BusyLevelY:5|    14022
+ |CONFIG:CSMA/CA Link:tokendelayX:5|    14376
+ |CONFIG:CSMA/CA Link:tokendelayY:5|    14742
+ |CONFIG:CSMA/CA Link:framelevel:5|    15108
+ |CONFIG:CSMA/CA Link:framedelay:5|    15535
+ |CONFIG:CSMA/CA Link:MultipleCllsns:5|    15900
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:5|    16224
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:6|    16548
+ |CONFIG:CSMA/CA Link:BusyLevelX:6|    16949
+ |CONFIG:CSMA/CA Link:BusyLevelY:6|    17303
+ |CONFIG:CSMA/CA Link:tokendelayX:6|    17657
+ |CONFIG:CSMA/CA Link:tokendelayY:6|    18023
+ |CONFIG:CSMA/CA Link:framelevel:6|    18389
+ |CONFIG:CSMA/CA Link:framedelay:6|    18816
+ |CONFIG:CSMA/CA Link:MultipleCllsns:6|    19181
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:6|    19505
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:7|    19829
+ |CONFIG:CSMA/CA Link:BusyLevelX:7|    20230
+ |CONFIG:CSMA/CA Link:BusyLevelY:7|    20584
+ |CONFIG:CSMA/CA Link:tokendelayX:7|    20938
+ |CONFIG:CSMA/CA Link:tokendelayY:7|    21304
+ |CONFIG:CSMA/CA Link:framelevel:7|    21670
+ |CONFIG:CSMA/CA Link:framedelay:7|    22097
+ |CONFIG:CSMA/CA Link:MultipleCllsns:7|    22462
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:7|    22786
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:8|    23110
+ |CONFIG:CSMA/CA Link:BusyLevelX:8|    23511
+ |CONFIG:CSMA/CA Link:BusyLevelY:8|    23865
+ |CONFIG:CSMA/CA Link:tokendelayX:8|    24219
+ |CONFIG:CSMA/CA Link:tokendelayY:8|    24585
+ |CONFIG:CSMA/CA Link:framelevel:8|    24951
+ |CONFIG:CSMA/CA Link:framedelay:8|    25378
+ |CONFIG:CSMA/CA Link:MultipleCllsns:8|    25743
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:8|    26067
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:9|    26391
+ |CONFIG:CSMA/CA Link:BusyLevelX:9|    26792
+ |CONFIG:CSMA/CA Link:BusyLevelY:9|    27146
+ |CONFIG:CSMA/CA Link:tokendelayX:9|    27500
+ |CONFIG:CSMA/CA Link:tokendelayY:9|    27866
+ |CONFIG:CSMA/CA Link:framelevel:9|    28232
+ |CONFIG:CSMA/CA Link:framedelay:9|    28659
+ |CONFIG:CSMA/CA Link:MultipleCllsns:9|    29024
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:9|    29348
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:10|    29672
+ |CONFIG:CSMA/CA Link:BusyLevelX:10|    30073
+ |CONFIG:CSMA/CA Link:BusyLevelY:10|    30427
+ |CONFIG:CSMA/CA Link:tokendelayX:10|    30781
+ |CONFIG:CSMA/CA Link:tokendelayY:10|    31147
+ |CONFIG:CSMA/CA Link:framelevel:10|    31513
+ |CONFIG:CSMA/CA Link:framedelay:10|    31940
+ |CONFIG:CSMA/CA Link:MultipleCllsns:10|    32305
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:10|    32629
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:0|    32953
+ |CONFIG:CSMA/CA Link:BusyLevelX:0|    33354
+ |CONFIG:CSMA/CA Link:BusyLevelY:0|    33719
+ |CONFIG:CSMA/CA Link:tokendelayX:0|    34084
+ |CONFIG:CSMA/CA Link:tokendelayY:0|    34450
+ |CONFIG:CSMA/CA Link:framelevel:0|    34816
+ |CONFIG:CSMA/CA Link:framedelay:0|    35181
+ |CONFIG:CSMA/CA Link:MultipleCllsns:0|    35546
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:0|    35915
+ |Msg:Computer Group:Message Source:Computer Group:transcmddelivered:-1|    36284
+ |CONFIG:CSMA/CA Link:BusyLevelX:-1|    36685
+ |CONFIG:CSMA/CA Link:BusyLevelY:-1|    37039
+ |CONFIG:CSMA/CA Link:tokendelayX:-1|    37393
+ |CONFIG:CSMA/CA Link:tokendelayY:-1|    37759
+ |CONFIG:CSMA/CA Link:framelevel:-1|    38125
+ |CONFIG:CSMA/CA Link:framedelay:-1|    38552
+ |CONFIG:CSMA/CA Link:MultipleCllsns:-1|    38917
+ |CONFIG:CSMA/CA Link:CllsnsPerFrame:-1|    39241

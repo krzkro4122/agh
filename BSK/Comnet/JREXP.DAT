@@ -1,0 +1,153 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |1.8| 
+ |SimFlow|  |0000.031| 
+ |SimLib|  |0000.014| 
+ |ComnetIII|  |0000.022| 
+ |EndVersion| 
+
+39
+	Parm	||	0	1			ALOHA_PARM	||	||	1	0	cLnkCfg	AlohaParmObj	||
+2				1	0	0	ALOHA_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	ALOHA_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			ANALYTIC_LINK_LOAD_PARM	||	||	1	0	cLnkLd	AnalyticalLnkLdrParmObj	||
+2				1	0	0	ANALYTIC_LINK_LOAD_PARM	STD_DEV_FRAME_SIZE	|Std. Dev. Frame Size|	rStdDevFrameSize	REALTYPE	||	0	
+				1	0	0	ANALYTIC_LINK_LOAD_PARM	MEAN_FRAME_SIZE	|Mean Frame Size|	rMeanFrameSize	REALTYPE	||	0	
+	|Answer Command|	Command	1	1			ANSWER_MSG_CMD	||	||	1	0	cSesOpn	AnswerCommandObj	||
+3				1	0	0	ANSWER_MSG_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				1	0	0	ANSWER_MSG_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				1	0	0	ANSWER_MSG_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+	|Application Source|	|Layouts.Sources|	1	1			APPLICATION_SOURCE	||	||	1	0	cApplic	AppSourceObj	||
+1				1	0	1	APPLICATION_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+	|Assign Variable Command|	Command	1	1			ASSIGN_VARIABLE_CMD	||	||	1	0	cVarCmd	AssignCommandObj	||
+3				1	0	0	ATM_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				1	0	0	ATM_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+				1	0	0	AVAILABLE_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+	|Call Source|	|Layouts.Sources|	1	1			CALL_SOURCE	||	||	1	0	cCall	CallSourceObj	||
+1				1	0	0	CALL_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+	|WAN Cloud|	Areas	0	1			CLOUD	||	||	1	0	cCldCfg	FrmRlyCloudConfigObj	||
+1				1	0	0	CLOUD	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+	|Cloud Access Link|	Layouts.Links	1	1			CLOUD_ACCESS_LINK	||	||	1	0	cCldAcc	CldAccessLinkConfigObj	||
+1				1	0	0	CLOUD_ACCESS_LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	|Cloud VC|	Layouts	1	1			CLOUD_VC	||	||	1	0	cCldVC	CldVCConfigObj	||
+1				1	0	0	CLOUD_VC	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	Parm	||	0	1			CLOUD_WAN_PARM 	||	||	1	0	cCldCfg	FrmRlyCloudConfigParmObj	||
+3				1	0	0	CLOUD_WAN_PARM 	FRAME_DROP_PROB_NORMAL	|Frame Drop Prob Normal|	rProbDropFrmNormal	REALTYPE	||	0	
+				1	0	0	CLOUD_WAN_PARM 	FRAME_DROP_PROB_MODERATE	|Frame Drop Prob Moderate|	rProbDropFrmModerate	REALTYPE	||	0	
+				1	0	0	CLOUD_WAN_PARM 	FRAME_DROP_PROB_EXTREME	|Frame Drop Prob Extreme|	rProbDropFrmExtreme	REALTYPE	||	0	
+	Parm	||	0	1			COMP_COMM_PARM	||	||	1	0	cConfig	ApplicConfigParmObj	||
+4				1	0	0	COMP_COMM_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				1	0	0	COMP_COMM_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0	
+				1	0	0	COMP_COMM_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				1	0	0	COMP_COMM_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+	Parm	||	0	1			COMPUTER_GROUP_PARM	||	||	1	0	cConfig	ComputerConfigParmObj	||
+5				1	0	0	COMPUTER_GROUP_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	QUANTITY	Quantity	iQuantity	INTEGERTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				1	0	0	COMPUTER_GROUP_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+	Parm	||	0	1			CONSTANT_RATE_PARM	||	||	1	0	cRatCtl	ConstantRCParmObj	||
+1				1	0	0	CONSTANT_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+	Parm	||	0	1			CSMA_CD_PARM	||	||	1	0	cLnkCfg	CsmaCdParmObj	||
+2				1	0	0	CSMA_CD_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	CSMA_CD_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			CSMA_PARM	||	||	1	0	cLnkCfg	CsmaParmObj	||
+2				1	0	0	CSMA_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	CSMA_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			FDDI_BASIC_PARM	||	||	1	0	cLnkCf2	PriorityTokenRingParmObj	||
+2				1	0	0	FDDI_BASIC_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	FDDI_BASIC_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			FRAME_RELAY_VC_PARM	||	||	1	0	cCldVC	CldVCConfigParmObj	||
+2				1	0	0	FRAME_RELAY_VC_PARM	BURST_EXCESS	|Burst Excess|	rBurstExcess	REALTYPE	||	0	
+				1	0	0	FRAME_RELAY_VC_PARM	BURST_COMMITTED	|Burst Committed|	rBurstCommitted	REALTYPE	||	0	
+	Aloha	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	AlohaConfigObj	||
+0	Polling	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	PollingConfigObj	||
+0	Point-To-Point	Layouts.Links	1	1			LINK	||	||	1	0	cPPLink	P2PConfigObj	||
+0	CSMA/CD	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaCdConfigObj	||
+0	CSMA	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCfg	CsmaConfigObj	||
+0	|Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	TokenRingConfigObj	||
+0	|Priority Token Passing|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityTokenRingConfigObj	||
+0	|FDDI Basic|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	FDDIConfigObj	||
+0	|Priority FDDI|	Layouts.Links	1	1			LINK	||	||	1	0	cLnkCf2	PriorityFDDIConfigObj	||
+3				1	0	0	LINK	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+				1	0	0	LINK	LINK_LOAD_FACTOR_Y	|Link Load Factor Y|	oConfigOwner.rLoadFactorY	REALTYPE	||	0	
+				1	0	0	LINK	LINK_LOAD_FACTOR_X	|Link Load Factor X|	oConfigOwner.rLoadFactorX	REALTYPE	||	0	
+	|Message Source|	|Layouts.Sources|	1	1			MESSAGE_SOURCE	||	||	1	0	cMsgSrc	MsgSourceObj	||
+4				1	0	0	MESSAGE_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SourceCommand.SampleObj	0	
+				1	0	0	MESSAGE_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				1	0	0	MESSAGE_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.SampleObj	0	
+				1	0	0	MESSAGE_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+	|Processing Node|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ApplicConfigObj	||
+0	Switch	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ATMConfigObj	||
+0	Router	Layouts.Nodes	1	1			NODE	||	||	1	0	cRteNd	RouterConfigObj	||
+0	|Computer Group|	Layouts.Nodes	1	1			NODE	||	||	1	0	cConfig	ComputerConfigObj	||
+1				1	0	0	NODE	PARM	Parms	oParms	OBJECTTYPE	ParmType	0	
+	|Packet Flow|	Miscellaneous	0	1			PACKET_FLOW	||	||	1	0	cPktFlo	PacketFlowObj	||
+3				1	0	0	PACKET_FLOW	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0	
+				1	0	0	PACKET_FLOW	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				1	0	0	PACKET_FLOW	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+	Parm	||	0	1			POLLING_PARM	||	||	1	0	cLnkCfg	PollingParmObj	||
+2				1	0	0	POLLING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	POLLING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			PRIORITY_FDDI_PARM	||	||	1	0	cLnkCf2	PriorityTokenRingParmObj	||
+2				1	0	0	PRIORITY_FDDI_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	PRIORITY_FDDI_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			PRIORITY_TOKEN_PASSING_PARM	||	||	1	0	cLnkCf2	PriorityTokenRingParmObj	||
+2				1	0	0	PRIORITY_TOKEN_PASSING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	PRIORITY_TOKEN_PASSING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	|Process Command|	Command	1	1			PROCESS_DATA_CMD	||	||	1	0	cComman	ProcessingCommandObj	||
+1				1	0	0	PROCESS_DATA_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+	Parm	||	0	1			PT_TO_PT_PARM	||	||	1	0	cLnkCfg	PtToPtParmObj	||
+3				1	0	0	PT_TO_PT_PARM	REV_BANDWIDTH	|Rev Bandwidth|	rRevBandwidth	REALTYPE	||	0	
+				1	0	0	PT_TO_PT_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	PT_TO_PT_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	Parm	||	0	1			RANDOM_LINK_LOAD_PARM	||	||	1	0	cLnkLd	RandomLnkLdrParmObj	||
+2				1	0	0	RANDOM_LINK_LOAD_PARM	FRAME_SIZE	|Frame Size|	soFrameSize	OBJECTTYPE	SampleObj	0	
+				1	0	0	RANDOM_LINK_LOAD_PARM	FRAME_IAT	|Frame IAT|	soIAT	OBJECTTYPE	SampleObj	0	
+	|Read Command|	Command	1	1			READ_FILE_CMD	||	||	1	0	cComman	ReadCommandObj	||
+1				1	0	0	READ_FILE_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+	|Remote Link|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteLinkConfigObj	||
+0	|Remote Node|	Layouts.Remotes	1	1			REMOTE	||	||	1	0	cRemote	RemoteNodeConfigObj	||
+0	Socket	Layouts.Sockets	1	1			REMOTE	||	||	1	0	cRemote	SocketObj	||
+1				1	0	0	REMOTE	PARM	Parm	oParms	OBJECTTYPE	ParmType	0	
+	|Response Source|	|Layouts.Sources|	1	1			RESPONSE_SOURCE	||	||	1	0	cResSrc	ResSourceObj	||
+3				1	0	0	RESPONSE_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				1	0	0	RESPONSE_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.SampleObj	0	
+				1	0	0	RESPONSE_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+	Parm	||	0	1			ROUTER_PARM	||	||	1	0	cRteNd	RouterConfigParmObj	||
+4				1	0	0	ROUTER_PARM	STORAGE_CAPACITY	|Storage Capacity|	rStorageCapacity	REALTYPE	||	0	
+				1	0	0	ROUTER_PARM	PROC_COUNT	|Processor Count|	iNumProcessors	INTEGERTYPE	||	0	
+				1	0	0	ROUTER_PARM	OUTPUT_BUFFER_CAPACITY	|Output Buffer Capacity|	rOutputBufferCapacity	REALTYPE	||	0	
+				1	0	0	ROUTER_PARM	INPUT_BUFFER_CAPACITY	|Input Buffer Capacity|	rInputBufferCapacity	REALTYPE	||	0	
+	|Session Source|	|Layouts.Sources|	1	1			SESSION_SOURCE	||	||	1	0	cSesSrc	SesSourceObj	||
+6				1	0	0	SESSION_SOURCE	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SourceCommand.ForwardMsgCommand.SampleObj	0	
+				1	0	0	SESSION_SOURCE	MSGS_PER_SESSION	|Msgs Per Session|	oForwardMsgSrc.oGenratr.soMaxCount	OBJECTTYPE	SourceCommand.SampleObj	0	
+				1	0	0	SESSION_SOURCE	MSG_IAT	|Msg IAT|	oForwardMsgSrc.oGenratr.sotDelta1	OBJECTTYPE	SourceCommand.SampleObj	0	
+				1	0	0	SESSION_SOURCE	IAT	IAT	oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				1	0	0	SESSION_SOURCE	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SourceCommand.ForwardMsgCommand.SampleObj	0	
+				1	0	0	SESSION_SOURCE	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	SourceCommand.ProtocolType	0	
+	|Setup Command|	Command	1	1			SETUP_SESSION_CMD	||	||	1	0	cSesOpn	SetupCommandObj	||
+5				1	0	0	SETUP_SESSION_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				1	0	0	SETUP_SESSION_CMD	MSGS_PER_SESSION	|Msgs Per Session|	oForwardMsgSrc.oGenratr.soMaxCount	OBJECTTYPE	SampleObj	0	
+				1	0	0	SETUP_SESSION_CMD	MSG_IAT	|Msg IAT|	oForwardMsgSrc.oGenratr.sotDelta1	OBJECTTYPE	SampleObj	0	
+				1	0	0	SETUP_SESSION_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	ForwardMsgCommand.SampleObj	0	
+				1	0	0	SETUP_SESSION_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0	
+	Parm	||	0	1			SOCKET_PARM	||	||	1	0	cRemote	SocketConfigParmObj	||
+1				1	0	0	SOCKET_PARM	PKTZ_DELAY	|Pktz Delay|	sotPktzDelay	OBJECTTYPE	SampleObj	0	
+	Parm	||	0	1			THROTTLED_RATE_PARM	||	||	1	0	cRatCtl	ThrottledRCParmObj	||
+1				1	0	0	THROTTLED_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+	Parm	||	0	1			TOKEN_PASSING_PARM	||	||	1	0	cLnkCf2	TokenRingParmObj	||
+2				1	0	0	TOKEN_PASSING_PARM	FRAME_ERROR_PROB	|Frame Error Prob|	rFrameErrProb	REALTYPE	||	0	
+				1	0	0	TOKEN_PASSING_PARM	BANDWIDTH	Bandwidth	rBandwidth	REALTYPE	||	0	
+	|Transport Command|	Command	1	1			TRANSPORT_MSG_CMD	||	||	1	0	cTrnCmd	TransportCommandObj	||
+3				1	0	0	TRANSPORT_MSG_CMD	PACKETIZING_DELAY	|Packetizing Delay|	sotPacketizingDelay	OBJECTTYPE	SampleObj	0	
+				1	0	0	TRANSPORT_MSG_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+				1	0	0	TRANSPORT_MSG_CMD	PROTOCOL	Protocol	oTransportProto	OBJECTTYPE	ProtocolType	0	
+	Parm	||	0	1			VARIABLE_RATE_PARM	||	||	1	0	cRatCtl	VariableRCParmObj	||
+3				1	0	0	VARIABLE_RATE_PARM	SUSTAIN_THRESHOLD	|Sustain Threshold|	iThresholdSustain	INTEGERTYPE	||	0	
+				1	0	0	VARIABLE_RATE_PARM	PEAK_THRESHOLD	|Peak Threshold|	iThresholdPeak	INTEGERTYPE	||	0	
+				1	0	0	VARIABLE_RATE_PARM	BURST_THRESHOLD	|Burst Threshold|	iThreshold	INTEGERTYPE	||	0	
+	|Write Command|	Command	1	1			WRITE_FILE_CMD	||	||	1	0	cComman	WriteCommandObj	||
+1				1	0	0	WRITE_FILE_CMD	BYTES_OR_CYCLES	|Bytes Or Cycles|	soBytesOrCycles	OBJECTTYPE	SampleObj	0	
+	|Port Arc|	|Arcs|	1	1			PORT_ARC	||	||	1	0	cPort	PortArcObj	||
+2				1	0	0	PORT_ARC	OUTPUT_BUFFER_DELAY	|Output Buffer Delay|	tOutputBufferDelay	REALTYPE	||	0	
+				1	0	0	PORT_ARC	INPUT_BUFFER_DELAY	|Input Buffer Delay|	tInputBufferDelay	REALTYPE	||	0	

@@ -1,0 +1,30 @@
+ustawienie pn generator, zdj
+potem unipolar na 2
+potem barkera ogarnac z wykladu
+potem sine zdj 2
+potem probkowanie w productcie zdj 3 w pierwszym bloku 
+model explorer zdj 4 
+w pierwszym bloczku product predkosc bedzie odpowiadala predkosci generowania kodu barkera
+a w drugim produkcie 0.1 ns
+a w dwóch kolejnych produktach tez 0.1 ns
+nie ma bloczku generowania szumu gaussowkiego, zastepujemy go tym jesli nie ma tamtego bloczku zdj 5 ale noise na 1e-11
+analizator jeden ustawic a potem sobie skopiowac poleca
+skopiowac zdj 6 tylko pamietac o tym czasie prokowaniwa co wyzej pisalem ze dwa kolejne...
+zdj 7 ustawienia i w sprawozdaniu trzeba napisac dlaczego to jest taka liczba
+zdj 8 ustawienie spectrum
+prawym w spectrum configuration parameters zdj9
+na scopie odebrany jest przesuniety o czas trwania jednej próbki
+integrate and du... jest to prostsza realizacja filtru - mamy usrednie po czasie,
+*** notka do szumu z zdj 5, szum 1e-11 poniewaz do poakzu nie byl az tak zauwazalny i tak jak na zdj teraz i porowanienie, 
+dodajac szum caly sygnal ginie w poziomie szumu po jest powyzej 
+Czy nie odbierzemy sygnalu po drugiej stronie, sygnał po korelacji ciagiem barkera wyglda tragicznie, a jednak da sie cos uzyskac
+dlaczego tak sie dzieje i po co sie te kody barkera korzysta
+
+2 film 
+widmo po roproszeniu szerokie, zmenijszamy jego moc i dopiero po korelacji wracamy do do naszego sygnalu o waskim pasmie
+jezeli wezniemy na ten nasz sygnal zaklocenia, np losowe od mikrofali czy cos, czyli po strobnie odbiornika po korelacji nasze wąskopasmowe zakłócenia sie rozmyją, a nasz sygnal wroci do wasko pasmowego
+wroci do swojej orginalnej formy.
+
+jesli odbiorca nie zna odpowiedniego koduy barkera to jemu z takiego zaszumionego sygnaly nic sie nie nada
+
+

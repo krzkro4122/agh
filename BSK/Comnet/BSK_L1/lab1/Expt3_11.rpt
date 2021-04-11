@@ -1,0 +1,75 @@
+CACI COMNET III  Release 1.3 (Build 1220)  Tue Mar 23 14:00:53 2021   PAGE     1
+
+                                     BSK_L1                                     
+    Experiment scenario 11: IAT of "Message Source @ Computer group" = 0.002    
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                     REPLICATION 1 FROM 0.0 TO 2.0 SECONDS                      
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA link                5405      0     35.020     71.021    474.185  20.26
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Tue Mar 23 14:00:53 2021   PAGE     2
+
+                                     BSK_L1                                     
+    Experiment scenario 11: IAT of "Message Source @ Computer group" = 0.002    
+
+                             LINKS: COLLISION STATS                             
+
+                     REPLICATION 1 FROM 0.0 TO 2.0 SECONDS                      
+
+
+LINK NAME                  CSMA/CA  
+                             link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES              4066
+
+COLLIDED FRAMES                 9778
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       2.65
+  STANDARD DEVIATION            1.81
+  MAXIMUM                          7
+
+NBR OF DEFERRALS                5429
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       2.20
+  STANDARD DEVIATION            1.51
+  MAXIMUM                      13.29
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       5.98
+  STANDARD DEVIATION            4.47
+  MAXIMUM                         84
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                  1250
+  AVG PER EPISODE               3.32
+  MAX PER EPISODE                  8
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Tue Mar 23 14:00:53 2021   PAGE     3
+
+                                     BSK_L1                                     
+    Experiment scenario 11: IAT of "Message Source @ Computer group" = 0.002    
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                     REPLICATION 1 FROM 0.0 TO 2.0 SECONDS                      
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer group / src Message Source:
+  Computer group             5255        941.376       547.293      1916.691

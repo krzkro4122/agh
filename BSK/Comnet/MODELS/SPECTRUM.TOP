@@ -1,0 +1,645 @@
+--------------------------------------------------------------------
+
+Spectrum_Topology_Exported:Mon Oct 17 14:21:22 EDT 1994
+Virtual_Network_Name:   disney
+Landscape_ID:           0x56c40000
+
+----------------------Segment_Info----------------------
+
+Number_of_Segments:                16
+
+Segment_ID:                        0x56c405f0
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    FDDI
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40625
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c405f4
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c405f3
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c405f2
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c405f1
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40335
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40334
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40333
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40332
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c401f6
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c401f5
+Model_Name:                        Automapped LAN
+Modeltype_Name:                    LAN_802_3
+Segment_Mask:                      0.0.0.0
+Segment_Address:                   
+
+Segment_ID:                        0x56c40051
+Model_Name:                        134.141.252.0
+Modeltype_Name:                    LAN
+Segment_Mask:                      255.255.255.0
+Segment_Address:                   134.141.252.0
+
+Segment_ID:                        0x56c4003e
+Model_Name:                        134.141.54.0
+Modeltype_Name:                    LAN
+Segment_Mask:                      255.255.255.0
+Segment_Address:                   134.141.54.0
+
+Segment_ID:                        0x56c4003d
+Model_Name:                        134.141.53.0
+Modeltype_Name:                    LAN
+Segment_Mask:                      255.255.255.0
+Segment_Address:                   134.141.53.0
+
+Segment_ID:                        0x56c4003b
+Model_Name:                        134.141.55.0
+Modeltype_Name:                    LAN
+Segment_Mask:                      255.255.255.0
+Segment_Address:                   134.141.55.0
+
+------------------Connectivity_Info------------------
+
+Connections_in_Segment:            0x56c405f0
+
+ModelID:                           0x56c403de
+ModelName:                         splb69
+ModelType:                         BdgCSIFDM
+
+ModelID:                           0x56c40019
+ModelName:                         spec22
+ModelType:                         Rtr_Cisco
+
+
+Connections_in_Segment:            0x56c40625
+
+ModelID:                           0x56c40046
+ModelName:                         134.141.251.22
+ModelType:                         Rtr_CiscoIG
+
+
+Connections_in_Segment:            0x56c405f4
+
+ModelID:                           0x56c40412
+ModelName:                         splb95
+ModelType:                         BRtrCSIuMMA
+
+ModelID:                           0x56c403be
+ModelName:                         splb80
+ModelType:                         HubCSIEMME
+
+ModelID:                           0x56c40383
+ModelName:                         splb72
+ModelType:                         HubCSIEMME
+
+
+Connections_in_Segment:            0x56c405f3
+
+ModelID:                           0x56c403de
+ModelName:                         splb69
+ModelType:                         BdgCSIFDM
+
+ModelID:                           0x56c4039d
+ModelName:                         splb74
+ModelType:                         BdgCSIETW
+
+ModelID:                           0x56c40383
+ModelName:                         splb72
+ModelType:                         HubCSIEMME
+
+
+Connections_in_Segment:            0x56c405f2
+
+ModelID:                           0x56c403be
+ModelName:                         splb80
+ModelType:                         HubCSIEMME
+
+
+Connections_in_Segment:            0x56c40335
+
+ModelID:                           0x56c40227
+ModelName:                         spla148
+ModelType:                         BdgCSIETW
+
+ModelID:                           0x56c4020c
+ModelName:                         spla34
+ModelType:                         BRtrCSIEMM_
+
+
+Connections_in_Segment:            0x56c40333
+
+ModelID:                           0x56c40212
+ModelName:                         spla35
+ModelType:                         BdgCSIETW
+
+ModelID:                           0x56c4020c
+ModelName:                         spla34
+ModelType:                         BRtrCSIEMM_
+
+
+Connections_in_Segment:            0x56c40332
+
+ModelID:                           0x56c4020c
+ModelName:                         spla34
+ModelType:                         BRtrCSIEMM_
+
+ModelID:                           0x56c40030
+ModelName:                         spla23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40025
+ModelName:                         spec23
+ModelType:                         Rtr_Cisco
+
+
+Connections_in_Segment:            0x56c401f5
+
+ModelID:                           0x56c4012a
+ModelName:                         spec126
+ModelType:                         HubCSIEMME
+
+ModelID:                           0x56c4009f
+ModelName:                         Gator_MIM
+ModelType:                         Rtr_Cay_Gat
+
+ModelID:                           0x56c40030
+ModelName:                         spla23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40025
+ModelName:                         spec23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40019
+ModelName:                         spec22
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c4000e
+ModelName:                         spec21
+ModelType:                         Rtr_Cisco
+
+
+Connections_in_Segment:            0x56c40051
+
+ModelID:                           0x56c4003f
+ModelName:                         134.141.251.0
+ModelType:                         WA_Link
+
+
+Connections_in_Segment:            0x56c4003e
+
+ModelID:                           0x56c40019
+ModelName:                         spec22
+ModelType:                         Rtr_Cisco
+
+
+Connections_in_Segment:            0x56c4003d
+
+ModelID:                           0x56c40030
+ModelName:                         spla23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40025
+ModelName:                         spec23
+ModelType:                         Rtr_Cisco
+
+
+Connections_in_Segment:            0x56c4003b
+
+ModelID:                           0x56c4003f
+ModelName:                         134.141.251.0
+ModelType:                         WA_Link
+
+ModelID:                           0x56c40030
+ModelName:                         spla23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40025
+ModelName:                         spec23
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40019
+ModelName:                         spec22
+ModelType:                         Rtr_Cisco
+
+ModelID:                           0x56c40000
+ModelName:                         disney
+ModelType:                         VNM
+
+
+--------------------Endpoint_Info--------------------
+
+
+Nodes_on_Segment:                  0x56c405f4
+
+Model_Name:                        Repeating
+Modeltype_Name:                    StckRptrRev4
+Segment_Address:                   134.141.54.95
+MAC_Address:                       0.0.1D.F.72.4B
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+Model_Name:                        splb95
+Modeltype_Name:                    BRtrCSIuMMAC
+Segment_Address:                   134.141.54.95
+MAC_Address:                       0.0.1D.F.72.4B
+Polling_Interval:                  60
+Desc_Key_Word:                     Cabletron MicroMMAC
+
+Model_Name:                        Network C
+Modeltype_Name:                    CSIRptr
+Segment_Address:                   134.141.54.72
+MAC_Address:                       0.0.1D.B.2F.B4
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+Model_Name:                        splb80
+Modeltype_Name:                    HubCSIEMME
+Segment_Address:                   134.141.54.80
+MAC_Address:                       0.0.1D.7.CD.F8
+Polling_Interval:                  60
+Desc_Key_Word:                     EMME
+
+
+Nodes_on_Segment:                  0x56c40335
+
+Model_Name:                        spla148
+Modeltype_Name:                    BdgCSIETW
+Segment_Address:                   134.141.53.148
+MAC_Address:                       0.0.B8.8.3A.FD
+Polling_Interval:                  60
+Desc_Key_Word:                     Cabletron ETWMIM
+
+Model_Name:                        Network C
+Modeltype_Name:                    CSIRptr
+Segment_Address:                   134.141.53.34
+MAC_Address:                       0.0.1D.11.7B.92
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+
+Nodes_on_Segment:                  0x56c40334
+
+Model_Name:                        spla252
+Modeltype_Name:                    WS_DEC
+Segment_Address:                   134.141.53.252
+MAC_Address:                       8.0.2B.33.F2.74
+Polling_Interval:                  60
+Desc_Key_Word:                     DS5000_;DECstation3100
+
+Model_Name:                        spla54
+Modeltype_Name:                    WS_IBM
+Segment_Address:                   134.141.53.54
+MAC_Address:                       8.0.5A.D.77.39
+Polling_Interval:                  60
+Desc_Key_Word:                     IBM RISC System
+
+
+Nodes_on_Segment:                  0x56c40333
+
+Model_Name:                        Network A
+Modeltype_Name:                    CSIRptr
+Segment_Address:                   134.141.53.34
+MAC_Address:                       0.0.1D.11.7B.90
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+
+Nodes_on_Segment:                  0x56c401f5
+
+Model_Name:                        spec161
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.161
+MAC_Address:                       0.0.1D.F.13.78
+Polling_Interval:                  60
+
+Model_Name:                        suptptr1
+Modeltype_Name:                    GnSNMPDev
+Segment_Address:                   134.141.55.100
+MAC_Address:                       8.0.9.68.4C.BB
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+Model_Name:                        spec172
+Modeltype_Name:                    GnSNMPDev
+Segment_Address:                   134.141.55.172
+MAC_Address:                       0.0.1D.E.86.19
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+Model_Name:                        marshall
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.165
+MAC_Address:                       8.0.20.2.90.4D
+Polling_Interval:                  60
+
+Model_Name:                        spec157
+Modeltype_Name:                    HubCSIMRXi
+Segment_Address:                   134.141.55.157
+MAC_Address:                       0.0.1D.9.B1.2C
+Polling_Interval:                  60
+Desc_Key_Word:                     Cabletron MRXI
+
+Model_Name:                        spec66
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.66
+MAC_Address:                       8.0.20.1A.3E.6C
+Polling_Interval:                  60
+
+Model_Name:                        spec141
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.141
+MAC_Address:                       0.0.1D.D.DB.EC
+Polling_Interval:                  60
+
+Model_Name:                        spec121
+Modeltype_Name:                    Hub_CSI_IRM2
+Segment_Address:                   134.141.55.121
+MAC_Address:                       0.0.1D.2.48.C8
+Polling_Interval:                  60
+Desc_Key_Word:                     IRM2
+
+Model_Name:                        spec68
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.68
+MAC_Address:                       8.0.20.2.91.B4
+Polling_Interval:                  60
+
+Model_Name:                        nova
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.72
+MAC_Address:                       8.0.20.18.52.E8
+Polling_Interval:                  60
+
+Model_Name:                        spec152
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.152
+MAC_Address:                       0.0.1D.8.89.1D
+Polling_Interval:                  60
+
+Model_Name:                        spec151
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.151
+MAC_Address:                       0.0.1D.A.B5.BE
+Polling_Interval:                  60
+
+Model_Name:                        spec126
+Modeltype_Name:                    HubCSIEMME
+Segment_Address:                   134.141.55.129
+MAC_Address:                       0.0.1D.B.0.81
+Polling_Interval:                  60
+Desc_Key_Word:                     EMME
+
+Model_Name:                        spec150
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.150
+MAC_Address:                       0.0.1D.B.46.DE
+Polling_Interval:                  60
+
+Model_Name:                        spec111
+Modeltype_Name:                    Hub_CSI_IRM2
+Segment_Address:                   134.141.55.111
+MAC_Address:                       0.0.1D.3.F6.64
+Polling_Interval:                  60
+Desc_Key_Word:                     IRM2
+
+Model_Name:                        spec76
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.76
+MAC_Address:                       8.0.20.1A.45.AB
+Polling_Interval:                  60
+
+Model_Name:                        spec63
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.63
+MAC_Address:                       8.0.20.C.D9.D6
+Polling_Interval:                  60
+
+Model_Name:                        spec69
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.69
+MAC_Address:                       8.0.20.1E.13.8E
+Polling_Interval:                  60
+
+Model_Name:                        spec75
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.75
+MAC_Address:                       8.0.20.1A.49.E3
+Polling_Interval:                  60
+
+Model_Name:                        spec67
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.67
+MAC_Address:                       8.0.20.A.26.F8
+Polling_Interval:                  60
+
+Model_Name:                        spec177
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.177
+MAC_Address:                       0.0.1D.A.C.4D
+Polling_Interval:                  60
+
+Model_Name:                        spec73
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.73
+MAC_Address:                       8.0.20.B.CD.3E
+Polling_Interval:                  60
+
+Model_Name:                        spec60
+Modeltype_Name:                    WS_IBM
+Segment_Address:                   134.141.55.60
+MAC_Address:                       8.0.5A.47.21.D3
+Polling_Interval:                  60
+Desc_Key_Word:                     IBM RISC System
+
+Model_Name:                        spec61
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.61
+MAC_Address:                       8.0.20.2.91.3D
+Polling_Interval:                  60
+
+Model_Name:                        spec50
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.50
+MAC_Address:                       8.0.20.C.8E.4B
+Polling_Interval:                  60
+
+Model_Name:                        spec71
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.71
+MAC_Address:                       8.0.20.1F.AC.45
+Polling_Interval:                  60
+
+Model_Name:                        spec59
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.59
+MAC_Address:                       8.0.20.2.91.27
+Polling_Interval:                  60
+
+Model_Name:                        frigga
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.36
+MAC_Address:                       8.0.20.E.DC.BE
+Polling_Interval:                  60
+
+Model_Name:                        spec58
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.58
+MAC_Address:                       8.0.20.2.91.96
+Polling_Interval:                  60
+
+Model_Name:                        spec57
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.57
+MAC_Address:                       8.0.20.E.B2.2C
+Polling_Interval:                  60
+
+Model_Name:                        spec40
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.40
+MAC_Address:                       8.0.20.B.92.21
+Polling_Interval:                  60
+
+Model_Name:                        jephyr
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.39
+MAC_Address:                       8.0.20.B.E5.76
+Polling_Interval:                  60
+
+Model_Name:                        spec48
+Modeltype_Name:                    WS_SGI
+Segment_Address:                   134.141.55.48
+MAC_Address:                       8.0.69.7.2B.6E
+Polling_Interval:                  60
+Desc_Key_Word:                     IRIS;IRIX;Silicon Graphics
+
+Model_Name:                        eeyor
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.42
+MAC_Address:                       8.0.20.C.E4.DC
+Polling_Interval:                  60
+
+Model_Name:                        134.141.55.2
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.2
+MAC_Address:                       0.0.1D.7.8A.B8
+Polling_Interval:                  60
+
+Model_Name:                        134.141.55.1
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.1
+MAC_Address:                       0.0.C.3.A6.4A
+Polling_Interval:                  60
+
+Model_Name:                        spec62
+Modeltype_Name:                    WS_SGI
+Segment_Address:                   134.141.55.62
+MAC_Address:                       8.0.69.7.4C.10
+Polling_Interval:                  60
+Desc_Key_Word:                     IRIS;IRIX;Silicon Graphics
+
+Model_Name:                        harley
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.31
+MAC_Address:                       8.0.20.A.14.72
+Polling_Interval:                  60
+
+Model_Name:                        specserv
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.30
+MAC_Address:                       8.0.20.B.C5.F0
+Polling_Interval:                  60
+
+Model_Name:                        angel
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.55
+MAC_Address:                       8.0.69.7.19.A8
+Polling_Interval:                  60
+
+Model_Name:                        vortac
+Modeltype_Name:                    Pingable
+Segment_Address:                   134.141.55.32
+MAC_Address:                       8.0.20.C.D1.A9
+Polling_Interval:                  60
+
+Model_Name:                        spec28
+Modeltype_Name:                    Hub_CSI_IRM2
+Segment_Address:                   134.141.55.28
+MAC_Address:                       0.0.1D.9.B2.81
+Polling_Interval:                  60
+Desc_Key_Word:                     IRM2
+
+Model_Name:                        Gator_MIM
+Modeltype_Name:                    Rtr_Cay_GatorM
+Segment_Address:                   134.141.55.10
+MAC_Address:                       0.0.89.1.89.5C
+Polling_Interval:                  60
+Desc_Key_Word:                     GatorShare;GatorSystem
+
+Model_Name:                        spec28
+Modeltype_Name:                    Hub_CSI_IRM2
+Segment_Address:                   134.141.55.28
+MAC_Address:                       0.0.1D.9.B2.81
+Polling_Interval:                  60
+Desc_Key_Word:                     IRM2
+
+Model_Name:                        spla23
+Modeltype_Name:                    Rtr_Cisco
+Segment_Address:                   134.141.53.23
+MAC_Address:                       0.0.C.1.7F.98
+Polling_Interval:                  60
+Desc_Key_Word:                     
+
+Model_Name:                        spec23
+Modeltype_Name:                    Rtr_Cisco
+Segment_Address:                   134.141.53.23
+MAC_Address:                       0.0.C.1.7F.98
+Polling_Interval:                  60
+Desc_Key_Word:                     
+

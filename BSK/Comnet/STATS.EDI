@@ -1,0 +1,72 @@
+|Statistic Analysis| 0 1  6
+ |dat| 0 0 
+ 0  0  0  0
+|StatMenuBar| |Chart|   8  8  8
+ |Unfilter|
+ 
+background 100.0 100.0 100.0
+foreground 30.0 0.0 0.0
+cursor 30.0 0.0 0.0
+frame 75.0 75.0 75.0
+winwidth 50.0
+winheight 80.0
+winx 5.0
+winy 0.0
+font context_font 1 |System| 12 50 0
+font graph_font 1 |Arial| 8 50 0
+font statusbox_font 1 |System| 10 50 0
+end
+
+|Post-run Plot|
+|ChartTitle|       0  0  0  100.0
+|ChartXTitle|      0  0  0  100.0
+|ChartYTitle|      0  0  0  100.0
+|ChartY2Title|     0  0  0  100.0
+|ChartXAxis|       0  0  0  100.0
+|ChartYAxis|       0  0  0  100.0
+|ChartY2Axis|      0  0  0  100.0
+|ChartXNumbering|  0  0  0  100.0
+|ChartYNumbering|  0  0  0  100.0
+|ChartY2Numbering| 0  0  0  100.0
+|ChartXGrid|       0  1  0  100.0
+|ChartYGrid|       0  1  0  100.0
+|ChartY2Grid|      0  1  0  100.0
+|ChartBorder|      0  1  0  100.0
+|ChartLegend|      0  0  0  100.0
+
+|| || ||
+|ChartShowLegend|       1
+|ChartShowBox|          0
+|ChartTimeTrace|        0
+|ChartStacked|          0
+|ChartAdjacent|         0
+|ChartXTicsInside|      0
+|ChartYTicsInside|      0
+|ChartXTicsOutside|     0
+|ChartYTicsOutside|     0
+|ChartShowXGrid|        0
+|ChartShowYGrid|        0
+|ChartShowY2Grid|       0
+|ChartRescaleX|         0
+|ChartRescaleY|         0
+|ChartRescaleY2|        0
+|ChartCompressX|        0
+999999.0 -999999.0 999999.9 -999999.0  999999.0 -999999.0
+
+3
+|alert|     |Test Alert...|
+|confirm|   |Test Confirm...|
+|status|    |Test Status...|
+
+  |txt|            |TEXTTOOL|                1    2    |Background text|
+  |back|           |BKGDTOOL|                1    3    |Background icon|   |background|
+  |back|           |SHAPES|                  1    4    |Background shape|  |shapes|
+  |back|           |THINGS|                  1    5    |Background shape|  |things|
+  |zoom|           |ZOOM|                    1    6    |Zoom into work area|
+
+0
+    
+2
+  |print|      |Print the graph|
+  |return|     |Close the window|
+

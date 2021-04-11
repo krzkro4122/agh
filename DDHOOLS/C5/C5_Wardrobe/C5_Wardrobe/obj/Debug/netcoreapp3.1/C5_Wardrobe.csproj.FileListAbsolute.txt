@@ -1,0 +1,13 @@
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.exe
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.deps.json
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.runtimeconfig.json
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.runtimeconfig.dev.json
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.dll
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\bin\Debug\netcoreapp3.1\C5_Wardrobe.pdb
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.csprojAssemblyReference.cache
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.AssemblyInfoInputs.cache
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.AssemblyInfo.cs
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.csproj.CoreCompileInputs.cache
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.dll
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.pdb
+C:\Users\Krzysztof\source\repos\C5_Wardrobe\C5_Wardrobe\obj\Debug\netcoreapp3.1\C5_Wardrobe.genruntimeconfig.cache

@@ -1,0 +1,271 @@
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     1
+
+                                      ACME                                      
+
+                      NODES: PROCESSOR + DISK UTILIZATION                       
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+                         DISK            DISK USAGE (KILOBYTES)       PROCESSOR
+                        REQSTS
+         NODE           GRNTED    AVERAGE        MAXIMUM      STD DEV    % UTIL
+______________________  ______  ____________  _____________  __________  ______
+
+  Boston1                    0         0.000          0.000       0.000    0.05
+  DC1                        0         0.000          0.000       0.000    0.30
+  RouterB                    0         0.000          0.000       0.000    0.00
+  RouterDC                   0         0.000          0.000       0.000    0.00
+  NYC                        0         0.000          0.000       0.000   81.37
+  RouterNYC                  0         0.000          0.000       0.000    0.00
+  BostonATMs                 0         0.000          0.000       0.000    6.28
+
+  DCATMs                     0         0.000          0.000       0.000    4.58
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     2
+
+                                      ACME                                      
+
+                         NODES: RECEIVED MESSAGE COUNTS                         
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+      RECEIVER            COUNT                   MESSAGE NAME
+______________________  __________  _________________________________________
+
+Boston1                        1    MsgB1                                    
+
+DC1                            6    MsgDC1                                   
+
+NYC                          126    MsgBoston                                
+NYC                            6    MsgDC1                                   
+NYC                           92    MsgDC                                    
+NYC                            1    MsgB1                                    
+
+BostonATMs                   125    MsgBoston                                
+
+DCATMs                        89    MsgDC                                    
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     3
+
+                                      ACME                                      
+
+                           NODES: INPUT BUFFER TOTALS                           
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+                             PACKETS         BUFFER USE (P=PKTS, B=BYTES)
+NODE                   ACCEPTED  BLOCKED   AVERAGE    STD DEV     MAXIMUM P/B
+______________________ ________  _______  __________  _________  _________ ___
+
+Boston1                        1        0          0          0          73 B
+DC1                            6        0          0          0         115 B
+RouterB                      253        0          2         13         176 B
+RouterDC                     194        0          1         11         172 B
+NYC                          226        0         64        108         673 B
+RouterNYC                    447        0          3         17         236 B
+BostonATMs                   125        0          0          4         123 B
+
+DCATMs                        89        0          0          3         121 B
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     4
+
+                                      ACME                                      
+
+                          NODES: OUTPUT BUFFER TOTALS                           
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+                             PACKETS         BUFFER USE (P=PKTS, B=BYTES)
+NODE                   ACCEPTED  BLOCKED   AVERAGE    STD DEV     MAXIMUM P/B
+______________________ ________  _______  __________  _________  _________ ___
+
+Boston1                        1        0          0          0         115 B
+DC1                            6        0          0          0          94 B
+RouterB                      253        0         18         42         287 B
+RouterDC                     194        0         13         35         225 B
+NYC                          221        0          0          3         123 B
+RouterNYC                    447        0         29         46         239 B
+BostonATMs                   126        0          0          2         123 B
+
+DCATMs                        93        0          0          2         122 B
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     5
+
+                                      ACME                                      
+
+                        NODES: INPUT BUFFER USE BY PORT                         
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+NODE:                        PACKETS           BUFFER USE (P=PKTS, B=BYTES) 
+  CONNECTED LINKS      ACCEPTED  BLOCKED   AVERAGE    STD DEV     MAXIMUM  P/B
+______________________ ________  _______  __________  _________  _________ ___
+
+Boston1:
+  LanB                         1        0          0          0          73 B
+DC1:
+  LanDC                        6        0          0          0         115 B
+RouterB:
+  LanB                       127        0          1          9         123 B
+  B-DC                         0        0          0          0           0 B
+  B-NYC                      126        0          1          9         123 B
+RouterDC:
+  LanDC                       99        0          1          8         122 B
+  B-DC                         0        0          0          0           0 B
+  DC-NYC                      95        0          1          8         121 B
+NYC:
+  LanNYC                     226        0         64        108         673 B
+RouterNYC:
+  B-NYC                      127        0          1          9         123 B
+  DC-NYC                      99        0          1          8         122 B
+  LanNYC                     221        0          2         12         123 B
+BostonATMs:
+  LanB                       125        0          0          4         123 B
+
+DCATMs:
+  LanDC                       89        0          0          3         121 B
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     6
+
+                                      ACME                                      
+
+                        NODES: OUTPUT BUFFER USE BY PORT                        
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+NODE:                        PACKETS           BUFFER USE (P=PKTS, B=BYTES) 
+  CONNECTED LINKS      ACCEPTED  BLOCKED   AVERAGE    STD DEV     MAXIMUM  P/B
+______________________ ________  _______  __________  _________  _________ ___
+
+Boston1:
+  LanB                         1        0          0          0         115 B
+DC1:
+  LanDC                        6        0          0          0          94 B
+RouterB:
+  LanB                       126        0          1         10         123 B
+  B-DC                         0        0          0          0           0 B
+  B-NYC                      127        0         17         41         261 B
+RouterDC:
+  LanDC                       95        0          1          8         121 B
+  B-DC                         0        0          0          0           0 B
+  DC-NYC                      99        0         13         34         225 B
+NYC:
+  LanNYC                     221        0          0          3         123 B
+RouterNYC:
+  B-NYC                      126        0         16         37         123 B
+  DC-NYC                      95        0         11         31         121 B
+  LanNYC                     226        0          2         13         123 B
+BostonATMs:
+  LanB                       126        0          0          2         123 B
+
+DCATMs:
+  LanDC                       93        0          0          2         122 B
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     7
+
+                                      ACME                                      
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+LanB                         253      0      0.221      0.041      0.288   0.09
+LanDC                        194      0      0.218      0.039      0.286   0.07
+B-DC                  
+  FROM RouterB                 0      0      0.000      0.000      0.000   0.00
+  FROM RouterDC                0      0      0.000      0.000      0.000   0.00
+B-NYC                 
+  FROM RouterB               127      0     73.740     16.951    102.500  15.61
+  FROM RouterNYC             126      0     75.470     17.566    102.500  15.85
+DC-NYC                
+  FROM RouterDC               99      0     73.779     16.073    101.667  12.17
+  FROM RouterNYC              95      0     73.044     16.764    100.833  11.57
+LanNYC                       447      0      0.220      0.041      0.288   0.16
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     8
+
+                                      ACME                                      
+
+                   MESSAGE + RESPONSE SOURCES: MESSAGE DELAY                    
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Boston1 / src MsgB1:
+  NYC                           1        146.381         0.000       146.381
+DC1 / src MsgDC1:
+  NYC                           6        225.012        61.728       304.027
+NYC / src Authorisation:
+  ECHO                        221        772.116       370.127      1968.387
+BostonATMs / src MsgBoston:
+  NYC                         126        335.575       233.759      1388.657
+DCATMs / src MsgDC:
+  NYC                          92        310.778       243.681      1295.543
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE     9
+
+                                      ACME                                      
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Boston1 / src MsgB1:
+  NYC                           1        146.381         0.000       146.381
+DC1 / src MsgDC1:
+  NYC                           6        225.012        61.728       304.027
+NYC / src Authorisation:
+  ECHO                        221        772.116       370.127      1968.387
+BostonATMs / src MsgBoston:
+  NYC                         126        335.575       233.759      1388.657
+DCATMs / src MsgDC:
+  NYC                          92        310.778       243.681      1295.543
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Thu Apr 23 15:36:18 2009   PAGE    10
+
+                                      ACME                                      
+
+                    MESSAGE + RESPONSE SOURCES: PACKET DELAY                    
+
+                     REPLICATION 1 FROM 0.0 TO 60.0 SECONDS                     
+
+ORIGIN:                           NUMBER OF PACKETS           PACKET DELAY (MS)
+  DESTINATION LIST       CREATED DELIVERED RESENT DROPPED   AVERAGE    MAXIMUM
+______________________  ________  ________  _____  _____  _________  __________
+
+Boston1 / src MsgB1:
+  NYC                          1         1      0      0    136.381     136.381
+DC1 / src MsgDC1:
+  NYC                          6         6      0      0    215.012     294.027
+NYC / src Authorisation:
+  ECHO                       221       221      0      0    115.523     157.269
+BostonATMs / src MsgBoston:
+  NYC                        126       126      0      0    325.575    1378.657
+DCATMs / src MsgDC:
+  NYC                         93        92      0      0    300.778    1285.543

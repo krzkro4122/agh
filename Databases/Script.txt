@@ -1,0 +1,188 @@
+MySql T.Orzechowski:
+
+komenda do połączenia z bazą:
+	>>mysqlsh -u krkrol -h mysql.agh.edu.pl -p
+przejście na język Sql:
+	>>\sql
+hasło: 
+	*panel agh->Sql*
+
+Dodatek (SoloLearn):	
+	([...] <- a part of a query)
+	[...] Limit NUMBER;
+	[...] Limit NUMBER OFFSET;
+	
+	[...] where COLUMN_NAME between VALUE1 and VALUE2;
+	[...] where COLUMN_NAME in ( VALUE1, VALUE2, ... );
+	
+	select concat(COLUMN_NAME, VALUE1, VALUE2, OTHER_COLUMN_NAME, ...) [...];
+	select upper(COLUMN_NAME or VALUE) [...];
+	select lower(COLUMN_NAME or VALUE) [...];
+	select sqrt(COLUMN_NAME or VALUE) [...];
+	select sum(COLUMN_NAME or VALUE) [...];
+	select avg(COLUMN_NAME or VALUE) [...];
+	select min(COLUMN_NAME or VALUE) [...];
+	select max(COLUMN_NAME or VALUE) [...];
+	select count(COLUMN_NAME or VALUE) [...];
+	
+	[...] where VALUE CONDITION ALL (SUBQUERY);
+	[...] where VALUE CONDITION ANY (SUBQUERY);
+	
+	QUERY union QUERY on CONDITION;
+	QUERY union all QUERY on CONDITION;
+	
+	select COLUMN1, ... from TABLE1, TABLE2 where CONDITION;
+	select TABLE1.COLUMN1, TABLE2.COLUMN1 from TABLE1 left outer join TABLE2 on TABLE1.COLUMN2 = TABLE2.COLUMN2; 
+	select TABLE1.COLUMN1, TABLE2.COLUMN1 from TABLE1 right outer join TABLE2 on TABLE1.COLUMN2 = TABLE2.COLUMN2;
+	select TABLE1.COLUMN1, TABLE2.COLUMN1 from TABLE1 inner join TABLE2 on TABLE1.COLUMN2 = TABLE2.COLUMN2;
+	
+	insert into TABLE values (VALUE1, VALUE2, VALUE3, ...);
+	insert into TABLE (COLUMN1, COLUMN2, ...) values (VALUE1, VALUE2, VALUE3, ...);
+	
+	update TABLE set COLUMN1=VALUE1, COLUMN2=VALUE2, ... where CONDITION;
+	
+	delete from TABLE where CONDITION;
+	
+	create table TABLE ( COLUMN1 DATA_TYPE1(size), ... );	
+	create table TABLE ( COLUMN1 DATA_TYPE1(size), ..., primary key(COLUMN1));
+	create table TABLE ( COLUMN1 DATA_TYPE1(size) CONSTRAIN, ... );
+	[...] UserID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (UserID) [...];
+	
+	alter table TABLE add COLUMN1 DATA_TYPE;
+	alter table TABLE drop column COLUMN1;
+	alter table TABLE rename COLUMN1 to NEW_COLUMN1;
+	
+	rename table TABLE to NEW_TABLE;
+	drop table TABLE;
+	
+	create view VIEW as select COLUMN1, ... from TABLE where CONDITION;
+	create or replace view VIEW as select COLUMN1, ... from TABLE where CONDITION;
+	
+	drop view VIEW;
+	select * from VIEW;
+	
+Tab 1:
+	show databases;
+	show tables;
+	use krkrol;
+	source sciezka/do/pliku.sql - uruchomienie skryptu
+	select * from books;
+	select price from books;
+
+Tab 2:
+	1.)
+		a) select * from books where price>30.00;
+		b) select * from books where topic='Java';
+		c) select * from books where publisher='O\'Reilly';
+		d) select distinct publisher from books;
+		e) select distinct topic from books;
+	2.)
+		a) select count(*) from books;
+		b) select count(*) number from books;
+		c) select publisher, count(publisher) as number from books group by publisher;
+		d) select topic, count(topic) as number from books group by topic;
+		e) select * from books order by price ;
+		f) select * from books order by publisher,price desc;
+		
+	3.)
+		a) select publisher from books where topic like 'Java' or topic like 'Perl';
+		b) select publisher from books where publisher in (select publisher from books where topic="Java") and topic="Perl";
+		c) select * from books where publisher=(select publisher from books where publisher in (select publisher from books where topic like 'Java') and topic like 'Perl');
+		d) select * from books where topic like 'XML' and title not like '%XML%';
+		
+Tab 3:
+	a) select avg(price) from books;
+	b) select * from books where price>(select avg(price) from books);
+	c) select distinct publisher, topic from books;
+	d) select publisher, topic, count(*) from books group by publisher, topic;
+	e) select publisher, topic, count(*) from books group by publisher, topic order by publisher, topic;
+	f) select publisher, topic, count(*) as number from books group by publisher, topic order by number desc, publisher, topic;
+	g) select min(price) min, max(price) max, avg(price) avg from books; 
+	h)  h1) select topic, count(*) number from books group by topic;
+		h2) select avg(count) from (select count(topic) as count from books group by topic) as counts;
+	i) select avg(count) from (select count(*) as count from books group by publisher) as counts;
+	j) select publisher from books group by publisher having count(*)>1;
+	k) select publisher from books group by publisher having count(*)>(select avg(count) from (select count(*) as count from books group by topic) as counts);
+	   select count(*), publisher from books group by publisher having count(*)>(select avg(c) from (select count(*) c from books group by publisher) x); <-- od Dr Nut
+	l) select publisher from books group by publisher having count(distinct topic)>1;
+	m) select publisher from books where publisher not in (select publisher from books where topic='Java') group by publisher having count(distinct topic)>=2;
+	   select publisher from books group by publisher having count(distinct topic)>=2 and publisher not in (select distinct publisher from books where topic="Java"); <-- Dr Nut
+	   select publisher from books where topic in ("Perl", "Java") group by publisher having count(distinct topic)=2;
+	n) select distinct publisher from books having publisher not in (select publisher from books where topic!='Java' and topic!='Perl');
+	o) select publisher from books where (topic='Java' xor topic='Perl') group by publisher having count(topic)<3;
+	
+Tab 4:
+	4.  DROP TABLE IF EXISTS User, Goods, Vendor;
+
+		CREATE TABLE User
+		(
+			name		VARCHAR(20),
+			surname		VARCHAR(20),
+			PESEL		VARCHAR(20),
+			born		VARCHAR(20),
+			user_id		INT		NOT NULL
+		);
+
+		CREATE TABLE Goods
+		(
+			product		VARCHAR(20),
+			goods_id	INT 		NOT NULL
+		);
+
+		CREATE TABLE Vendor
+		(
+			name		VARCHAR(20),
+			area		VARCHAR(20),
+			vendor_id	INT		NOT NULL
+		);
+		
+Tab 5:
+	1. 	INSERT INTO User VALUES ("Jan", "Kowalski", "75020201234", "02.02.1975", 1000);
+		INSERT INTO User VALUES ("Jan",	"Kowalski", "76030201034", "02.03.1976", 1001);
+		INSERT INTO User VALUES ("Andrzej", "Nowak", "75020203434", "02.02.1975", 1002);
+		INSERT INTO User VALUES ("Anna", "Kowalska", "79103001234", "30.10.1979", 1003);
+
+		INSERT INTO Goods VALUES ("refrigerator", 2000);
+		INSERT INTO Goods VALUES ("washing machine", 2001);
+		INSERT INTO Goods VALUES ("hair dryer", 2002);
+		INSERT INTO Goods VALUES ("TV", 2003);
+		INSERT INTO Goods VALUES ("blue-ray player", 2004);
+		INSERT INTO Goods VALUES ("satellite tuner", 2005);
+
+		INSERT INTO Vendor VALUES ("Your Gorgeous Bathroom", "bathroom", 3000); /* first argument "name" longer than varchar(20) */
+		INSERT INTO Vendor VALUES ("World of Satellites", "TV SAT", 3001);
+		INSERT INTO Vendor VALUES ("Super Coffee", "coffee makers", 3002);
+		INSERT INTO Vendor VALUES ("A.B.C.D.", "hifi", 3003);
+		INSERT INTO Vendor VALUES ("Dry Hair", "hair dryers", 3004);
+		
+
+
+Uzupełnienia: (źródło, głownie  sololearn)
+ 
+	The most common data types:
+	
+		Numeric
+		INT -A normal-sized integer that can be signed or unsigned.
+		FLOAT(M,D) - A floating-point number that cannot be unsigned. You can optionally define the display length (M) and the number of decimals (D).
+		DOUBLE(M,D) - A double precision floating-point number that cannot be unsigned. You can optionally define the display length (M) and the number of decimals (D).
+
+		Date and Time
+		DATE - A date in YYYY-MM-DD format.
+		DATETIME - A date and time combination in YYYY-MM-DD HH:MM:SS format.
+		TIMESTAMP - A timestamp, calculated from midnight, January 1, 1970
+		TIME - Stores the time in HH:MM:SS format.
+
+		String Type
+		CHAR(M) - Fixed-length character string. Size is specified in parenthesis. Max 255 bytes.
+		VARCHAR(M) - Variable-length character string. Max size is specified in parenthesis.
+		BLOB - "Binary Large Objects" and are used to store large amounts of binary data, such as images or other types of files.
+		TEXT - Large amount of text data.
+
+
+	The following are commonly used SQL constraints:
+	
+		NOT NULL - Indicates that a column cannot contain any NULL value.
+		UNIQUE - Does not allow to insert a duplicate value in a column. The UNIQUE constraint maintains the uniqueness of a column in a table. More than one UNIQUE column can be used in a table.
+		PRIMARY KEY - Enforces the table to accept unique data for a specific column and this constraint create a unique index for accessing the table faster.
+		CHECK - Determines whether the value is valid or not from a logical expression.
+		DEFAULT - While inserting data into a table, if no value is supplied to a column, then the column gets the value set as DEFAULT.

@@ -1,0 +1,1745 @@
+|***** COMNET III system parameters *****|
+|notepad|
+||
+|1.0/3600.0|    2  1  2
+|cnModelObj|
+
+1
+|SimFlow| |0000.031| |0000.000|
+
+0
+|comnet.dbg|
+0
+0  0  0  0  0
+
+|none| 
+
+background 60.0 60.0 60.0
+foreground 0.0 0.0 0.0
+cursor 100.0 100.0 100.0
+use_small_icons
+frame 70.0 70.0 70.0
+palette 70. 70.0 70.0
+winwidth 100.0
+winheight 100.0
+winx 0.0
+winy 0.0
+scale 0.75
+font node_label     1 |MS Sans Serif| 8 50 0
+font count_font     1 |MS Sans Serif| 8 100 0
+font context_font   1 |System|       10 50 0
+font graph_font     1 |Arial|         8 50 0
+font statusbox_font 1 |System|       10 50 0
+font clock_font     1 |System|       10 50 0
+font 3d_font        1 |adobe-helvetica| 6 100 0
+maxnamesize 3500.
+end
+
+|***** editor parms *****|
+|create| |editor.dat| 0 2 16 16
+
+|***** Verification Message Manager parms ***|
+|UseAlertIfOneError| 0 75 |MsgDialog|
+ || ||
+
+|***** Graphic library manager parameters *****|
+31
+  |cacibrok.sg2| |broken|                0
+  |colorpal.sg2| |colors|                0
+  |distdlg.sg2|  |distdlg|               0
+  |simplot.sg2|  |simplot|               0
+  |usernode.sg2| |nodes|                 0
+  |cacinode.sg2| |nodes|                 0
+  |userlink.sg2| |links|                 0
+  |cacilink.sg2| |links|                 0
+  |usercall.sg2| |call sources|          0
+  |cacicall.sg2| |call sources|          0
+  |usermsg.sg2|  |message sources|       0
+  |cacimsg.sg2|  |message sources|       0
+  |userapp.sg2|  |application sources|   0
+  |caciapp.sg2|  |application sources|   0
+  |userres.sg2|  |response sources|      0
+  |cacires.sg2|  |response sources|      0
+  |userses.sg2|  |session sources|       0
+  |cacises.sg2|  |session sources|       0
+  |usercld.sg2|  |clouds or subnets|     0
+  |cacicld.sg2|  |clouds or subnets|     0
+  |usergen.sg2|  |virtual circuits|      0
+  |cacigen.sg2|  |virtual circuits|      0
+  |userrem.sg2|  |remote pads|           0
+  |cacirem.sg2|  |remote pads|           0
+  |appl.sg2|     |appl|                  0
+  |system.sg2|   |system|                0
+  |userback.sg2| |background|            0
+  |user.sg2|     |background|            0
+  |shapes.sg2|   |shapes|                0
+  |things.sg2|   |shapes|                0
+  |threed.sg2|   |3D|                    0
+
+|***** Library manager configuration: rename mgrs; set mgr display/save flags *****|
+0
+16
+  |Daemons|                0 0
+  |Distributions|          0 0
+  |Hierarchical Nodes|     0 0
+  |Hierarchical Pads|      0 0
+  |Models|                 0 0
+  |NodeLibMgrObj|          0 0
+  |Pads|                   0 0
+  |Process Node Pads|      0 0
+  |Process Nodes|          0 0
+  |Resources|              0 0
+  |StatMonitorLibMgrObj|   0 0
+  |StdArcLibMgrObj|        0 0
+  |StdNodeLibMgrObj|       0 0
+  |Tokens|                 0 0
+  |TokenGenLibMgrObj|      0 0
+  |Token Queues|           0 0
+
+|***** Library element configuration *****|
+10
+  |cLdLnk|  |LoadedLinkObj|     |LoadedLinkObj|  |LinkObj|
+  |cPPLink| |P2PConfigObj|      |Pt-To-Pt|       |Point-To-Point|
+  |cRMMon|  |RMeanRAccumMonObj| |RMeanAccum|     |RealAccum|
+  |cRMMon|  |RMeanRAccumMonObj| |RTRMeanAccum|   |RTRAccum|
+  |cRMMon|  |RMeanIAccumMonObj| |IMeanAccum|     |IntAccum|
+  |cRMMon|  |RMeanIAccumMonObj| |RTIMeanAccum|   |RTIAccum|
+  |cRMMon|  |RMeanRTallyMonObj| |RMeanTally|     |RealTally|
+  |cRMMon|  |RMeanRTallyMonObj| |RTRMeanTally|   |RTRTally|
+  |cRMMon|  |RMeanITallyMonObj| |IMeanTally|     |IntTally|
+  |cRMMon|  |RMeanITallyMonObj| |RTIMeanTally|   |RTITally|
+
+22
+  |cLink|    |LinkObj|               |LinkObj|
+  |cLnkCfg|  |PtToPtConfigObj|       |Point-To-Point|
+  |sPNodes|  |pnDelayObj|            |Delay|
+  |sPNodes|  |pnSinkObj|             |Sink|
+  |sPNodes|  |pnQueueObj|            |Queue|
+  |sPNodes|  |pnSourceObj|           |Source|
+  |sPNodes|  |pnResourceRequestObj|  |Request|
+  |sPNodes|  |pnResourceReleaseObj|  |Release|
+  |sPNodes|  |pnBatchObj|            |Batch|
+  |sPNodes|  |pnUnBatchObj|          |UnBatch|
+  |sPNodes|  |pnXFormObj|            |XForm|
+  |sHierNd|  |HierNodeObj|           |Hierarchical|
+  |sRnHyp|   |HypObj|                |Hyp|
+  |sRnNamd|  |NamedDistObj|          |NamedDist|
+  |sMonits|  |RTallyMonObj|          |RealTally|
+  |sMonits|  |RAccumMonObj|          |RealAccum|
+  |sMonits|  |ITallyMonObj|          |IntTally|
+  |sMonits|  |IAccumMonObj|          |IntAccum|
+  |sMonits|  |RTallyMonObj|          |RTRTally|
+  |sMonits|  |RAccumMonObj|          |RTRAccum|
+  |sMonits|  |ITallyMonObj|          |RTITally|
+  |sMonits|  |IAccumMonObj|          |RTIAccum|
+  
+|***** library card initialization parms *****|
+17
+
+|Models|  0
+1
+  |cnModelObj|     ||                      ||     0
+     || || || || 0  0  0 0
+
+|NodeLibMgrObj|    0
+1
+  |AreaObj|     |AreaLayoutIcon|           ||   0   || || || || 0  0  0 0
+
+|Process Nodes|     0
+18
+  |kPtToPtTransmissionDelayObj|   ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |kCsmaCdTransmissionDelayObj|   ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |P2PTransDelayObj|              ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |BusDelayObj|                   ||           |nodes| 0 ||                             || |RouterPktCtlObj|       ||  1 1 1 1
+  |ProcessorObj|                  ||           |nodes| 0 ||                             || |DataPktRouterObj|      ||  1 1 1 1
+  |PtToPtTransmissionDelayObj|    ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |DAMATransmissionDelayObj|      ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |CsmaCaTransmissionDelayObj|    ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |CsmaCdTransmissionDelayObj|    ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |CsmaTransmissionDelayObj|      ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |AlohaTransmissionDelayObj|     ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |PollingTransmissionDelayObj|   ||           |nodes| 0 |PollingContentionTransCtlObj| || ||                      ||  1 1 1 1
+  |TokenRingTransmissionDelayObj| ||           |nodes| 0 |TokenRingTransmissionCtlObj|  || ||                      ||  1 1 1 1
+  |FDDITransmissionDelayObj|      ||           |nodes| 0 |FDDITransmissionCtlObj|       || ||                      ||  1 1 1 1
+  |OutputBuffer|                  ||           |nodes| 0 |OutputBufferPullCtlObj|       || |CsmaCdAccessCtlObj|    ||  1 1 1 1
+  |InputBuffer|                   ||           |nodes| 0 ||                             || |InputBufferPushCtlObj| ||  1 1 1 1
+  |CldInTransDelayObj|            ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+  |CldOutTransDelayObj|           ||           |nodes| 0 |TransmissionCtlObj|           || ||                      ||  1 1 1 1
+
+|Session Sources|    0
+1
+  |Session Source|                |icn.session|            |nodes| 1 ||                        || ||                      ||  0 1 1 1
+
+|SessionMsgSourceLibMgrObj|   0
+1
+  |SessionMsgSourceObj|           ||                       |nodes| 1 ||                        || ||                      ||  0 1 1 1
+
+|Nodes|             0
+7
+  |ComNodeObj|                    ||                       |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Processing Node|               |node.icn|               |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Comp & Comm Node|              |node.icn|               |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Router|                        |router.icn|             |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Computer Group|                |compgroup.icn|          |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Switch|                        |atm.icn|                |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+  |ATM Switch|                    |atm.icn|                |nodeicons| 1 ||                    || ||                      ||  1 1 1 1
+
+|Call Sources|         0
+1
+  |Call Source|                   |icn.call|               |nodes| 1 ||                        || ||                      ||  0 1 1 1
+
+|Links|               0
+12
+  |LinkObj|                       ||                       |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Point-To-Point|                |circuit.icn|            |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |DAMA|                          |dama.icn|               |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Aloha|                         |aloha.icn|              |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |CSMA|                          |csma.icn|               |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |CSMA/CD|                       |csma.icn|               |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |CSMA/CA|                       |csmaca.icn|             |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Polling|                       |polling.icn|            |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Token Passing|                 |token.icn|              |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |FDDI Basic|                    |fddi.icn|               |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Priority Token Ring|           |token.icn|              |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+  |Priority FDDI|                 |fddi.icn|               |linkicons| 1 ||                    || ||                      ||  1 1 1 1
+
+|Remotes|           0
+4
+  |RemoteObj|                     ||                       |remoteicons| 1 ||                  || ||                      ||  1 1 1 1  
+  |Remote Node|                   |pad.square|             |remoteicons| 1 ||                  || ||                      ||  1 1 1 1  
+  |Remote Link|                   |pad.hexagon|            |remoteicons| 1 ||                  || ||                      ||  1 1 1 1  
+  |Socket|                        |pad.diamond|            |remoteicons| 1 ||                  || ||                      ||  1 1 1 1  
+
+|Networks|          0
+1
+  |Network|                       |mesh.icn|               |cloudicons| 1 ||                   || ||                      ||  1 1 1 1
+
+|Network Interfaces|      0
+1
+  |Network Interface|             ||                       ||           1 ||                   || ||                      ||  1 1 1 1
+
+|Clouds|          0
+1
+  |WAN Cloud|                     |cloud2.icn|             |cloudicons| 1 ||                   || ||                      ||  1 1 1 1
+
+|Cloud Access Links|       0
+1
+  |Cloud Access|                  |circuit.icn|            |nodes| 1 ||                        || ||                      ||  1 1 1 1
+
+|Cloud VCs|         0
+1
+  |Cloud VC|                      |cloudvc.icn|            |nodes| 1 ||                        || ||                      ||  1 1 1 1
+
+|Message Sources|      0
+2
+  |Response Source|               |icn.response|           |nodes| 1 ||                        || ||                      ||  0 1 1 1
+  |Message Source|                |icn.msg|                |nodes| 1 ||                        || ||                      ||  0 1 1 1
+
+|Application Sources|   0
+1
+  |Application Source|            |icn.app|                |nodes| 1 ||                        || ||                      ||  0 1 1 1
+  
+|Arcs|    0
+9
+  |PortArcObj|      250.0
+  |GatewayArcObj|   250.0
+  |SourceArcObj|    250.0
+  |CloudPortArcObj| 250.0
+  |CloudGWArcObj|   250.0
+  |CldVCArcObj|     250.0
+  |RemoteArcObj|    250.0
+  |NetPortArcObj|   250.0
+  |NetGWArcObj|     250.0
+
+|***** Expression evaluation parms *****|
+0
+
+|***** Test menu configuration *****|
+9
+|dumpgraphics|   |Print graphic lib...|
+|debug|          |Debugger...|
+|incdebuglevel|  |Increment debug level|
+|decdebuglevel|  |Decrement debug level|
+|rechargedebugalert|  |Recharge DebugAlert|
+|alarmdebug|     |Toggle alarms->debugger|
+|rereadini|      |Reread Meta.ini|
+|stresscancel|   |Dialog stress test CANCEL|
+|stressok|       |Dialog stress test OK|
+
+|***** StatMonBinary, StatIndexBinary, SaveInactiveMonitors, SaveStatistics; last flag turns statfile on/off *****|
+0  0  0  1  |.mon|  |.ndx|  |.trc|
+
+|***** Stat Plot Controller parms *****|
+|| |stats.edi| 0 1 10
+
+|***** StatProcessors *****|
+4
+ |sStVwrs.UniIntHistObj|  |Uniform|    |Uniform|
+ |sStVwrs.FilterObj|      |Filter|     |Filter|
+ |sStVwrs.UnfilterObj|    |Unfilter|   |Unfilter|
+ |sPercnt.PercentileObj|  |Percentile| |Percentile|
+
+|***** Link Stat Request Mgr parms *****|
+0
+
+|***** Pt-to-Pt Stat Request Mgr parms *****|
+9
+|IntAccum|  |BusyLevelX|    |Busy Channels from 1st Node|
+|IntAccum|  |BusyLevelY|    |Busy Channels from 2nd Node|
+|RealTally| |tokendelayX|   |Transmission Delay from 1st Node|
+|RealTally| |tokendelayY|   |Transmission Delay from 2nd Node|
+|RealTally| |FrameSizeX|    |Frame Size from 1st Node|
+|RealTally| |FrameSizeY|    |Frame Size from 2nd Node| 
+|IntAccum|  |AvailLevel|   |Available Calls|
+|RealAccum| |Level|        |Call Utilization|
+|RealAccum| |tokenlevel|   |Sessions In-Progress|
+
+|***** Pt-to-Pt with call-based loading Stat Request Mgr parms (RealAccum for BusyLevel) *****|
+9
+|RealAccum|  |BusyLevelX|    |Busy Channels from 1st Node|
+|RealAccum|  |BusyLevelY|    |Busy Channels from 2nd Node|
+|RealTally| |tokendelayX|   |Transmission Delay from 1st Node|
+|RealTally| |tokendelayY|   |Transmission Delay from 2nd Node|
+|RealTally| |FrameSizeX|    |Frame Size from 1st Node|
+|RealTally| |FrameSizeY|    |Frame Size from 2nd Node| 
+|IntAccum|  |AvailLevel|   |Available Calls|
+|RealAccum| |Level|        |Call Utilization|
+|RealAccum| |tokenlevel|   |Sessions In-Progress|
+
+|***** DAMA Stat Request Mgr parms *****|
+6
+|RealAccum| |BusyLevelX|    |Busy Channels|
+|RealTally| |tokendelayX|   |Transmission Delay|
+|RealTally| |FrameSizeX|    |Frame Size|
+|IntAccum|  |AvailLevel|    |Available Calls|
+|RealAccum| |Level|         |Call Utilization|
+|RealAccum| |tokenlevel|    |Sessions In-Progress|
+
+|***** Token Ring Stat Request Mgr parms *****|
+9
+|RealTally| |NodeAccessDuration| |Node Activity Duration|
+|RealAccum| |NbrNodesWaiting| |Active Node Count|
+|RealTally| |TokenRotationTime| |Token Rotation Time|
+|IntAccum|  |BusyLevelX|    |Utilization|
+|RealTally| |tokendelayX|   |Transmission Delay|
+|RealTally| |FrameSizeX|    |Frame Size|
+|IntAccum|  |AvailLevel|    |Available Calls|
+|RealAccum| |Level|         |Call Utilization|
+|RealAccum| |tokenlevel|    |Sessions In-Progress|
+
+|***** Ctl Link Stat Request Mgr parms *****|
+13
+|IntAccum|  |BusyLevelX|     |Contention Channel Utilization|
+|IntAccum|  |BusyLevelY|     |Control Channel Utilization|
+|RealTally| |tokendelayX|    |Contention Channel Transmission Delay|
+|RealTally| |tokendelayY|    |Control Channel Transmission Delay|
+|RealTally| |framedelay|     |Deferral Delay|
+|RealAccum| |framelevel|     |Deferral Queue Size|
+|IntTally|  |MultipleCllsns| |Multiple Collision Episodes|
+|IntTally|  |CllsnsPerFrame| |Collisions Per Collided Frame|
+|RealTally| |FrameSizeX|     |Contention Channel Frame Size|
+|RealTally| |FrameSizeY|     |Control Channel Frame Size| 
+|IntAccum|  |AvailLevel|   |Available Calls|
+|RealAccum| |Level|        |Call Utilization|
+|RealAccum| |tokenlevel|   |Sessions In-Progress|
+
+|***** Msg Stat Request Mgr parms *****|
+6
+|RealTally| |setupcmdlengthdly| |Message Delay (sec)|
+|RTRTally|  |rttokendelay| |Real-Time Message Delay|  4  2  1  0  0.0  60.0  0.0  0.0001
+|RealTally| |transcmddelivered| |Msg Delivered Delay (sec)|
+|RTRTally|  |rttranscmddelivered| |Real-Time Msg Delivered Delay|  4  2  1  0  0.0  60.0  0.0  0.0001
+|RealAccum| |tokenlevel|   |Messages In-Transit|
+|RTRAccum|  |rttokenlevel| |Real-Time Messages In-Transit| 4 2 1 0  0.0  60.0  0.0  2.0
+
+
+|***** App Source Stat Request Mgr parms *****|
+2
+|RealTally| |tokendelay| |Application Source Delay|
+|RTRTally| |rttokendelay| |Real-Time Application Source Delay|  4  2  1  0  0.0  60.0  0.0  0.0001
+
+|***** Token Stat Request Mgr parms *****|
+4
+|RealTally| |tokendelay| |token delay|
+|RTRTally| |rttokendelay| |Real-Time Token Delay|  4  2  1  0  0.0  60.0  0.0  0.0001
+|RealAccum| |tokenlevel|   |token level|
+|RTRAccum|  |rttokenlevel| |Real-Time Token Level| 4 2 1 0  0.0  60.0  0.0  2.0
+
+|***** Polling Stat Request Mgr parms *****|
+9
+|IntAccum|  |BusyLevelX|    |Contention Channel Utilization|
+|IntAccum|  |BusyLevelY|    |Control Channel Utilization|
+|RealTally| |tokendelayX|   |Contention Channel Transmission Delay|
+|RealTally| |tokendelayY|   |Control Channel Transmission Delay|
+|RealTally| |FrameSizeX|    |Contention Channel Frame Size|
+|RealTally| |FrameSizeY|    |Control Channel Frame Size| 
+|IntAccum|  |AvailLevel|   |Available Calls|
+|RealAccum| |Level|        |Call Utilization|
+|RealAccum| |tokenlevel|   |Sessions In-Progress|
+
+|***** Node Stat Request Mgr parms *****|
+8
+|IntAccum| |AvailLevel|   |Available Calls|
+|RealAccum| |Level|   |Call Utilization|
+|RealAccum| |tokenlevel|   |Sessions In Progress|
+|RealAccum| |nodebufferlevelI|   |Input Buffer Level|
+|RealAccum| |nodebufferlevelO|   |Output Buffer Level|
+|RealAccum| |nodebuffersnaplevelIbyport|   |Percentage of All Port Input Buffers In Use|
+|RealAccum| |nodebuffersnaplevelIoverall|   |Percentage of Node's Overall Input Buffer Limit In Use|
+|RealAccum| |nodebuffersnaplevelIbyte|   |Input Buffer Usage|
+
+|***** Application Stat Request Mgr parms *****|
+6
+|RealAccum| |UsedBytesLevel|   |Used Bytes Level|
+|RealAccum| |appnodebusyprocs|   |Busy Processors|
+|RealAccum| |appnodebusyprocssnap|    |Busy Processors|
+|RealAccum| |UsedBytesSnapLevel|   |Used Bytes Level|
+|RealAccum| |applicbufferlevelI|   |Input Buffer Level|
+|RealAccum| |appliccallbandlevel|   |Call Bandwidth Level|
+
+|***** ATM Stat Request Mgr parms *****|
+2
+|RealAccum| |ATMbufferlevelI|   |Input Buffer Level|
+|RealAccum| |ATMcallbandlevel|   |Call Bandwidth Level|
+
+|***** Port Stat Request Mgr parms *****|
+4
+|RealAccum| |portbufferlevel|   |Port Buffer Level|
+|RTRAccum|  |RTportbufferlevel| |Real-Time Port Buffer Level| 4 2 1 0 0.0 60.0 0.0 1.0
+|RealTally| |portbufferdelay|   |Packet Delay in Port|
+|RTRTally|  |RTportbufferdelay| |Real-Time Port Packet Delay| 4 2 1 0 0.0 60.0 0.0 0.001
+
+
+|***** Call Type Stat Request Mgr parms *****|
+1
+|IntTally| |NbrHopsLevel|   |Call Type Statistics|
+
+|***** Transport Stat Request Mgr parms *****|
+13
+|RealTally| |transcmdtokendly|   |Message Delay|
+|RealTally| |transcmddelivered|   |Message Delivery Delay|
+|RealTally| |transcmdpacketdly|   |Transport Command Packet Delay|
+|IntTally| |windowsize|   |Transport Layer Window Stats|
+|RealTally| |interpktintvl|   |InterPkt Interval|
+|IntTally| |pktsperretrans|   |Pkts In Retransmission|
+|IntTally| |samepktretrans|   |Pkt Retransmission Times|
+|RealTally| |rto|   |Retransmission TimeOut|
+|RealTally| |roundtrip|   |Round Trip Time|
+|RealTally| |transcmdackdly|   |Transport Command Ack Delay|
+|IntTally| |packetsize| |Packet Size|
+|IntTally| |burstsize| |Burst Size|
+|RealTally| |pktassyintvl| |Inter-Assembly Interval|
+
+|***** Setup Stat Request Mgr parms *****|
+14
+|RealTally| |setupcmdtokendly|   |Setup Command Message Delay|
+|RealTally| |setupcmddelivered|   |Setup Command Message Delivery Delay|
+|RealTally| |setupcmdpacketdly|   |Setup Command Packet Delay|
+|RealTally| |setupcmddly|   |SetupCommand Delay|
+|IntTally| |windowsize|   |Transport Layer Window Stats|
+|RealTally| |interpktintvl|   |InterPkt Interval|
+|IntTally| |pktsperretrans|   |Pkts In Retransmission|
+|IntTally| |samepktretrans|   |Pkt Retransmission Times|
+|RealTally| |rto|   |Retransmission TimeOut|
+|RealTally| |roundtrip|   |Round Trip Time|
+|RealTally| |setupcmdackdly|   |Setup Command Ack Delay|
+|IntTally| |packetsize| |Packet Size|
+|IntTally| |burstsize| |Burst Size|
+|RealTally| |pktassyintvl| |Inter-Assembly Interval|
+
+|***** VC Stat Request Mgr parms *****|
+6
+|RealTally| |Burst|          |Burst Size|
+|RealTally| |SampledBurst|   |Sampled Burst Size|
+|RealTally| |FrmDelay|       |Frame Delay|
+|RealTally| |MeanFrmDelay|   |Mean Frame Delay|
+|RTRTally|  |RTSampledBurst| |Real-Time Sampled Burst Size| 4 2 1 0 0.0 60.0 0.0 1.0
+|RTRTally|  |RTMeanFrmDelay| |Real-Time Mean Frame Delay|   4 2 1 0 0.0 60.0 0.0 0.001
+
+
+|***** Cloud Access Stat Request Mgr parms *****|
+9
+|RealAccum| |OutBufferLevel|          |Exit Buffer Size|
+|RealAccum| |OutMeanBufferLevel|      |Mean Exit Buffer Size|
+|IntAccum|  |BusyLevelX|              |Entry Link Utilization|
+|RealAccum| |InMeanUtil|              |Mean Entry Link Utilization|
+|IntAccum|  |BusyLevelY|              |Exit Link Utilization|
+|RealAccum| |OutMeanUtil|             |Mean Exit Link Utilization|
+|RTRAccum|  |RTOutMeanBufferLevel|    |R-T Mean Exit-Buffer Level| 4 2 1 0 0.0 60.0 0.0 1.0
+|RTRAccum|  |RTInMeanUtil|            |R-T Mean Entry Utilization| 4 2 1 0 0.0 60.0 0.0 1.0
+|RTRAccum|  |RTOutMeanUtil|           |R-T Mean Exit Utilization|  4 2 1 0 0.0 60.0 0.0 1.0
+
+|***** Packet Flow Stat Request Mgr parms RCM20 *****|
+2
+|RealTally| |transcmdpacketdly|   |Packet Delay|
+|IntTally|  |packetsize|          |Packet Size|
+
+|***** Nodes report specification parms *****|
+|Nodes| |setnoderpts| 0
+14
+|Processor + Disk Utilization| || |nodeapplic| 0 0
+  2
+  |UsedBytesLevel|
+  |appnodebusyprocs|
+|Received Message Counts| || |applicrecmsg| 0 0
+  1
+  |dummy|
+|Disk Access Error Counts| || |applicfilewarning| 0 0
+  1
+  |dummy|
+|Session Level| || |nodesession| 0 0
+  1
+  |tokenlevel|
+|Call Counts| || |callnode| 0 0
+  1
+  |dummy|
+|Call Level| || |nodecall| 0 0
+  2
+  |AvailLevel|
+  |Level|
+|Input Buffer Totals| || |nodebufferI| 0 0
+  1
+  |nodebufferlevelI|
+|Output Buffer Totals| || |nodebufferO| 0 0
+  1
+  |nodebufferlevelO|
+|Input Node Buffer Policy| || |inputnodebufferpolicy| 0 0
+  1
+  |dummy|
+|Output Node Buffer Policy| || |outputnodebufferpolicy| 0 0
+  1
+  |dummy|
+|Input Buffer Use by Port| || |portbufferI| 0 0
+  1
+  |portbufferlevelI|
+|Output Buffer Use by Port| || |portbufferO| 0 0
+  1
+  |portbufferlevelO|
+|Input Port Buffer Policy| || |inputportbufferpolicy| 0 0
+  1
+  |dummy|
+|Output Port Buffer Policy| || |outputportbufferpolicy| 0 0
+  1
+  |dummy|
+
+|***** Links report specification parms *****|
+|Links| |setlinkrpts| 0
+9
+|Channel Utilization| || |linkframe| 0 0
+  4
+  |BusyLevelX|
+  |BusyLevelY|
+  |tokendelayX|
+  |tokendelayY|
+|Utilization by Application| || |linkutilbyapp| 0 0
+  2
+  |BusyLevelX|
+  |BusyLevelY|
+|Utilization by Protocol| || |linkutilbyprot| 0 0
+  2
+  |BusyLevelX|
+  |BusyLevelY|
+|Frame Size|  ||  |framesize| 0 0
+  2
+  |FrameSizeX|
+  |FrameSizeY|
+|Collision Stats| || |linkcollision| 0 0
+  8
+  |BusyLevelX|
+  |BusyLevelY|
+  |tokendelayX|
+  |tokendelayY|
+  |framelevel|
+  |framedelay|
+  |MultipleCllsns|
+  |CllsnsPerFrame|
+|Token Ring Stats| || |linktokenring| 0 0
+  3
+  |TokenRotationTime|
+  |NodeAccessDuration|
+  |NbrNodesWaiting|
+|Session Level| || |linksession| 0 0
+  1
+  |tokenlevel|
+|Call Counts| || |calllink| 0 0
+  1
+  |dummy|
+|Call Level| || |linkcall| 0 0
+  2
+  |AvailLevel|
+  |Level|
+
+|***** Cloud Report specification parms *****|
+|WAN Clouds| |setcloudrpts| 0
+6
+|Frame Delay by VC| || |cldfrmdly| 0 1
+  2
+  |FrmDelay|
+  |Burst|
+|Frame Counts by VC| || |cldfrmcount| 0 0
+  1
+  |dummy|
+|Access Link Stats| || |cldaccess| 0 0
+  3
+  |BusyLevelX|
+  |BusyLevelY|
+  |OutBufferLevel|
+|Cloud Access Buffer Policy| || |cloudaccessbufferpolicy| 0 0
+  1
+  |dummy|
+|Cloud VC Buffer Policy| || |cloudVCbufferpolicy| 0 0
+  1
+  |dummy|
+|EPD/PPD| || |cldaccessEPD| 0 0
+  1
+  |dummy|
+
+|***** Application Sources report specification parms *****|
+|Application Sources| |setappsrcreps| 0
+1
+|Application Run Length| || |appmsgdly| 0 0
+  1
+  |tokendelay|
+
+|***** Message + Response Sources report specification parms *****|
+|Message + Response Sources| |setmsgsrcreps| 0 
+11
+|Message Delay| || |msgmsgdly| 0 0
+  1
+  |transcmdtokendly|
+|Message Delivered| || |msgmsgdlv| 0 1
+  1
+  |transcmddelivered|
+|Packet Delay| || |msgpktdly| 0 0
+  1
+  |transcmdpacketdly|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |transcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+
+|***** Call Sources report specification parms *****|
+|Call Sources| |setcalltypereps| 0
+3
+|Blocked Call Counts| || |calltype| 0 1
+  1
+  |NbrHopsLevel|
+|Disconnected Call Counts| || |disconcalls| 0 1
+  1
+  |dummy|
+|Preempted Call Counts| || |preemptcalls| 0 1
+  1
+  |dummy|
+
+|***** Session Sources report specification parms *****|
+|Session Sources| |setsesssrcreps| 0
+14
+|Message Delay| || |sessmsgdly| 0 0
+  1
+  |setupcmdtokendly|
+|Message Delivered| || |sessmsgdlv| 0 1
+  1
+  |setupcmddelivered|
+|Packet Delay| || |sespktdly| 0 0
+  1
+  |setupcmdpacketdly|
+|Setup Delay| || |sessetupdly| 0 0
+  1
+  |setupcmddly|
+|Session Length| || |seslength| 0 0
+  1
+  |setupcmdlengthdly|
+|Setup Counts| || |sescounts| 0 1
+  1
+  |dummy|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |setupcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+|***** Transport + Answer Commands report specification parms *****|
+|Transport + Answer Commands| |settrncmdreps| 0
+11
+|Message Delay| || |trnsmsgdly| 0 0
+  1
+  |transcmdtokendly|
+|Message Delivered| || |trnsmsgdlv| 0 1
+  1
+  |transcmddelivered|
+|Packet Delay| || |trnspktdly| 0 0
+  1
+  |transcmdpacketdly|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |transcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+|***** Setup Commands report specification parms *****|
+|Setup Commands| |setsetupcmdreps| 0
+14
+|Message Delay| || |setupmsgdly| 0 0
+  1
+  |setupcmdtokendly|
+|Message Delivered| || |setupmsgdlv| 0 1
+  1
+  |setupcmddelivered|
+|Packet Delay| || |setuppktdly| 0 0
+  1
+  |setupcmdpacketdly|
+|Setup Delay| || |setupsesdly| 0 0
+  1
+  |setupcmddly|
+|Session Length| || |setupseslength| 0 0
+  1
+  |setupcmdlengthdly|
+|Setup Counts| || |setupsescounts| 0 1
+  1
+  |dummy|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |setupcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+|***** Global Transport + Answer Commands report specification parms *****|
+|Global Transport + Answer Commands| |setgtrncmdreps| 0
+11
+|Message Delay| || |trnsmsgdly| 0 0
+  1
+  |transcmdtokendly|
+|Message Delivered| || |trnsmsgdlv| 0 1
+  1
+  |transcmddelivered|
+|Packet Delay| || |trnspktdly| 0 0
+  1
+  |transcmdpacketdly|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |transcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+|***** Global Setup Commands report specification parms *****|
+|Global Setup Commands| |setgsetupcmdreps| 0
+14
+|Message Delay| || |setupmsgdly| 0 0
+  1
+  |setupcmdtokendly|
+|Message Delivered| || |setupmsgdlv| 0 1
+  1
+  |setupcmddelivered|
+|Packet Delay| || |setuppktdly| 0 0
+  1
+  |setupcmdpacketdly|
+|Setup Delay| || |setupsesdly| 0 0
+  1
+  |setupcmddly|
+|Session Length| || |setupseslength| 0 0
+  1
+  |setupcmdlengthdly|
+|Setup Counts| || |setupsescounts| 0 1
+  1
+  |dummy|
+|Window Stats| || |windstats| 0 0
+  2
+  |windowsize|
+  |interpktintvl|
+|Retransmissions| || |retrans| 0 0
+  2
+  |pktsperretrans|
+  |samepktretrans|
+|Timeout| || |timeout| 0 0
+  2
+  |rto|
+  |roundtrip|
+|Ack Delay| || |ackdly| 0 0
+  1
+  |setupcmdackdly|
+|Pkt Size| || |pktsz| 0 0
+  1
+  |packetsize|
+|Burst Size| || |burstsz| 0 0
+  1
+  |burstsize|
+|Assy Intvl| || |assyint| 0 0
+  1
+  |pktassyintvl|
+|DE Packets| || |pktDE| 0 0
+  1
+  |dummy|
+
+|***** Background Packet Flow report specification parms RCM8 *****|
+|Background Packet Flows| |bgpktflows| 0
+1
+|Packet Delay| || |bgpktdly| 0 0
+  1
+  |transcmdpacketdly|
+
+|***** Node snapshot specification parms *****|
+|Nodes| |setnodesnaps| 0
+11
+0000.000 |Processor Utilization| || |procutilsnap| 0 0
+  1
+  |appnodebusyprocssnap|
+0000.000 |Input Buffer Totals (percent)| || |nodebufferIsnap| 0 0
+  2
+  |nodebuffersnaplevelIbyport|
+  |nodebuffersnaplevelIoverall|
+0000.000 |Input Buffer Totals| || |nodebufferIbytesnap| 0 0
+  1
+  |nodebuffersnaplevelIbyte|
+0000.000 |Disk Utilization| || |nodediskutilsnap| 0 0
+  1
+  |UsedBytesSnapLevel|
+0000.000 |Session Counts (Node)| || |nodevirtcircuitsnap| 0 0
+  1
+  |dummy|
+0000.000 |Received Message Counts| || |applicrecmsgsnap| 0 0
+  1
+  |dummy|
+0000.000 |Call Bandwidth Utilization (Node)| || |nodecallbandutilsnap| 0 0
+  1
+  |dummy|
+0001.000 |Disk Error| || |nodediskerrorsnap| 0 1
+  1
+  |dummy|
+0001.000 |Variable Error| || |nodeusrvarerrsnap| 0 1
+  1
+  |dummy|
+0000.000 |Variable Value| || |nodeusrvarsnap| 0 0
+  1
+  |dummy|
+0000.000 |Suspended/Pending Apps| || |nodependingappsnap| 0 0
+  1
+  |dummy|
+
+|***** Links snapshot specification parms *****|
+|Links| |setlinksnaps| 0
+3
+0000.000 |Channel Utilization| || |linkutilsnap| 0 0
+  1
+  |dummy|
+0000.000 |Session Counts (Link)| || |linkvirtcircuitsnap| 0 0
+  1
+  |dummy|
+0000.000 |Call Bandwidth Utilization (Link)| || |linkcallbandutilsnap| 0 0
+  1
+  |dummy|
+
+|***** Cloud VC snapshot specification parms *****|
+|Cloud VCs| |setcloudvcsnaps| 0
+1
+0000.000 |Burst Size| || |vcburstsnap| 0 0
+  1
+  |dummy|
+
+|***** Graph Labeling specification parms *****|
+205
+|Token:setupcmdlengthdly:Table|      |<name> Delay|        |seconds|     ||         ||
+|Token:setupcmdlengthdly:Unfilter|   |<name> Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdlengthdly:Filter|     |<name> Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdlengthdly:Uniform|    |<name> Delay|        |Delay (sec)|             |Number of Observations|   ||
+
+|Token:rttokendelay:|                |<name> Delay|        |Simulation Time|         |Message Delay|            ||
+
+|Token:setupcmddly:Table|            |Setup Delay|         |seconds|   ||              ||
+|Token:setupcmddly:Unfilter|         |Setup Delay|         |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmddly:Filter|           |Setup Delay|         |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmddly:Uniform|          |Setup Delay|         |Delay (sec)|             |Number of Observations|   ||
+
+|Token:transcmddelivered:Table|      |Message Delivery|    |seconds|    ||          ||
+|Token:transcmddelivered:Unfilter|   |Msg Delivery Delay|  |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmddelivered:Filter|     |Msg Delivery Delay|  |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmddelivered:Uniform|    |Msg Delivery Delay|  |Delay (sec)|             |Number of Observations|   ||
+
+|Token:rttranscmddelivered:|         |Msg Delivery Delay|  |Simulation Time|         |Message Delay|            ||
+
+|Token:transcmdtokendly:Table|       |Message Delay|       |seconds|  ||              ||
+|Token:transcmdtokendly:Unfilter|    |Msg Delay|           |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmdtokendly:Filter|      |Msg Delay|           |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmdtokendly:Uniform|     |Msg Delay|           |Delay (sec)|             |Number of Observations|   ||
+
+|Token:setupcmdtokendly:Table|       |Session Msg Delay|   |seconds|   ||           ||
+|Token:setupcmdtokendly:Unfilter|    |Session Msg Delay|   |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdtokendly:Filter|      |Session Msg Delay|   |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdtokendly:Uniform|     |Session Msg Delay|   |Delay (sec)|             |Number of Observations|   ||
+
+|Token:setupcmddelivered:Table|      |Msg Delivery Delay|  |seconds|   ||              ||
+|Token:setupcmddelivered:Unfilter|   |Msg Delivery Delay|  |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmddelivered:Filter|     |Msg Delivery Delay|  |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmddelivered:Uniform|    |Msg Delivery Delay|  |Delay (sec)|             |Number of Observations|   ||
+
+|Token:transcmdpacketdly:Table|      |Packet Delay|        |seconds|   ||              ||
+|Token:transcmdpacketdly:Unfilter|   |Packet Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmdpacketdly:Filter|     |Packet Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:transcmdpacketdly:Uniform|    |Packet Delay|        |Delay (sec)|             |Number of Observations|   ||
+
+|Token:setupcmdpacketdly:Table|      |Packet Delay|        |seconds|   ||              ||
+|Token:setupcmdpacketdly:Unfilter|   |Packet Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdpacketdly:Filter|     |Packet Delay|        |Simulation Time (sec)|   |Delay (sec)|              ||
+|Token:setupcmdpacketdly:Uniform|    |Packet Delay|        |Delay (sec)|             |Number of Observations|   ||
+
+|Token:windowsize:Table|             |Window Size|         |packets|   ||              ||
+|Token:windowsize:Unfilter|          |Window Size|         |Simulation Time (sec)|   |Size (packets)|              ||
+|Token:windowsize:Filter|            |Window Size|         |Simulation Time (sec)|   |Size (packets)|              ||
+|Token:windowsize:Uniform|           |Window Size|         |Size (packets)|             |Number of Observations|   ||
+
+|Token:interpktintvl:Table|          |Packetize Interval|  |seconds|   ||              ||
+|Token:interpktintvl:Unfilter|       |Packetize Interval|  |Simulation Time (sec)|   |Interval (sec)|              ||
+|Token:interpktintvl:Filter|         |Packetize Interval|  |Simulation Time (sec)|   |Interval (sec)|              ||
+|Token:interpktintvl:Uniform|        |Packetize Interval|  |Interval (sec)|             |Number of Observations|   ||
+
+|Token:pktsperretrans:Table|         |Packets Per Retransmission|   |packets|   ||              ||
+|Token:pktsperretrans:Unfilter|      |Packets Per Retransmission|   |Simulation Time (sec)|   |Number of Packets|              ||
+|Token:pktsperretrans:Filter|        |Packets Per Retransmission|   |Simulation Time (sec)|   |Number of Packets|              ||
+|Token:pktsperretrans:Uniform|       |Packets Per Retransmission|   |Number of Packets|             |Number of Observations|   ||
+
+|Token:samepktretrans:Table|         |Retransmissions of Packet|    |count|     ||              ||
+|Token:samepktretrans:Unfilter|      |Retransmissions of Packet|    |Simulation Time (sec)|   |Retransmissions|              ||
+|Token:samepktretrans:Filter|        |Retransmissions of Packet|    |Simulation Time (sec)|   |Retransmissions|              ||
+|Token:samepktretrans:Uniform|       |Retransmissions of Packet|    |Retransmissions|             |Number of Observations|   ||
+
+|Token:rto:Table|                    |Retransmission Time|         |seconds|   ||              ||
+|Token:rto:Unfilter|                 |Retransmission Time|         |Simulation Time (sec)|   |Timeout (sec)|              ||
+|Token:rto:Filter|                   |Retransmission Time|         |Simulation Time (sec)|   |Timeout (sec)|              ||
+|Token:rto:Uniform|                  |Retransmission Time|         |Timeout (sec)|             |Number of Observations|   ||
+
+|Token:roundtrip:Table|              |Round Trip Time|             |seconds|   ||              ||
+|Token:roundtrip:Unfilter|           |Round Trip Time|             |Simulation Time (sec)|   |Time (sec)|              ||
+|Token:roundtrip:Filter|             |Round Trip Time|             |Simulation Time (sec)|   |Time (sec)|              ||
+|Token:roundtrip:Uniform|            |Round Trip Time|             |Round Trip Time (sec)|             |Number of Observations|   ||
+
+|Token:transcmdackdly:Table|         |Ack Delay|                   |seconds|   ||              ||
+|Token:transcmdackdly:Unfilter|      |Ack Delay|                   |Simulation Time (sec)|   |Ack Delay (sec)|              ||
+|Token:transcmdackdly:Filter|        |Ack Delay|                   |Simulation Time (sec)|   |Ack Delay (sec)|              ||
+|Token:transcmdackdly:Uniform|       |Ack Delay|                   |Ack Delay (sec)|             |Number of Observations|   ||
+
+|Token:setupcmdackdly:Table|         |Ack Delay|                   |seconds|   ||              ||
+|Token:setupcmdackdly:Unfilter|      |Ack Delay|                   |Simulation Time (sec)|   |Ack Delay (sec)|              ||
+|Token:setupcmdackdly:Filter|        |Ack Delay|                   |Simulation Time (sec)|   |Ack Delay (sec)|              ||
+|Token:setupcmdackdly:Uniform|       |Ack Delay|                   |Ack Delay (sec)|             |Number of Observations|   ||
+
+|Token:packetsize:Table|             |Packet Size|        |bytes|   ||              ||
+|Token:packetsize:Unfilter|          |Packet Size|        |Simulation Time (sec)|   |Size (Bytes)|              ||
+|Token:packetsize:Filter|            |Packet Size|        |Simulation Time (sec)|   |Size (Bytes)|              ||
+|Token:packetsize:Uniform|           |Packet Size|        |Size (Bytes)|             |Number of Observations|   ||
+
+|Token:burstsize:Table|              |Burst Size|        |burst|   ||              ||
+|Token:burstsize:Unfilter|           |Burst Size|        |Simulation Time (sec)|   |Burst|              ||
+|Token:burstsize:Filter|             |Burst Size|        |Simulation Time (sec)|   |Burst|              ||
+|Token:burstsize:Uniform|            |Burst Size|        |Burst|             |Number of Observations|   ||
+
+|Token:pktassyintvl:Table|           |Assembly Interval|        |seconds|   ||              ||
+|Token:pktassyintvl:Unfilter|        |Assembly Interval|        |Simulation Time (sec)|   |Interval (sec)|              ||
+|Token:pktassyintvl:Filter|          |Assembly Interval|        |Simulation Time (sec)|   |Interval (sec)|              ||
+|Token:pktassyintvl:Uniform|         |Assembly Interval|        |Interval (sec)|             |Number of Observations|   ||
+
+|Token:tokenlevel:Table|             |No. of <name> Msgs In-Transit| |seconds|   ||        ||
+|Token:tokenlevel:Unfilter|          |No. of <name> Msgs In-Transit| |Simulation Time (sec)|   |Number In-Transit|        ||
+|Token:tokenlevel:Filter|            |No. of <name> Msgs In-Transit| |Simulation Time (sec)|   |Number In-Transit|        ||
+|Token:tokenlevel:Uniform|           |No. of <name> Msgs In-Transit| |Number In-Transit|       |Percent Time in Bin|      ||
+
+|Token:rttokenlevel:|                |No. of <name> Msgs In-Transit| |Simulation Time|         |Number In-Transit|        ||
+
+|Token:NbrHopsLevel:Table|           |Call Type Statistics|     |seconds|   ||           ||
+|Token:NbrHopsLevel:Unfilter|        |Call Type Statistics|     |Simulation Time (sec)|   |Number of Hops|           ||
+|Token:NbrHopsLevel:Filter|          |Call Type Statistics|     |Simulation Time (sec)|   |Number of Hops|           ||
+|Token:NbrHopsLevel:Uniform|         |Call Type Statistics|     |Number of Hops|   |Number of Observations|          ||
+
+|LinkConfig:NodeAccessDuration:Table|        |Node Activity Duration| |Seconds|   ||      ||
+|LinkConfig:NodeAccessDuration:Unfilter|     |Node Activity Duration| |Simulation Time (sec)|   |Duration (sec)|      ||
+|LinkConfig:NodeAccessDuration:Filter|       |Node Activity Duration| |Simulation Time (sec)|   |Duration (sec)|      ||
+|LinkConfig:NodeAccessDuration:Uniform|      |Node Activity Duration| |Duration (sec)|     |Number of Observations|      ||
+
+|LinkConfig:NbrNodesWaiting:Table|        |Active Node Count| |number of nodes|   ||      ||
+|LinkConfig:NbrNodesWaiting:Unfilter|     |Active Node Count| |Simulation Time (sec)|   |Number of Nodes|      ||
+|LinkConfig:NbrNodesWaiting:Filter|       |Active Node Count| |Simulation Time (sec)|   |Number of Nodes|      ||
+|LinkConfig:NbrNodesWaiting:Uniform|      |Active Node Count| |Number of Nodes|     |Percent Time in Bin|      ||
+
+|LinkConfig:TokenRotationTime:Table|        |Token Rotation Time| |Seconds|   ||      ||
+|LinkConfig:TokenRotationTime:Unfilter|     |Token Rotation Time| |Simulation Time (sec)|   |Rotation Time (sec)|      ||
+|LinkConfig:TokenRotationTime:Filter|       |Token Rotation Time| |Simulation Time (sec)|   |Rotation Time (sec)|      ||
+|LinkConfig:TokenRotationTime:Uniform|      |Token Rotation Time| |Rotation Time (sec)|     |Number of Observations|      ||
+
+|LinkConfig:BusyLevelX:Table|        |Channel Utilization| |busy X channels|   ||      ||
+|LinkConfig:BusyLevelX:Unfilter|     |Channel Utilization| |Simulation Time (sec)|   |Channel Utilization|      ||
+|LinkConfig:BusyLevelX:Filter|       |Channel Utilization| |Simulation Time (sec)|   |Channel Utilization|      ||
+|LinkConfig:BusyLevelX:Uniform|      |Channel Utilization| |Channel Utilization|     |Percent Time in Bin|      ||
+
+|LinkConfig:BusyLevelY:Table|        |Channel Utilization| |busy Y channels|   ||      ||
+|LinkConfig:BusyLevelY:Unfilter|     |Channel Utilization| |Simulation Time (sec)|   |Channel Utilization|      ||
+|LinkConfig:BusyLevelY:Filter|       |Channel Utilization| |Simulation Time (sec)|   |Channel Utilization|      ||
+|LinkConfig:BusyLevelY:Uniform|      |Channel Utilization| |Channel Utilization|     |Percent Time in Bin|      ||
+
+|LinkConfig:tokendelayX:Table|       |Frame X Delay|       |seconds|   || ||
+|LinkConfig:tokendelayX:Unfilter|    |Frame Delay|         |Simulation Time (sec)|   |Transmission Delay (sec)| ||
+|LinkConfig:tokendelayX:Filter|      |Frame Delay|         |Simulation Time (sec)|   |Transmission Delay (sec)| ||
+|LinkConfig:tokendelayX:Uniform|     |Frame Delay|         |Transmission Delay (sec)| |Number of Observations|  ||
+
+|LinkConfig:tokendelayY:Table|       |Frame Y Delay|       |seconds|   || ||
+|LinkConfig:tokendelayY:Unfilter|    |Frame Delay|         |Simulation Time (sec)|   |Transmission Delay (sec)| ||
+|LinkConfig:tokendelayY:Filter|      |Frame Delay|         |Simulation Time (sec)|   |Transmission Delay (sec)| ||
+|LinkConfig:tokendelayY:Uniform|     |Frame Delay|         |Transmission Delay (sec)| |Number of Observations|  ||
+
+|LinkConfig:FrameSizeX:Table|        |Frame X Size|       |bytes|   ||         ||
+|LinkConfig:FrameSizeX:Unfilter|     |Frame Size|         |Simulation Time (sec)|   |Frame Size (bytes)|         ||
+|LinkConfig:FrameSizeX:Filter|       |Frame Size|         |Simulation Time (sec)|   |Frame Size (bytes)|         ||
+|LinkConfig:FrameSizeX:Uniform|      |Frame Size|         |Frame Size (bytes)|      |Number of Observations|     ||
+
+|LinkConfig:FrameSizeY:Table|        |Frame Y Size|       |bytes|   ||         ||
+|LinkConfig:FrameSizeY:Unfilter|     |Frame Size|         |Simulation Time (sec)|   |Frame Size (bytes)|         ||
+|LinkConfig:FrameSizeY:Filter|       |Frame Size|         |Simulation Time (sec)|   |Frame Size (bytes)|         ||
+|LinkConfig:FrameSizeY:Uniform|      |Frame Size|         |Frame Size (bytes)|      |Number of Observations|     ||
+
+|LinkConfig:framelevel:Table|        |Deferral Queue Size| |deferring frames|   ||             ||
+|LinkConfig:framelevel:Unfilter|     |Deferral Queue Size| |Simulation Time (sec)|   |No. in Queue|             ||
+|LinkConfig:framelevel:Filter|       |Deferral Queue Size| |Simulation Time (sec)|   |No. in Queue|             ||
+|LinkConfig:framelevel:Uniform|      |Deferral Queue Size| |No. in Queue|            |Percent Time in Bin|      ||
+
+|LinkConfig:framedelay:Table|        |Deferral Delay|      |seconds|   ||              ||
+|LinkConfig:framedelay:Unfilter|     |Deferral Delay|      |Simulation Time (sec)|   |Delay (sec)|              ||
+|LinkConfig:framedelay:Filter|       |Deferral Delay|      |Simulation Time (sec)|   |Delay (sec)|              ||
+|LinkConfig:framedelay:Uniform|      |Deferral Delay|      |Delay (sec)|             |Number of Observations|   ||
+
+|LinkConfig:MultipleCllsns:Table|    |Multiple Collisions| |frames|   || ||
+|LinkConfig:MultipleCllsns:Unfilter| |Multiple Collisions| |Simulation Time (sec)|   |No. of Collisions per MultiCollision Episode| ||
+|LinkConfig:MultipleCllsns:Filter|   |Multiple Collisions| |Simulation Time (sec)|   |No. of Collisions per MultiCollision Episode| ||
+|LinkConfig:MultipleCllsns:Uniform|  |Multiple Collisions| |No. of Collisions per MultiCollision Episode| |Number of Observations|  ||
+
+|LinkConfig:CllsnsPerFrame:Table|    |Frame Collisions|    |collisions|   || ||
+|LinkConfig:CllsnsPerFrame:Unfilter| |Frame Collisions|    |Simulation Time (sec)|   |No. of Collisions per Collided Frame| ||
+|LinkConfig:CllsnsPerFrame:Filter|   |Frame Collisions|    |Simulation Time (sec)|   |No. of Collisions per Collided Frame| ||
+|LinkConfig:CllsnsPerFrame:Uniform|  |Frame Collisions|    |No. of Collisions per Collided Frame| |Number of Observations| ||
+
+|LinkConfig:tokenlevel:Table|        |Session Count|  |sessions|   ||      ||
+|LinkConfig:tokenlevel:Unfilter|     |Session Count|  |Simulation Time (sec)|   |Sessions|      ||
+|LinkConfig:tokenlevel:Filter|       |Session Count|  |Simulation Time (sec)|   |Sessions|      ||
+|LinkConfig:tokenlevel:Uniform|      |Session Count|  |Sessions|     |Percent Time in Bin|      ||
+
+|LinkConfig:AvailLevel:Table|        |Call Availability| |channels|   ||      ||
+|LinkConfig:AvailLevel:Unfilter|     |Call Availability| |Simulation Time (sec)|   |Available Channels|      ||
+|LinkConfig:AvailLevel:Filter|       |Call Availability| |Simulation Time (sec)|   |Available Channels|      ||
+|LinkConfig:AvailLevel:Uniform|      |Call Availability| |Available Channels|     |Percent Time in Bin|      ||
+
+|LinkConfig:Level:Table|             |Call Utilization| |Bits/Second|   ||      ||
+|LinkConfig:Level:Unfilter|          |Call Utilization| |Simulation Time (sec)|   |Bits/Second|      ||
+|LinkConfig:Level:Filter|            |Call Utilization| |Simulation Time (sec)|   |Bits/Second|      ||
+|LinkConfig:Level:Uniform|           |Call Utilization| |Bits/Second|     |Percent Time in Bin|      ||
+
+|Node:nodebufferlevelI:Table|     |Node Input Buffer Level|  |level|  ||                ||
+|Node:nodebufferlevelI:Unfilter|  |Node Input Buffer Level|  |Simulation Time (sec)|  |Buffer Level|                ||
+|Node:nodebufferlevelI:Filter|    |Node Input Buffer Level|  |Simulation Time (sec)|  |Buffer Level|                  ||
+|Node:nodebufferlevelI:Uniform|   |Node Input Buffer Level|  |Buffer Level|  |Percent Time in Bin|                 ||
+
+|Node:nodebufferlevelO:Table|     |Node Output Buffer Level|  |level|  ||                ||
+|Node:nodebufferlevelO:Unfilter|  |Node Output Buffer Level|  |Simulation Time (sec)|  |Buffer Level|                ||
+|Node:nodebufferlevelO:Filter|    |Node Output Buffer Level|  |Simulation Time (sec)|  |Buffer Level|                  ||
+|Node:nodebufferlevelO:Uniform|   |Node Output Buffer Level|  |Buffer Level|  |Percent Time in Bin|                 ||
+
+|Node:portbufferlevel:Table|      |Port Buffer Level|  |level|                  ||                       ||
+|Node:portbufferlevel:Unfilter|   |Port Buffer Level|  |Simulation Time (sec)|  |Buffer Level|           ||
+|Node:portbufferlevel:Filter|     |Port Buffer Level|  |Simulation Time (sec)|  |Buffer Level|           ||
+|Node:portbufferlevel:Uniform|    |Port Buffer Level|  |Buffer Level|           |Percent Time in Bin|    ||
+|Node:RTportbufferlevel:|         |Port Buffer Level|  |Simulation Time (sec)|  |Buffer Level|           ||
+
+|Node:portbufferdelay:Table|      |Port Buffer Delay|  |seconds|                ||                       ||
+|Node:portbufferdelay:Unfilter|   |Port Buffer Delay|  |Simulation Time (sec)|  |Delay (sec)|            ||
+|Node:portbufferdelay:Filter|     |Port Buffer Delay|  |Simulation Time (sec)|  |Delay (sec)|            ||
+|Node:portbufferdelay:Uniform|    |Port Buffer Delay|  |Buffer Delay (sec)|     |Number of Observations| ||
+|Node:RTportbufferdelay:|         |Port Buffer Delay|  |Simulation Time (sec)|  |Buffer Delay (sec)|     ||
+
+|CldVC:Burst:Table|                  |Burst Size|           |burst|   ||       ||
+|CldVC:Burst:Unfilter|               |Burst Size|           |Simulation Time (sec)|   |Burst Size (kbits)|       ||
+|CldVC:Burst:Filter|                 |Burst Size|           |Simulation Time (sec)|   |Burst Size (kbits)|       ||
+|CldVC:Burst:Uniform|                |Burst Size|           |Burst Size (kbits)|      |Number of Observations|   ||
+
+|CldVC:SampledBurst:Table|           |Sampled Burst Size|   |burst|   ||       ||
+|CldVC:SampledBurst:Unfilter|        |Sampled Burst Size|   |Simulation Time (sec)|   |Burst Size (kbits)|       ||
+|CldVC:SampledBurst:Filter|          |Sampled Burst Size|   |Simulation Time (sec)|   |Burst Size (kbits)|       ||
+|CldVC:SampledBurst:Uniform|         |Sampled Burst Size|   |Burst Size (kbits)|      |Number of Observations|   ||
+
+|CldVC:FrmDelay:Table|               |Frame Delay|          |seconds|   ||        ||
+|CldVC:FrmDelay:Unfilter|            |Frame Delay|          |Simulation Time (sec)|   |Frame Delay (sec)|        ||
+|CldVC:FrmDelay:Filter|              |Frame Delay|          |Simulation Time (sec)|   |Frame Delay (sec)|        ||
+|CldVC:FrmDelay:Uniform|             |Frame Delay|          |Frame Delay (sec)|       |Number of Observations|   ||
+
+|CldVC:MeanFrmDelay:Table|           |Mean Frame Delay|     |seconds|   ||        ||
+|CldVC:MeanFrmDelay:Unfilter|        |Mean Frame Delay|     |Simulation Time (sec)|   |Frame Delay (sec)|        ||
+|CldVC:MeanFrmDelay:Filter|          |Mean Frame Delay|     |Simulation Time (sec)|   |Frame Delay (sec)|        ||
+|CldVC:MeanFrmDelay:Uniform|         |Mean Frame Delay|     |Frame Delay (sec)|       |Number of Observations|   ||
+
+|Node:tokenlevel:Table|           |Session Count|  |sessions|   ||      ||
+|Node:tokenlevel:Unfilter|        |Session Count|  |Simulation Time (sec)|   |Sessions|      ||
+|Node:tokenlevel:Filter|          |Session Count|  |Simulation Time (sec)|   |Sessions|      ||
+|Node:tokenlevel:Uniform|         |Session Count|  |Sessions|     |Percent Time in Bin|      ||
+
+|Node:AvailLevel:Table|           |Call Availability| |channels|   ||      ||
+|Node:AvailLevel:Unfilter|        |Call Availability| |Simulation Time (sec)|   |Available Channels|      ||
+|Node:AvailLevel:Filter|          |Call Availability| |Simulation Time (sec)|   |Available Channels|      ||
+|Node:AvailLevel:Uniform|         |Call Availability| |Available Channels|     |Percent Time in Bin|      ||
+
+|Node:Level:Table|                |Call Utilization| |Bits/Second|   ||      ||
+|Node:Level:Unfilter|             |Call Utilization| |Simulation Time (sec)|   |Bits/Second|      ||
+|Node:Level:Filter|               |Call Utilization| |Simulation Time (sec)|   |Bits/Second|      ||
+|Node:Level:Uniform|              |Call Utilization| |Bits/Second|     |Percent Time in Bin|      ||
+
+|:appnodebusyprocs:Table|     |Node Processor Utilization|  |busy processors|  ||                ||
+|:appnodebusyprocs:Unfilter|  |Node Processor Utilization|  |Simulation Time (sec)|  |Busy Processors|                ||
+|:appnodebusyprocs:Filter|    |Node Processor Utilization|  |Simulation Time (sec)|  |Busy Processors|                  ||
+|:appnodebusyprocs:Uniform|   |Node Processor Utilization|  |Busy Processors|  |Percent Time in Bin|                 ||
+
+|:UsedBytesLevel:Table|     |Storage Utilization|  |bytes|  ||                ||
+|:UsedBytesLevel:Unfilter|  |Storage Utilization|  |Simulation Time (sec)|  |Bytes|                ||
+|:UsedBytesLevel:Filter|    |Storage Utilization|  |Simulation Time (sec)|  |Bytes|                  ||
+|:UsedBytesLevel:Uniform|   |Storage Utilization|  |Bytes|  |Percent Time in Bin|                 ||
+
+|***** Sample Plot Controller parms *****|
+|| |sample.edi| 0 1 10
+
+|***** Multi Stat Plot Controller parms *****|
+|| |mulstats.edi| 0 1 10
+
+|***** node library menu parms. *****|
+11
+
+|Nodes|
+4
+    |Processing Node|
+    |Router|
+    |Computer Group|
+    |Switch|
+
+|Links|
+11
+    |Point-To-Point|
+    |DAMA|
+    |Aloha|
+    |CSMA|
+    |CSMA/CD|
+    |Polling|
+    |Token Passing|
+    |CSMA/CA|
+    |FDDI Basic|
+    |Priority Token Ring|
+    |Priority FDDI|
+
+|Remotes|
+3
+    |Remote Link|
+    |Remote Node|
+    |Socket|
+
+|Clouds|
+1
+    |WAN Cloud|
+    
+|Networks|
+1
+    |Network|
+
+|Application Sources|
+1
+    |Application Source|
+
+|Message Sources|
+2
+    |Message Source|
+    |Response Source|
+
+|Session Sources|
+1
+    |Session Source|
+
+|Call Sources|
+1
+    |Call Source|
+
+|Cloud VCs|
+1
+    |Cloud VC|
+
+|Cloud Access Links|
+1
+    |Cloud Access|
+
+|***** node container menu and palette list parms. *****|
+4
+
+|Models|
+1
+|cnModelObj|
+4
+|editing|    |all|                 1
+|editing|    |Cloud VC|            0
+|simulating| |all|                 0
+|simulating| |zoom|                1
+20
+|editing|    |all|                 1
+|editing|    |haltsim|             0
+|editing|    |Cloud VCs|           0
+|editing|    |Cloud Access Links|  0
+|simulating| |all|                 0
+|simulating| |haltsim|             1
+|simulating| |memstat|             1
+|simulating| |animate|             1
+|simulating| |snapshotcolor|       1
+|simulating| |trace|               1
+|simulating| |index|               1
+|simulating| |about|               1
+|simulating| |print|               1
+|simulating| |zoomin|              1
+|simulating| |zoomout|             1
+|simulating| |zoomreset|           1
+|simulating| |browse|              1
+|simulating| |snapfolder|          1
+|simulating| |snapbrowse|          1
+|simulating| |debug|               1
+
+|NodeLibMgrObj|
+1
+|AreaObj|
+4
+|editing|    |all|                 1
+|editing|    |Cloud VC|            0
+|simulating| |all|                 0
+|simulating| |zoom|                1
+21
+|editing|    |all|                 1
+|editing|    |haltsim|             0
+|editing|    |Cloud VCs|           0
+|editing|    |Cloud Access Links|  0
+|editing|    |snapbrowse|          0
+|simulating| |all|                 0
+|simulating| |haltsim|             1
+|simulating| |memstat|             1
+|simulating| |animate|             1
+|simulating| |snapshotcolor|       1
+|simulating| |trace|               1
+|simulating| |index|               1
+|simulating| |about|               1
+|simulating| |print|               1
+|simulating| |zoomin|              1
+|simulating| |zoomout|             1
+|simulating| |zoomreset|           1
+|simulating| |browse|              1
+|simulating| |snapfolder|          1
+|simulating| |snapbrowse|          1
+|simulating| |debug|               1
+
+|Clouds|
+1
+|WAN Cloud|
+19
+|editing|    |all|                 1
+|editing|    |WAN Cloud|           0
+|editing|    |AreaObj|             0
+|editing|    |Call Source|         0
+|editing|    |Message Source|      0
+|editing|    |Response Source|     0
+|editing|    |Application Source|  0
+|editing|    |Session Source|      0
+|editing|    |Processing Node|     0
+|editing|    |Router|              0
+|editing|    |Computer Group|      0
+|editing|    |Switch|              0
+|editing|    |CSMA/CD|             0
+|editing|    |Token Passing|       0
+|editing|    |Network|             0
+|editing|    |Remote Link|         0
+|editing|    |Socket|              0
+|simulating| |all|                 0
+|simulating| |zoom|                1
+31
+|editing|    |all|                 1
+|editing|    |haltsim|             0
+|editing|    |Nodes|               0
+|editing|    |Links|               0
+|editing|    |Clouds|              0
+|editing|    |Networks|            0
+|editing|    |Application Sources| 0
+|editing|    |Message Sources|     0
+|editing|    |Call Sources|        0
+|editing|    |Session Sources|     0
+|editing|    |Remote Node|         0
+|editing|    |Remote Link|         0
+|editing|    |Socket|              0
+|editing|    |snapbrowse|          0
+|simulating| |all|                 0
+|simulating| |haltsim|             1
+|simulating| |memstat|             1
+|simulating| |animate|             1
+|simulating| |snapshotcolor|       1
+|simulating| |trace|               1
+|simulating| |index|               1
+|simulating| |about|               1
+|simulating| |print|               1
+|simulating| |zoomin|              1
+|simulating| |zoomout|             1
+|simulating| |zoomreset|           1
+|simulating| |parent|              1
+|simulating| |browse|              1
+|simulating| |snapfolder|          1
+|simulating| |snapbrowse|          1
+|simulating| |debug|               1
+
+|Networks|
+1
+|Network|
+7
+|editing|    |all|                 1
+|editing|    |AreaObj|             0
+|editing|    |Application Source|  0
+|editing|    |Call Source|         0
+|editing|    |Cloud VC|            0
+|simulating| |all|                 0
+|simulating| |zoom|                1
+25
+|editing|    |all|                 1
+|editing|    |haltsim|             0
+|editing|    |Application Sources| 0
+|editing|    |commands|            0
+|editing|    |Call Sources|        0
+|editing|    |Cloud Access Links|  0
+|editing|    |Cloud VCs|           0
+|editing|    |snapbrowse|          0
+|simulating| |all|                 0
+|simulating| |haltsim|             1
+|simulating| |memstat|             1
+|simulating| |animate|             1
+|simulating| |snapshotcolor|       1
+|simulating| |trace|               1
+|simulating| |index|               1
+|simulating| |about|               1
+|simulating| |print|               1
+|simulating| |zoomin|              1
+|simulating| |zoomout|             1
+|simulating| |zoomreset|           1
+|simulating| |parent|              1
+|simulating| |browse|              1
+|simulating| |snapfolder|          1
+|simulating| |snapbrowse|          1
+|simulating| |debug|               1
+
+|***** menu registration items *****|
+19
+  |cut|
+  |copy|
+  |clone|
+  |duplicate|
+  |detail|
+  |scale|
+  |move|
+  |enter|
+  |clear|
+  |hide|
+  |expose|
+  |snapbrowse|
+  |align|
+  |distribute|
+  |nocolor|
+  |front|
+  |back|
+  |group|
+  |ungroup|
+  
+|***** node menu activation items *****|
+12
+|NodeLibMgrObj| 1
+  |AreaObj|                 14              |clone|             |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group| |enter|
+                             1                                                                                                                                                  |enter|
+|Nodes| 7
+  |ComNodeObj|              16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Processing Node|         16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Router|                  16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Computer Group|          16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Switch|                  16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Comp & Comm Node|        16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |ATM Switch|              16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+|Links| 12
+  |LinkObj|                 16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Point-To-Point|          16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |DAMA|                    16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Aloha|                   16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |CSMA|                    16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |CSMA/CD|                 16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Polling|                 16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group| 
+                             2 |detail| |snapbrowse|
+  |Token Passing|           16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |CSMA/CA|                 16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |FDDI Basic|              16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Priority Token Ring|     16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+  |Priority FDDI|           16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+
+|Application Sources| 1
+  |Application Source|      16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+|Message Sources| 2
+  |Response Source|         16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+  |Message Source|          16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+|Session Sources| 1
+  |Session Source|          16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+|Call Sources| 1
+  |Call Source|             16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+|Networks| 1
+  |Network|                 17 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group| |enter|
+                             2 |detail|                                                                                                                       |enter|
+|Clouds| 1
+  |WAN Cloud|               17 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group| |enter|
+                             2 |detail|                                                                                                                       |enter|
+|Cloud Access Links| 1
+  |Cloud Access|            16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+|Cloud VCs| 1
+  |Cloud VC|                16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             2 |detail| |snapbrowse|
+|Remotes| 3
+  |Remote Node|             16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+  |Remote Link|             16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+  |Socket|                  16 |cut| |copy| |clone| |duplicate| |detail| |scale| |move| |clear| |hide| |expose| |align| |distribute| |nocolor| |front| |back| |group|
+                             1 |detail|
+|***** pad menu activation items *****|
+1
+|Process Node Pads| 3
+  |GatewayPadObj|      3 |detail| |nocolor| |clear|
+                       2          |nocolor| |clear|
+                       1 |detail|
+                       0
+  |NetAccessPadObj|    3 |detail| |nocolor| |clear|
+                       2          |nocolor| |clear|
+                       1 |detail|
+                       0
+  |CloudAccessPadObj|  3 |detail| |nocolor| |clear|
+                       2          |nocolor| |clear|
+                       1 |detail|
+                       0
+
+|***** arc menu activation items *****|
+1
+|Arcs| 9
+  |PortArcObj|       3 |clear| |nocolor| |detail|
+                     0
+  |GatewayArcObj|    2 |clear| |nocolor|
+                     0
+  |SourceArcObj|     2 |clear| |nocolor|
+                     0
+  |NetPortArcObj|    3 |clear| |nocolor| |detail|
+                     0
+  |NetGWArcObj|      2 |clear| |nocolor|
+                     0
+  |CloudPortArcObj|  3 |clear| |nocolor| |detail|
+                     0
+  |CloudGWArcObj|    2 |clear| |nocolor|
+                     0
+  |CldVCArcObj|      2 |clear| |nocolor|
+                     0
+  |RemoteArcObj|     2 |clear| |nocolor|
+                     0
+                   
+
+|***** Background text activation items *****|
+14
+  |detail|
+  |scale|
+  |move|
+  |clear|
+  |hide|
+  |expose|
+  |cut|
+  |copy|
+  |align|
+  |distribute|
+  |nocolor|
+  |front|
+  |back|
+  |group|
+
+|***** Background icon activation items *****|
+14
+  |detail|
+  |scale|
+  |move|
+  |clear|
+  |hide|
+  |expose|
+  |cut|
+  |copy|
+  |align|
+  |distribute|
+  |nocolor|
+  |front|
+  |back|
+  |group|
+
+|***** Group activation items (editing mode then simulation mode) *****|
+14
+  |cut|
+  |copy|
+  |clone|
+  |duplicate|
+  |detail|
+  |scale|
+  |move|
+  |clear|
+  |hide|
+  |expose|
+  |align|
+  |distribute|
+  |group|
+  |ungroup|
+0
+
+|***** pad palette parms; GatewayPadObj may be discarded & actual pad created is a NetAccessPadObj or CloudAccessPadObj *****|
+  |GatewayPadObj|  |ACCESSPT|                1    5     |Access point|
+
+|***** Arc palette parms *****|
+  |Arc1| |CONTOOL1|  1                       2    2     |Horizontal/vertical arc|
+  |Arc2| |CONTOOL2|  0                       1    2     |Diagonal arc|
+
+|***** Miscellaneous palette parms *****|
+  |txt|            |TEXTTOOL|                2    13    |Background text|
+  |back|           |BKGDTOOL|                1    13    |Background map|     |background|
+  |back|           |SHAPES|                  1    12    |Background shape|   |shapes|
+  |back|           |THINGS|                  0     0    |Background thing--combined for now with shapes| |shapes|
+  |zoom|           |ZOOM|                    2     1    |Zoom into work area|
+  |Delay Graph|    |DGRAPH|                  0     0    |Dynamic delay graph|
+  |Level Graph|    |LGRAPH|                  0     0    |Dynamic level graph|
+  
+|***** node library palette parms. *****|
+11
+
+|Nodes|
+4
+  |Processing Node|    |NODE|              1    3     |Processing node|
+  |Router|             |ROUTER|            1    4     |Router|
+  |Computer Group|     |GROUP|             2    3     |Computer group|
+  |Switch|             |ATMSW|             2    4     |Switch|
+
+|Links|
+3                                                       
+  |Point-To-Point|     |PPLINK|            2    7    |Point-to-point link|
+  |CSMA/CD|            |COLLINK|           1    8    |CSMA/CD link|
+  |Token Passing|      |TOKENLNK|          2    8    |Token-passing link|
+
+|Remotes|
+2
+  |Remote Link|        |HEXAGON|           2   12    |Remote link|
+  |Socket|             |DIAMOND|           2   11    |Source socket|
+
+|NodeLibMgrObj|
+1
+  |AreaObj|            |SUBNET|            2    5    |Subnet|
+  
+|Networks|
+1
+  |Network|            |TRANSIT|           2    6    |Transit network|
+
+|Clouds|
+1
+  |WAN Cloud|          |CLOUD|             1    6    |Cloud|
+
+|Cloud VCs|
+1
+  |Cloud VC|           |VIRTCIRC|          1    7    |Cloud VC|
+
+|Application Sources|
+1
+  |Application Source| |APPSRC|            1   10    |Application source|
+
+|Message Sources|
+2
+  |Message Source|     |MSGSRC|            1    9    |Message source|
+  |Response Source|    |RSPSRC|            2    9    |Response source|
+
+|Session Sources|
+1
+  |Session Source|     |SSNSRC|            2   10    |Session source|
+
+|Call Sources|
+1
+  |Call Source|        |CALLSRC|           1   11    |Call source|
+  
+
+|***** Process node help keys *****|
+0
+
+|***** Playback parms *****|
+|playback.dat| |jrexp.dat| |find.dat|
+3
+   |Areas.Backbones.Fields.Foreground B|            ||  || 0 0 1 0 1  |NILOBJ|
+   |Areas.Backbones.Fields.Foreground G|            ||  || 0 0 1 0 1  |NILOBJ|
+   |Areas.Backbones.Fields.Foreground R|            ||  || 0 0 1 0 1  |NILOBJ|
+                                                                  
+|***** Help system parms *****|
+|default.hlp|
+100
+0
+
+7
+  3
+    |FILENEW|      |new|
+    |FILEOPEN|     |open|
+    |FILESAVE|     |save|
+  25.0
+  1
+    |PRINT|        |print|
+  25.0
+  3
+    |CUT|          |cut|
+    |COPY|         |copy|
+    |PASTE|        |paste|
+  25.0
+  2
+    |CLONE|        |clone|
+    |DETAIL|       |detail|
+  25.0
+  1
+    |CLEAR|        |clear|
+  25.0
+  3
+    |START|        |simulate|
+    |STOP|         |haltsim|
+    |SNAP|         |snapbrowse|
+  25.0
+  1
+    |HELP|         |index|
+    
+0
+

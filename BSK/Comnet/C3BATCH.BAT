@@ -1,0 +1,2 @@
+ECHO OFF
+C:\COMNET32\COMNET -r %1 -nograp

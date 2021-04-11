@@ -1,0 +1,35 @@
+ASCII-META-EDITOR-FILExx
+ |xxMetaEditor|  |2.1|  
+ |SimLib|  |0000.014| 
+ |TrafLink| |0000.005|
+ |EndVersion| 
+      2 
+
+ |External Traffic Profiles| 
+       4 
+ |Sniffer Profile|  |Sniffer Profile|  1 0 1 
+ |Sniffer Profile|  |NetMetrix Profile|  1 0 1 
+ |Sniffer Profile|  |Domino Profile|  1 0 1 
+ |Sniffer Profile|  |Sniffer CSV Profile|  1 0 1 
+
+
+ |External Pair Traffic Profiles| 
+      4 
+ |Generic|  |Generic|  1 0 1 
+ |Generic|  |Frontier Profile|  1 0 1 
+ |Generic|  |Axon Profile|  1 0 1 
+ |Expert SNIFFER Profile|  |Expert SNIFFER Profile|  1 0 1 
+
+ |External Traffic Profiles| 
+ |Sniffer Profile|  |Sniffer Profile|  |Messages|   |Fixed Column Values|        25       12        38        12       52       32       8        9          18        5       0        0        96          0.0000  1  |Seconds|   |%@%Sniffer Network Analyzer%@%SUMMARY  Delta T|  
+ |Sniffer Profile|  |NetMetrix Profile|  |Messages|   |Fixed Column Values|        46       12        33        12       59       80       17        14        11       5            0          0         96          0.0000  1  |Seconds|   |%@%NetMetrix%@%Report%@%-----%@%User =%@%Host =%@%Data capture%@%Buffer size%@%Packets seen%@%Bytes seen%@%Packets dropped%@%Error count%@%Packets in buffer%@%Bytes in buffer%@%Packets that entered buffer%@%Trigger state%@%Pretrigger packets%@%Pretrigger bytes|  
+ |Sniffer Profile|  |Domino Profile|  |Messages|   |Fixed Column Values|        46       22        70        22       93       99       12         15        39        5        0       0             96          0.0000  0  |Seconds|   |%@%Number|  
+ |Sniffer Profile|  |Sniffer CSV Profile|  |Messages|   |Comma Separated Values|        5       0        6        0       8       0       3        0          4        0       0        0        96          0.0000  1  |Seconds|   |%@%Sniffer%@%Summary%@%Date|  
+
+
+ |External Pair Traffic Profiles| 
+ |Generic|   |Generic| |StartStop|   |Bi-directional|   |Seconds|         0        0        0        0        0        0        0        6        0        0        0        0        0        0        0      5.0000000000e-001              5.0000000000e-001              0.0000000000e+000 0  |%@%|  
+ |Generic|   |Frontier Profile|  |Fixed|   |Bi-directional|   |Seconds|         1        2        0        0        0        0        5        6        6        7        8        0        0        0    8          5.0000000000e-001              5.0000000000e-001              1.8144000000e+006 0  |%@%|  
+ |Generic|   |Axon Profile|  |Fixed|   |Combined|   |Seconds|         3        4        0        0        6        7        0        6        0        0        0        2        2        0         7     5.0000000000e-001              5.0000000000e-001              3600.0000000000e+000 0  |%@%|  
+ |Expert SNIFFER Profile|  |Expert SNIFFER Profile|   |StartStop|   |Bi-directional|   |Seconds|         0        0        0        0        0        0        0        6        0        0        0        0        0        0        0      5.0000000000e-001              5.0000000000e-001              0.0000000000e+000 0  |%@%|  
+

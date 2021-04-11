@@ -1,0 +1,72 @@
+CACI COMNET III  Release 1.3 (Build 1220)  Sun Mar 28 18:47:40 2021   PAGE     1
+
+                                     BSK_L1                                     
+
+                           LINKS: CHANNEL UTILIZATION                           
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+                             FRAMES           TRANSMISSION DELAY (MS)       %
+LINK                   DELIVERED RST/ERR  AVERAGE    STD DEV    MAXIMUM   UTIL
+_____________________  _________ ______  _________  _________  _________  _____
+
+CSMA/CA link               12497      0      0.644      0.463      7.912  43.99
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Sun Mar 28 18:47:40 2021   PAGE     2
+
+                                     BSK_L1                                     
+
+                             LINKS: COLLISION STATS                             
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+
+LINK NAME                  CSMA/CA  
+                             link   
+                                    
+
+ACCESS PROTOCOL              CSMA/CA
+
+COLLISION EPISODES               158
+
+COLLIDED FRAMES                  320
+
+NBR OF TRIES TO RESOLVE
+  AVERAGE                       1.08
+  STANDARD DEVIATION            0.29
+  MAXIMUM                          3
+
+NBR OF DEFERRALS                5700
+
+DEFERRAL DELAY  (MS)
+  AVERAGE                       0.48
+  STANDARD DEVIATION            0.36
+  MAXIMUM                       2.53
+
+DEFERRAL QUEUE SIZE  (FRAMES)
+  AVERAGE                       0.27
+  STANDARD DEVIATION            0.56
+  MAXIMUM                          3
+
+MULTIPLE COLLISION EPISODES
+  NBR EPISODES                     4
+  AVG PER EPISODE               3.00
+  MAX PER EPISODE                  3
+
+
+
+CACI COMNET III  Release 1.3 (Build 1220)  Sun Mar 28 18:47:40 2021   PAGE     3
+
+                                     BSK_L1                                     
+
+                 MESSAGE + RESPONSE SOURCES: MESSAGE DELIVERED                  
+
+                     REPLICATION 1 FROM 0.0 TO 10.0 SECONDS                     
+
+ORIGIN / MSG SRC NAME:  MESSAGES          MESSAGE DELAY (MILLISECONDS)
+  DESTINATION LIST      ASSEMBLED      AVERAGE       STD DEV       MAXIMUM
+______________________  _________   ____________  ____________  ____________
+
+Computer group / src Message Source:
+  Computer group            12497          0.644         0.463         7.912

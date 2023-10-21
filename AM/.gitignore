@@ -1,0 +1,6 @@
+# Exclude everything in those two directories:
+mniamPlayer/*
+mniamClient/*
+# Except those files:
+!.gitkeep
+!.gitignore

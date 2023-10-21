@@ -1,0 +1,3 @@
+C:/Users/Krzysztof/Documents/GitHub/mniAM/mniamPlayer/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Krzysztof/Documents/GitHub/mniAM/mniamPlayer/build/CMakeFiles/mniam_player.dir
+C:/Users/Krzysztof/Documents/GitHub/mniAM/mniamPlayer/build/CMakeFiles/edit_cache.dir
